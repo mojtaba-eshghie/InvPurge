@@ -1,0 +1,2184 @@
+RariCapital2_1 has one function call with several transfers
+Yearn1 has one function call with several transfers
+Eminence has one function call with several transfers
+Opyn has one function call with several transfers
+
+
+
+
+
+
+
+
+
+Invariant: gas control
+====== benchmark RoninNetwork: 
+==invariant map: 
+{ '': {},
+  'depositERC20For0x85eb3a35': { 'require(gasStart - gasEnd <= constant)': 189171,
+                                 'require(gasStart <= constant)': 2279519},
+  'depositEthFor0xeee3f07a': { 'require(gasStart - gasEnd <= constant)': 173161,
+                               'require(gasStart <= constant)': 2135004},
+  'withdrawERC20For0x993e1c42': { 'require(gasStart - gasEnd <= constant)': 236301,
+                                  'require(gasStart <= constant)': 834459}}
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0xc28fad5e8d5e0ce6a2eaf67b6687be5d58113e16be590824d6cfa1a94467d0b7
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	6	
+5 sampled FPs for require(gasStart <= constant)
+0x87b55a0abc9960a6111403d6e357b2c0ebf2f1d26dc7c7599fd8ed47b6a5f35f
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x0d54c34a7da75677e7bebb5665741958e88b1c5633a54744b1154a5182bf9140
+0x723cc5d4626c62f7836c29b3ca46378f1a4f56081f48fcfe43df687bbe2464f1
+0x7b119723340c5d1b8639ea2ade1bc5abe586d32dba9b7b302423cd5f4fc8b327
+0x9d780ae25b8f19231d2c87716afc88f049552e6913ebc75e13073279702b1896
+0xa918ec4f7aaba802d7c5f2ef4e13e3efcb630023811a1cb794214e9f9a2d1c24
+len(txList3):  93989
+====== benchmark HarmonyBridge: 
+==invariant map: 
+{ 'lockEth0xb6569195': {'require(gasStart <= constant)': 1478256},
+  'unlockEth0x973ff2e0': { 'require(gasStart - gasEnd <= constant)': 61081,
+                           'require(gasStart <= constant)': 867367}}
+exploitTx:  0x27981c7289c372e601c9475e5b5466310be18ed10b59d1ac840145f6e7804c97
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+271	270	
+5 sampled FPs for require(gasStart <= constant)
+0x2d5dc853f8f2715b312d515c4c813383a6f8b73ad8c036186ad7b38eefa17af7
+0x1dee95649b1ec646f676c51b442a600db9f15726837b230d0f109d91fa9024f0
+0x1c75af295db1444b557e049767b8a729060ddb8c18c8ccd77d8ff0aa27ac6480
+0xa02f7aa794964164b3796c7c6e3bf0bcb6d7ebbe22de494d3b4d48d3843f2911
+0xf372075069cbbc929fa7e99f87cf373b593e29e4e6cd24aefea75170e1b4d764
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xd45bbb13215692d2c9f9fb47d7d2b5f42258c05ae2bbd354700e03748e5bcd89
+0xda46c73592bb6e03894c5eb0787c2246b58609b2d3078e7db56e7e33f2764c47
+0xbff36ecfbb9d1095523b336f3b31b728b6b007598520c1192549abfcde7bfca4
+0xa44986c72fd8f2b2ca9463d7f626e8cff127377e8b7e389fa2db44271c9eb04e
+0x0cd94ad0b862cfd1d8075617058210e7e10f038026fb7343b0cb69033881287c
+len(txList3):  32149
+====== benchmark Nomad: 
+==invariant map: 
+{ 'handle0xab2dc3f5': { 'require(gasStart - gasEnd <= constant)': 481833,
+                        'require(gasStart <= constant)': 838931},
+  'send0xa9bd1226': { 'require(gasStart - gasEnd <= constant)': 283186,
+                      'require(gasStart <= constant)': 4996863}}
+exploitTx:  0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	1	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x08d5d83608f0a6a344d8021ff9db9d2f9e97695505824f6c858f1f17a693811c
+len(txList3):  15627
+====== benchmark PolyNetwork: 
+==invariant map: 
+{ 'bindAssetHash0x3348f63b': { 'require(gasStart - gasEnd <= constant)': 93736,
+                               'require(gasStart <= constant)': 2977684},
+  'bindProxyHash0x379b98f6': { 'require(gasStart - gasEnd <= constant)': 27523,
+                               'require(gasStart <= constant)': 27523},
+  'lock0x84a6d055': { 'require(gasStart - gasEnd <= constant)': 263005,
+                      'require(gasStart <= constant)': 977460},
+  'setManagerProxy0xaf9980f0': {},
+  'unlock0x06af4b9f': { 'require(gasStart - gasEnd <= constant)': 124034,
+                        'require(gasStart <= constant)': 1370667}}
+exploitTx:  0xad7a2c70c958fcd3effbf374d0acf3774a9257577625ae4c838e24b0de17602a
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	0	
+5 sampled FPs for require(gasStart <= constant)
+0xe49eac0fb567ab4a5f01d9d2e616e7050d8a7649ef603a0abdaab9e110d443ba
+0x2c2d5e2b06abbe65d99cd17008302ea954a6e10acfb94f1b856ad85060e86032
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  44507
+====== benchmark bZx2: 
+==invariant map: 
+{ 'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 38889,
+                         'require(gasStart <= constant)': 977077},
+  'borrowTokenFromDeposit0xcfb65bb9': { 'require(gasStart - gasEnd <= constant)': 2404840,
+                                        'require(gasStart <= constant)': 2975549},
+  'burn0x9dc29fac': { 'require(gasStart - gasEnd <= constant)': 211606,
+                      'require(gasStart <= constant)': 3244736},
+  'burnToEther0x81a6b250': { 'require(gasStart - gasEnd <= constant)': 194926,
+                             'require(gasStart <= constant)': 820815},
+  'marginTradeFromDeposit0x1c5d1da5': { 'require(gasStart - gasEnd <= constant)': 1787464,
+                                        'require(gasStart <= constant)': 3637452},
+  'mint0x40c10f19': { 'require(gasStart - gasEnd <= constant)': 187812,
+                      'require(gasStart <= constant)': 577170},
+  'mintWithEther0x8f6ede1f': { 'require(gasStart - gasEnd <= constant)': 172839,
+                               'require(gasStart <= constant)': 381900},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 102096,
+                          'require(gasStart <= constant)': 1213845},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 103772,
+                              'require(gasStart <= constant)': 951431},
+  'updateSettings0x284e2f56': { 'require(gasStart - gasEnd <= constant)': 20312,
+                                'require(gasStart <= constant)': 25713}}
+exploitTx:  0x762881b07feb63c436dee38edd4ff1f7a74c33091e534af56c9f7d49b5ecac15
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+3	4	
+5 sampled FPs for require(gasStart <= constant)
+0xf3723966ded658cdc7c2960a3ad13070ce453ff19aaadd1076d5a2bff2dc3065
+0xe9f5d5433ea3e1885a999369a61cc1ab52b5d1ddc84f95d61bf88818c64de21e
+0xefd2c9a1407ca6b281a4be75fa7fce4cc90d86207dba65dc02c717302b3dee3f
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x42291b05555005e236f1c71828d29993afaa00db2b4a500df40bfcaadd435332
+0x7e08c2d4114326c8356a7f07961649149a8c0dc2272a77ccd3bf6a0de701185b
+0xe9f5d5433ea3e1885a999369a61cc1ab52b5d1ddc84f95d61bf88818c64de21e
+0x0ce094abe32b0df6f1401e00706b6411c9b3b632afe4c1aa6f6ca9c6a5c65a2c
+len(txList3):  459
+====== benchmark Warp: 
+no gas
+0xa53c987280acb1cd58b901e24078b16fd17cf44cddc0211cfab14f12ac3567b4
+==invariant map: 
+{ '_borrow0x232d46d2': { 'require(gasStart - gasEnd <= constant)': 89959,
+                         'require(gasStart <= constant)': 90234},
+  'borrowBalanceCurrent0x17bfdfbc': { 'require(gasStart - gasEnd <= constant)': 51868,
+                                      'require(gasStart <= constant)': 474023},
+  'lendToWarpVault0x57d32b7a': { 'require(gasStart - gasEnd <= constant)': 144198,
+                                 'require(gasStart <= constant)': 232327},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 149103,
+                        'require(gasStart <= constant)': 149103}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1977466 - 1902107 = 75359 > 51868
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+3	3	
+5 sampled FPs for require(gasStart <= constant)
+0xc5c7c8ad8341ffa04507e71a70edfca9dd38e628526caf5f5be973f2c11d5798
+0x6e736e4fdc06fa35889b2892a246c0a9d3e95953df6d6058054f4c881406102f
+0xc869de9b05b82e370071b4203ef3366dc8a7cdbcb699795af622d5c9d6089072
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xc5c7c8ad8341ffa04507e71a70edfca9dd38e628526caf5f5be973f2c11d5798
+0x6e736e4fdc06fa35889b2892a246c0a9d3e95953df6d6058054f4c881406102f
+0xc869de9b05b82e370071b4203ef3366dc8a7cdbcb699795af622d5c9d6089072
+len(txList3):  148
+====== benchmark Warp_interface: 
+==invariant map: 
+{ 'borrowSC0x0a555989': { 'require(gasStart - gasEnd <= constant)': 491150,
+                          'require(gasStart <= constant)': 491525},
+  'createNewLPVault0xe50f4a30': { 'require(gasStart - gasEnd <= constant)': 2840115,
+                                  'require(gasStart <= constant)': 5489473},
+  'createNewSCVault0x2792bdd0': { 'require(gasStart - gasEnd <= constant)': 3844387},
+  'getMaxWithdrawAllowed0xab5e2c99': { 'require(gasStart - gasEnd <= constant)': 400806,
+                                       'require(gasStart <= constant)': 438478},
+  'transferOwnership0xf2fde38b': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	3	
+5 sampled FPs for require(gasStart <= constant)
+0x6e736e4fdc06fa35889b2892a246c0a9d3e95953df6d6058054f4c881406102f
+0xc869de9b05b82e370071b4203ef3366dc8a7cdbcb699795af622d5c9d6089072
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x6e736e4fdc06fa35889b2892a246c0a9d3e95953df6d6058054f4c881406102f
+0xc869de9b05b82e370071b4203ef3366dc8a7cdbcb699795af622d5c9d6089072
+0x13784adfa9136146fe1e267e2ab1e63ae8ce71e56417224cafbe7e2d436cd3be
+len(txList3):  31
+====== benchmark CheeseBank_1: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_setComptroller0x4576b5db': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 370639,
+                        'require(gasStart <= constant)': 372062},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 204233,
+                      'require(gasStart <= constant)': 284572},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 207050,
+                                  'require(gasStart <= constant)': 1160244},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 180123,
+                             'require(gasStart <= constant)': 181532}}
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	8	
+5 sampled FPs for require(gasStart <= constant)
+0x92744eb71c098c880b87df61dbe9041be1cfd59eba2239676ab34f163d9986c4
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xf7c9433512b41ff6f44fffd0cc132dd562bfb8473872e97aeb47d4e11b5d237d
+0x92f9b936b727c6dae1c2e281079824882dab1559b3bb6d7e69b6da7a40c7f672
+0x92744eb71c098c880b87df61dbe9041be1cfd59eba2239676ab34f163d9986c4
+0x303ae933fca38285e72e59b77111abb6b2b519895176ac96a98ea9779f4183e7
+0xdabda0ee453d6bc60d9e10577387d4bab865d03a13616bbf6eab4ec08b51a36d
+len(txList3):  240
+====== benchmark CheeseBank_2: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_setComptroller0x4576b5db': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 343696,
+                        'require(gasStart <= constant)': 345119},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 188348,
+                      'require(gasStart <= constant)': 189757},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 245574,
+                                  'require(gasStart <= constant)': 246997},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 166727,
+                             'require(gasStart <= constant)': 168136}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2185655 - 1830081 = 355574 > 343696
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	2	
+5 sampled FPs for require(gasStart <= constant)
+0x9c402e4b5cd0b7b137b0e5cc33c8b60bfc708ab2947a6ce292d6a03f4dc611da
+0xb7d41a31f3b9c632b5b0bbb3b054c17f4058ff747d1fa68d25199e5fd6e7f491
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x9c402e4b5cd0b7b137b0e5cc33c8b60bfc708ab2947a6ce292d6a03f4dc611da
+0xb7d41a31f3b9c632b5b0bbb3b054c17f4058ff747d1fa68d25199e5fd6e7f491
+len(txList3):  256
+====== benchmark CheeseBank_3: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_setComptroller0x4576b5db': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 382400,
+                        'require(gasStart <= constant)': 383823},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 183564,
+                      'require(gasStart <= constant)': 184973},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 241953,
+                                  'require(gasStart <= constant)': 243376},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 159454,
+                             'require(gasStart <= constant)': 160863}}
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+3	3	
+5 sampled FPs for require(gasStart <= constant)
+0x661a04416fd9718042b76fea39821d08b61a60e20bdfe97529a515f54dc9c672
+0x35c1c4f45322121ac3d9fb05eb616381a8d76418ba8faec0298d859702073ac8
+0x8b520d6ea6cdb0fc67e3653f309575477d5c9ff25415ccc778f2464b4720d496
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x661a04416fd9718042b76fea39821d08b61a60e20bdfe97529a515f54dc9c672
+0x35c1c4f45322121ac3d9fb05eb616381a8d76418ba8faec0298d859702073ac8
+0x8b520d6ea6cdb0fc67e3653f309575477d5c9ff25415ccc778f2464b4720d496
+len(txList3):  206
+====== benchmark InverseFi: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_setInterestRateModel0xf2b3abbd': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'accrueInterest0xa6afed95': { 'require(gasStart - gasEnd <= constant)': 81828,
+                                'require(gasStart <= constant)': 1956904},
+  'balanceOfUnderlying0x3af9e669': { 'require(gasStart - gasEnd <= constant)': 68313,
+                                     'require(gasStart <= constant)': 292836},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 741684,
+                        'require(gasStart <= constant)': 2575572},
+  'borrowBalanceCurrent0x17bfdfbc': {},
+  'liquidateBorrow0xf5e3c462': { 'require(gasStart - gasEnd <= constant)': 896489,
+                                 'require(gasStart <= constant)': 2189673},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 171097,
+                      'require(gasStart <= constant)': 310711},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 563720,
+                        'require(gasStart <= constant)': 697571},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 564407,
+                                  'require(gasStart <= constant)': 566530},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 121437,
+                             'require(gasStart <= constant)': 727362},
+  'repayBorrowBehalf0x2608f818': {'require(gasStart <= constant)': 180599},
+  'seize0xb2a02ff1': {}}
+exploitTx:  0x600373f67521324c8068cfd025f121a0843d57ec813411661b07edc5ff781842
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	0	
+5 sampled FPs for require(gasStart <= constant)
+0xc27139d94ab89216822cd74831d5bb16cb98dea7731aa7c6001b5fdac17f8ef2
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  3475
+====== benchmark CreamFi1_1: 
+==invariant map: 
+{'_becomeImplementation0x56e67728': {}}
+exploitTx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+N/A	N/A	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  2
+====== benchmark CreamFi1_2: 
+==invariant map: 
+{ '': { 'require(gasStart - gasEnd <= constant)': 182308,
+        'require(gasStart <= constant)': 11556808},
+  '_acceptAdmin0xe9c714f2': { 'require(gasStart - gasEnd <= constant)': 16489,
+                              'require(gasStart <= constant)': 24123},
+  '_setInterestRateModel0xf2b3abbd': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'accrueInterest0xa6afed95': { 'require(gasStart - gasEnd <= constant)': 105148,
+                                'require(gasStart <= constant)': 4382762},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 37221,
+                         'require(gasStart <= constant)': 906749},
+  'balanceOfUnderlying0x3af9e669': { 'require(gasStart - gasEnd <= constant)': 210415,
+                                     'require(gasStart <= constant)': 10207520},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 1563023,
+                        'require(gasStart <= constant)': 6349111},
+  'borrowBalanceCurrent0x17bfdfbc': {},
+  'liquidateBorrow0xaae40a2a': { 'require(gasStart - gasEnd <= constant)': 1202255,
+                                 'require(gasStart <= constant)': 4699621},
+  'mint0x1249c58b': { 'require(gasStart - gasEnd <= constant)': 201739,
+                      'require(gasStart <= constant)': 11978772},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 1594577,
+                        'require(gasStart <= constant)': 9637750},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 1597855,
+                                  'require(gasStart <= constant)': 6349021},
+  'repayBorrow0x4e4d9fea': { 'require(gasStart - gasEnd <= constant)': 158036,
+                             'require(gasStart <= constant)': 6349266},
+  'seize0xb2a02ff1': { 'require(gasStart - gasEnd <= constant)': 182175,
+                       'require(gasStart <= constant)': 4042969},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 384372,
+                          'require(gasStart <= constant)': 684592},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 731087,
+                              'require(gasStart <= constant)': 1078119}}
+exploitTx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+9	48	
+5 sampled FPs for require(gasStart <= constant)
+0xd0d4308260e6895967cc697a87d9b1b95969c4c606a516d574e39046926d00ca
+0xcd753ea59ae8020ea04a689fd4854040a9454496838adc41614d1ce90d2bbfd9
+0x4092cac4cc18d8eb91c3a8b57a852510022a6a6eb002f2e94603743061b548ec
+0xb7733346f3c51310bdc465d1ab589133d71badbdd6ec157526018ed309a06c71
+0x5cfdafed3b2127818a67c765bff0dc0c7f156a647938a4349bdc356da9f2dc13
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x25af28c7de4b11bd54c70c7484bb05ef91451517d0980d182dead1546752489d
+0x92e1192172ffa30d18f1a3eca3b2c3b8e619f279fd787316266578f7d9c5e474
+0x14c380488dcd056d3b64490b11e1bd99f9935be34d2770edcee619dbe58b1990
+0xa4caab235d4ec603a9f5cd20b9abecd39582d4ff6c5c546f71c5f3a8ca413abd
+0x5abc220ebc37f4edd9c1d0c38080e0ed067ea3008056ae96db55983f712570ba
+len(txList3):  21662
+====== benchmark CreamFi2_1: 
+==invariant map: 
+{ '_becomeImplementation0x56e67728': {},
+  '_reduceReserves0x601a0bf1': { 'require(gasStart - gasEnd <= constant)': 122002,
+                                 'require(gasStart <= constant)': 1826425},
+  'accrueInterest0xa6afed95': { 'require(gasStart - gasEnd <= constant)': 68896,
+                                'require(gasStart <= constant)': 1423146},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 27898,
+                         'require(gasStart <= constant)': 53359},
+  'balanceOfUnderlying0x3af9e669': { 'require(gasStart - gasEnd <= constant)': 66521,
+                                     'require(gasStart <= constant)': 2187385},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 1112268,
+                        'require(gasStart <= constant)': 2217529},
+  'exchangeRateCurrent0xbd6d894d': { 'require(gasStart - gasEnd <= constant)': 66363,
+                                     'require(gasStart <= constant)': 580817},
+  'liquidateBorrow0xf5e3c462': { 'require(gasStart - gasEnd <= constant)': 1111013,
+                                 'require(gasStart <= constant)': 1858047},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 220843,
+                      'require(gasStart <= constant)': 1914091},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 1557410,
+                        'require(gasStart <= constant)': 3144741},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 1311137,
+                                  'require(gasStart <= constant)': 2656738},
+  'registerCollateral0x8897bd85': { 'require(gasStart - gasEnd <= constant)': 53373,
+                                    'require(gasStart <= constant)': 1103231},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 132504,
+                             'require(gasStart <= constant)': 288463},
+  'seize0xb2a02ff1': { 'require(gasStart - gasEnd <= constant)': 165547,
+                       'require(gasStart <= constant)': 1126503},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 64497,
+                          'require(gasStart <= constant)': 116175},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 119085,
+                              'require(gasStart <= constant)': 283524},
+  'unregisterCollateral0x8b35776b': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+7702690 - 7546201 = 156489 > 53373
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+4	4	
+5 sampled FPs for require(gasStart <= constant)
+0xf1570adb8ae4d4b680a81df6a5a8df4d3330b4aa9014f641204cd102cc0ad255
+0xab18d432af36ce23546da94aa57c7115fa57a8bdfe4d08700d49facdd074e515
+0x9c544c6b371ec1e9e6e510d3037bc23667a0bb94345028ba0543aaa0ac1ef261
+0xbd4ffb73fc1eeb69922f13212b70ddd99ee7e86dde3cd6c158c50ddef8302b38
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x0b5aed13d11835013619b6fa189556d2ebff5877cf2c1f445dfcba56c2fc7ef3
+0xe7f1aa92cb4a91f492b06823f273e8f904392f83e285e58e75e37089ddb9e694
+0xbd4ffb73fc1eeb69922f13212b70ddd99ee7e86dde3cd6c158c50ddef8302b38
+0x5939e9f814608f537c76bdc762724720c3b839acfa518c36dc2cac8e84d535a4
+len(txList3):  678
+====== benchmark CreamFi2_2: 
+==invariant map: 
+{ '_becomeImplementation0x56e67728': {},
+  '_reduceReserves0x601a0bf1': { 'require(gasStart - gasEnd <= constant)': 143744,
+                                 'require(gasStart <= constant)': 2728192},
+  'accrueInterest0xa6afed95': { 'require(gasStart - gasEnd <= constant)': 60951,
+                                'require(gasStart <= constant)': 1034772},
+  'approve0x095ea7b3': {'require(gasStart <= constant)': 53335},
+  'balanceOfUnderlying0x3af9e669': { 'require(gasStart - gasEnd <= constant)': 66605,
+                                     'require(gasStart <= constant)': 2192775},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 982607,
+                        'require(gasStart <= constant)': 1962209},
+  'exchangeRateCurrent0xbd6d894d': { 'require(gasStart - gasEnd <= constant)': 65109,
+                                     'require(gasStart <= constant)': 575385},
+  'liquidateBorrow0xf5e3c462': { 'require(gasStart - gasEnd <= constant)': 1191330,
+                                 'require(gasStart <= constant)': 1887832},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 211372,
+                      'require(gasStart <= constant)': 1919733},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 667358,
+                        'require(gasStart <= constant)': 1119301},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 685927,
+                                  'require(gasStart <= constant)': 2154033},
+  'registerCollateral0x8897bd85': { 'require(gasStart - gasEnd <= constant)': 69930,
+                                    'require(gasStart <= constant)': 1157041},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 128246,
+                             'require(gasStart <= constant)': 279777},
+  'seize0xb2a02ff1': {},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 88536,
+                          'require(gasStart <= constant)': 118611},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 119320,
+                              'require(gasStart <= constant)': 347624},
+  'unregisterCollateral0x8b35776b': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6437141 - 6300426 = 136715 > 69930
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+9	7	
+5 sampled FPs for require(gasStart <= constant)
+0xf40a2c39755bd255c97129f3bb05d2db828ca3b3f97c932b93e8ff346229b91d
+0xebd688d0ac39feb33f4a78fe44933a1b27c6b9eb3f5d8f75b1943ae24f108686
+0x82e8bff574dbc48956ba604512b07f61577c06cf8e2c02593aa376e02a6dd982
+0xcd3aba60c03c5864367c7e027f3bb46b4b165cbf0481b55378d920b9c78f64ff
+0x188a03fcc0382e4d0eede2e74c9ce86baa87cf2c0131cbd8098a05dd64bbe3af
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xebd688d0ac39feb33f4a78fe44933a1b27c6b9eb3f5d8f75b1943ae24f108686
+0x563ca7d08f274c22ac3ae6261ae0be41b48f9bf49edd597961697b30260d523f
+0xf40a2c39755bd255c97129f3bb05d2db828ca3b3f97c932b93e8ff346229b91d
+0x567a51a57e3dfa96b11ae9c91afb41e3b7dbc7b61c8470e007fee07b74a9e4bf
+0x09171dc790465d2346e19eedf3f085be80047d0042396975b29a63222aa7fd76
+len(txList3):  477
+====== benchmark CreamFi2_3: 
+==invariant map: 
+{ '_becomeImplementation0x56e67728': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 170444,
+                      'require(gasStart <= constant)': 362950},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 1129655,
+                        'require(gasStart <= constant)': 2288875},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 510832,
+                                  'require(gasStart <= constant)': 1033200},
+  'registerCollateral0x8897bd85': { 'require(gasStart - gasEnd <= constant)': 62193,
+                                    'require(gasStart <= constant)': 252978},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 116883,
+                             'require(gasStart <= constant)': 257703}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8319331 - 8153207 = 166124 > 62193
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+3	2	
+5 sampled FPs for require(gasStart <= constant)
+0xdd944a682f9185e2f76b17ab44dce1ce13f511ad8c710cbbdaee9eeba307a248
+0xbf6deab08e4bc86e5a25746e0a3ec5abcf0846794df145ecc55477e320edf5b5
+0x417bc968ccfafbcdedf63598d5dd2500de39507f50e175cff8b8f437510c7981
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xdd944a682f9185e2f76b17ab44dce1ce13f511ad8c710cbbdaee9eeba307a248
+0xbf6deab08e4bc86e5a25746e0a3ec5abcf0846794df145ecc55477e320edf5b5
+len(txList3):  38
+====== benchmark CreamFi2_4: 
+==invariant map: 
+{ '_becomeImplementation0x56e67728': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 1709279,
+                        'require(gasStart <= constant)': 3393251},
+  'registerCollateral0x8897bd85': { 'require(gasStart - gasEnd <= constant)': 85067,
+                                    'require(gasStart <= constant)': 3116052},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 123511,
+                             'require(gasStart <= constant)': 270755}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+7102953 - 6955590 = 147363 > 85067
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  41
+====== benchmark RariCapital1: 
+==invariant map: 
+{ '': { 'require(gasStart - gasEnd <= constant)': 9371,
+        'require(gasStart <= constant)': 498625},
+  'addMissingPools0xcab6ca80': {},
+  'deposit0xd0e30db0': { 'require(gasStart - gasEnd <= constant)': 345773,
+                         'require(gasStart <= constant)': 1977577},
+  'disableFund0xf3b43386': {},
+  'enableFund0x65df2918': {},
+  'getFundBalance0xdae9e379': { 'require(gasStart - gasEnd <= constant)': 211177,
+                                'require(gasStart <= constant)': 893580},
+  'transferOwnership0xf2fde38b': {},
+  'withdraw0x2e1a7d4d': { 'require(gasStart - gasEnd <= constant)': 485518,
+                          'require(gasStart <= constant)': 951680},
+  'withdrawFees0x476343ee': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3381672 - 3328544 = 53128 > 9371
+exploitTx:  0x4764dc6ff19a64fc1b0e57e735661f64d97bc1c44e026317be8765358d0a7392
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+3	0	
+5 sampled FPs for require(gasStart <= constant)
+0x9c17e998294dd66808f674bf08a8ee710a807a94c7a217a23e9bcf9d308b0798
+0x890ee194b282a196aa04d8c9d56e888c1eb4080264d0c1d77b5a22f99dd7320e
+0x5b84c661cb0cb0e28728c403c120856e605f37a807ed902e3f2a33956a08de97
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  661
+====== benchmark RariCapital2_1: 
+==invariant map: 
+{ '_prepare0x1db78944': { 'require(gasStart - gasEnd <= constant)': 77637,
+                          'require(gasStart <= constant)': 2531597},
+  '_setImplementationSafe0x50d85b73': {},
+  '_setInterestRateModel0xf2b3abbd': { 'require(gasStart - gasEnd <= constant)': 72148,
+                                       'require(gasStart <= constant)': 131383},
+  '_setReserveFactor0xfca7820b': {},
+  'accrueInterest0xa6afed95': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 2478177,
+                        'require(gasStart <= constant)': 2493139},
+  'initialize0x79c2c954': {},
+  'liquidateBorrow0xaae40a2a': { 'require(gasStart - gasEnd <= constant)': 875975,
+                                 'require(gasStart <= constant)': 1776800},
+  'mint0x1249c58b': { 'require(gasStart - gasEnd <= constant)': 234586,
+                      'require(gasStart <= constant)': 333969},
+  'redeem0xdb006a75': {},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 2105261,
+                                  'require(gasStart <= constant)': 2139258},
+  'repayBorrow0x4e4d9fea': { 'require(gasStart - gasEnd <= constant)': 121276,
+                             'require(gasStart <= constant)': 207207},
+  'seize0xb2a02ff1': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+18789746 - 18478075 = 311671 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16098908 - 15837743 = 261165 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15831124 - 15574143 = 256981 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16585519 - 16316750 = 268769 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16314012 - 16049486 = 264526 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14723748 - 14484069 = 239679 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14481327 - 14245436 = 235891 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15076699 - 14831506 = 245193 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14586370 - 14348838 = 237532 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14346095 - 14112317 = 233778 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14554524 - 14317490 = 237034 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14314747 - 14081459 = 233288 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14643127 - 14404708 = 238419 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14173871 - 13942784 = 231087 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13940042 - 13712609 = 227433 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15823067 - 15566212 = 256855 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15813112 - 15411277 = 401835 > 234586
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14358669 - 14124695 = 233974 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14319174 - 14085817 = 233357 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15029296 - 14784843 = 244453 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14546160 - 14309256 = 236904 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14306514 - 14073355 = 233159 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14288306 - 14055431 = 232875 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13830052 - 13604337 = 225715 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13601595 - 13379450 = 222145 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14484033 - 14248100 = 235933 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14019710 - 13791032 = 228678 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13788289 - 13563227 = 225062 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13607542 - 13385304 = 222238 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13170395 - 12954988 = 215407 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12952245 - 12740246 = 211999 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13668306 - 13445119 = 223187 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13229276 - 13012949 = 216327 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13010206 - 12797302 = 212904 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12716009 - 12507701 = 208308 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12306505 - 12104596 = 201909 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12101853 - 11903142 = 198711 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10733430 - 10556100 = 177330 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10553358 - 10378842 = 174516 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11052289 - 10869977 = 182312 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10867227 - 10687807 = 179420 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9814123 - 9651157 = 162966 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9648414 - 9488038 = 160376 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10013911 - 9847824 = 166087 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9684373 - 9523435 = 160938 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9520692 - 9362311 = 158381 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9654136 - 9493670 = 160466 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9490928 - 9333012 = 157916 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9664896 - 9504262 = 160634 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9349995 - 9194281 = 155714 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9191539 - 9038301 = 153238 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10055347 - 9888612 = 166735 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9728339 - 9566714 = 161625 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9563971 - 9404914 = 159057 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10072455 - 9905453 = 167002 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10060582 - 9893765 = 166817 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9412613 - 9255921 = 156692 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9105534 - 8953640 = 151894 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8950897 - 8801419 = 149478 > 77637
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8820506 - 8673066 = 147440 > 77637
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	1	
+5 sampled FPs for require(gasStart <= constant)
+0x0967bc77c69e423a21678a2b4d2170ed80177f2ccfed6394393b8ed728733bab
+0xf93d4d03c9e40da52a8f61b08c67001574aa411cec10a5bba692db1f2256824b
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x0967bc77c69e423a21678a2b4d2170ed80177f2ccfed6394393b8ed728733bab
+len(txList3):  614
+====== benchmark RariCapital2_2: 
+==invariant map: 
+{ '_prepare0x1db78944': { 'require(gasStart - gasEnd <= constant)': 77500,
+                          'require(gasStart <= constant)': 2676069},
+  '_setImplementationSafe0x50d85b73': {},
+  '_setInterestRateModel0xf2b3abbd': { 'require(gasStart - gasEnd <= constant)': 87128,
+                                       'require(gasStart <= constant)': 153885},
+  '_setReserveFactor0xfca7820b': {},
+  'accrueInterest0xa6afed95': { 'require(gasStart - gasEnd <= constant)': 86847,
+                                'require(gasStart <= constant)': 1592019},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 2479272,
+                        'require(gasStart <= constant)': 2481409},
+  'initialize0xa0b0d289': {},
+  'liquidateBorrow0xf5e3c462': { 'require(gasStart - gasEnd <= constant)': 1584063,
+                                 'require(gasStart <= constant)': 1670078},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 283962,
+                      'require(gasStart <= constant)': 458486},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 115672,
+                        'require(gasStart <= constant)': 929372},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 2007994,
+                                  'require(gasStart <= constant)': 2023576},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 164950,
+                             'require(gasStart <= constant)': 279288},
+  'seize0xb2a02ff1': { 'require(gasStart - gasEnd <= constant)': 185061,
+                       'require(gasStart <= constant)': 1054750},
+  'transfer0xa9059cbb': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+19612349 - 19287780 = 324569 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+17068080 - 16791726 = 276354 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16790108 - 16518098 = 272010 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16780108 - 16461308 = 318800 > 86847
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16723177 - 16452212 = 270965 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16713174 - 16262678 = 450496 > 283962
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15161329 - 14914768 = 246561 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15119802 - 14873890 = 245912 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+16222817 - 15959671 = 263146 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15694344 - 15439455 = 254889 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15430397 - 15179632 = 250765 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15418962 - 15168376 = 250586 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15161302 - 14914742 = 246560 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15149867 - 14903485 = 246382 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15162736 - 14916153 = 246583 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14675754 - 14436780 = 238974 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14434020 - 14198823 = 235197 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14422585 - 14187567 = 235018 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14184855 - 13953552 = 231303 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14173419 - 13942294 = 231125 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14748764 - 14508650 = 240114 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14730696 - 14490864 = 239832 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14257112 - 14024680 = 232432 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14021920 - 13793163 = 228757 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14010484 - 13781905 = 228579 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13779193 - 13554228 = 224965 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13767757 - 13542971 = 224786 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15770548 - 15514468 = 256080 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15755940 - 15500088 = 255852 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15722229 - 15466904 = 255325 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14267957 - 14035355 = 232602 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14984548 - 14740749 = 243799 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14737990 - 14498044 = 239946 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14726554 - 14486787 = 239767 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14484074 - 14248095 = 235979 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14472639 - 14236839 = 235800 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15397877 - 15147620 = 250257 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+15376569 - 15126645 = 249924 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13914899 - 13687814 = 227085 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13685054 - 13461560 = 223494 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13673618 - 13450303 = 223315 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13447590 - 13227806 = 219784 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13436155 - 13216550 = 219605 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14245601 - 14013349 = 232252 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13783242 - 13558214 = 225028 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13555454 - 13333985 = 221469 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13544019 - 13322729 = 221290 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13320015 - 13102225 = 217790 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13308580 - 13090968 = 217612 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13712421 - 13488499 = 223922 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13485740 - 13265360 = 220380 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13474304 - 13254103 = 220201 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13251390 - 13034672 = 216718 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13239955 - 13023416 = 216539 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14441328 - 14206017 = 235311 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13976072 - 13748031 = 228041 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13745271 - 13520836 = 224435 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13733836 - 13509580 = 224256 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13506866 - 13286156 = 220710 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13495431 - 13274900 = 220531 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13564836 - 13343220 = 221616 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13126756 - 12911985 = 214771 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12909226 - 12697854 = 211372 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12897790 - 12686597 = 211193 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12683884 - 12476033 = 207851 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12672449 - 12464777 = 207672 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13625601 - 13403036 = 222565 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13185636 - 12969945 = 215691 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12967186 - 12754909 = 212277 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12955750 - 12743651 = 212099 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12740939 - 12532197 = 208742 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12729503 - 12520940 = 208563 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12673303 - 12465618 = 207685 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12262866 - 12061594 = 201272 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12058834 - 11860750 = 198084 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12047398 - 11849492 = 197906 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11846780 - 11652009 = 194771 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11835344 - 11640752 = 194592 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11471640 - 11282731 = 188909 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11202227 - 11017527 = 184700 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11192227 - 11016757 = 175470 > 86847
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11190439 - 11005923 = 184516 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11180436 - 10863031 = 317405 > 283962
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10128380 - 9960459 = 167921 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10820140 - 10641410 = 178730 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10465898 - 10292703 = 173195 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10289943 - 10119498 = 170445 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10278508 - 10108241 = 170267 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10105529 - 9937965 = 167564 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10094093 - 9926708 = 167385 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10099948 - 9932471 = 167477 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9769943 - 9607623 = 162320 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9604863 - 9445122 = 159741 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9593427 - 9433865 = 159562 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9431152 - 9274125 = 157027 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9419717 - 9262869 = 156848 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9770533 - 9608203 = 162330 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9752466 - 9590419 = 162047 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9433236 - 9276177 = 157059 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9273417 - 9118855 = 154562 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9261981 - 9107598 = 154383 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9104885 - 8952956 = 151929 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9093449 - 8941699 = 151750 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10381677 - 10209798 = 171879 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10367069 - 10195419 = 171650 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10333358 - 10162234 = 171124 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9364965 - 9208972 = 155993 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10012641 - 9846529 = 166112 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9684700 - 9523712 = 160988 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9520952 - 9362522 = 158430 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9509516 - 9351265 = 158251 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9348552 - 9192816 = 155736 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9337117 - 9181560 = 155557 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9368376 - 9212330 = 156046 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9060410 - 8909176 = 151234 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8906416 - 8757588 = 148828 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8894981 - 8746332 = 148649 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8743619 - 8597335 = 146284 > 77500
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8732184 - 8586079 = 146105 > 77500
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	1	
+5 sampled FPs for require(gasStart <= constant)
+0xd4477db3007cccd667a2a074161d3871caa3a2223deeffc9f85b297483372cef
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xd4477db3007cccd667a2a074161d3871caa3a2223deeffc9f85b297483372cef
+len(txList3):  752
+====== benchmark RariCapital2_3: 
+==invariant map: 
+{ '_prepare0x1db78944': { 'require(gasStart - gasEnd <= constant)': 63156,
+                          'require(gasStart <= constant)': 2557165},
+  '_setImplementationSafe0x50d85b73': {},
+  '_setInterestRateModel0xf2b3abbd': {},
+  '_setReserveFactor0xfca7820b': {},
+  'accrueInterest0xa6afed95': { 'require(gasStart - gasEnd <= constant)': 94095,
+                                'require(gasStart <= constant)': 2545165},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 1524960,
+                        'require(gasStart <= constant)': 1563422},
+  'initialize0xa0b0d289': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 273535,
+                      'require(gasStart <= constant)': 436968},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 126637,
+                        'require(gasStart <= constant)': 1543357},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 1429568,
+                                  'require(gasStart <= constant)': 1482439},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 173137,
+                             'require(gasStart <= constant)': 267886},
+  'seize0xb2a02ff1': { 'require(gasStart - gasEnd <= constant)': 196667,
+                       'require(gasStart <= constant)': 1640833}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+19585523 - 19267834 = 317689 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14357164 - 14123168 = 233996 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14118471 - 13888205 = 230266 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14107036 - 13876949 = 230087 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13872298 - 13645878 = 226420 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13860862 - 13634621 = 226241 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14725987 - 14486229 = 239758 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+14701021 - 14461653 = 239368 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13254760 - 13037989 = 216771 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13035230 - 12821890 = 213340 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13023794 - 12810632 = 213162 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12807920 - 12598131 = 209789 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12796484 - 12586874 = 209610 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13478113 - 13257853 = 220260 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13036005 - 12822652 = 213353 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12819893 - 12609917 = 209976 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12808457 - 12598660 = 209797 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12595947 - 12389470 = 206477 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12584512 - 12378214 = 206298 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12968772 - 12756470 = 212302 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12753710 - 12544768 = 208942 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12742275 - 12533512 = 208763 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12530798 - 12325339 = 205459 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12519363 - 12314083 = 205280 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13538877 - 13317667 = 221210 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13101873 - 12887491 = 214382 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12884731 - 12673742 = 210989 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12873296 - 12662486 = 210810 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12659773 - 12452299 = 207474 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12648338 - 12441043 = 207295 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12586580 - 12380250 = 206330 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12179103 - 11979140 = 199963 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11976380 - 11779584 = 196796 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11964944 - 11768327 = 196617 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11765614 - 11572111 = 193503 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11754179 - 11560855 = 193324 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9925918 - 9761161 = 164757 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9600936 - 9441256 = 159680 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9438497 - 9281356 = 157141 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9427061 - 9270098 = 156963 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9267386 - 9112918 = 154468 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9255950 - 9101661 = 154289 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9281650 - 9126959 = 154691 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8976645 - 8826720 = 149925 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8823959 - 8676420 = 147539 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8812524 - 8665163 = 147361 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8662450 - 8517434 = 145016 > 63156
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8651014 - 8506177 = 144837 > 63156
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	2	
+5 sampled FPs for require(gasStart <= constant)
+0x402a1482e69efb54240f3acda2483307e960c5c19f8e7498d9a5002c5275a7c9
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x402a1482e69efb54240f3acda2483307e960c5c19f8e7498d9a5002c5275a7c9
+0xf7e7d20fd81dd574f6a0de884092baf34c104307d1b5413d1ddcf9b9f72e5274
+len(txList3):  404
+====== benchmark RariCapital2_4: 
+==invariant map: 
+{ '_prepare0x1db78944': { 'require(gasStart - gasEnd <= constant)': 73131,
+                          'require(gasStart <= constant)': 3107682},
+  '_setImplementationSafe0x50d85b73': {},
+  '_setInterestRateModel0xf2b3abbd': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 1456728,
+                        'require(gasStart <= constant)': 2201805},
+  'initialize0xa0b0d289': {},
+  'liquidateBorrow0xf5e3c462': { 'require(gasStart - gasEnd <= constant)': 1018262,
+                                 'require(gasStart <= constant)': 1626162},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 266110,
+                      'require(gasStart <= constant)': 354685},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 317674,
+                                  'require(gasStart <= constant)': 506464},
+  'repayBorrow0x0e752702': { 'require(gasStart - gasEnd <= constant)': 152523,
+                             'require(gasStart <= constant)': 1237537}}
+no gasEnd
+0xb1798298d095afd8025e53f385c11bbf11859187ffe670b5c7ba144d311e6551
+no gasEnd
+0xb1798298d095afd8025e53f385c11bbf11859187ffe670b5c7ba144d311e6551
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+19565095 - 19247725 = 317370 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13458324 - 13238373 = 219951 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13233675 - 13017234 = 216441 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13222239 - 13005977 = 216262 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12998903 - 12786130 = 212773 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12987468 - 12774874 = 212594 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13777678 - 13552737 = 224941 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+13755040 - 13530453 = 224587 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12394408 - 12191080 = 203328 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12188321 - 11988214 = 200107 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12176885 - 11976956 = 199929 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11974244 - 11777481 = 196763 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11962808 - 11766224 = 196584 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12500802 - 12295812 = 204990 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12089346 - 11890785 = 198561 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11888025 - 11692610 = 195415 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11876590 - 11681353 = 195237 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11678641 - 11486497 = 192144 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11667205 - 11475240 = 191965 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+12021855 - 11824349 = 197506 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11821589 - 11627212 = 194377 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11810153 - 11615954 = 194199 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11613242 - 11422120 = 191122 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11601806 - 11410863 = 190943 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9840140 - 9676723 = 163417 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9518166 - 9359780 = 158386 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9357020 - 9201152 = 155868 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9345584 - 9189894 = 155690 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9187182 - 9033967 = 153215 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9175746 - 9022710 = 153036 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9195872 - 9042522 = 153350 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8893874 - 8745242 = 148632 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8742482 - 8596216 = 146266 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8731047 - 8584959 = 146088 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8582247 - 8438484 = 143763 > 73131
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8570811 - 8427227 = 143584 > 73131
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	6	
+5 sampled FPs for require(gasStart <= constant)
+0x7f80027b62a31abd32114f8d9e3d2395a46752fca8f0ad20c23ec08da2685114
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xe5ac8d1740006ee3f8c9ec2b4d85823aab507ad9e33ea68973bdb5957bfb56d7
+0x289643509766ac6a2c4fd35ea27ef65226591c2c1247297c198660fe9873691c
+0x624b4b05a2c107b4257a732b2ea09d25bf1e1b8bd320e31a724c013bbb6a9c5f
+0x7f80027b62a31abd32114f8d9e3d2395a46752fca8f0ad20c23ec08da2685114
+0x52d1edf2847a0b45a6f7d3acd2d0cbff7543334124d56e661421d64fc40dd653
+len(txList3):  776
+====== benchmark XCarnival: 
+==invariant map: 
+{ 'acceptAdmin0x0e18b681': {},
+  'borrow0x0c28d13e': { 'require(gasStart - gasEnd <= constant)': 333446,
+                        'require(gasStart <= constant)': 455221},
+  'borrowBalanceCurrent0xd9af3db8': { 'require(gasStart - gasEnd <= constant)': 6073,
+                                      'require(gasStart <= constant)': 228479},
+  'initialize0x7715632e': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 228000,
+                      'require(gasStart <= constant)': 280928},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 161404,
+                        'require(gasStart <= constant)': 200787},
+  'redeemUnderlying0x852a12e3': {},
+  'repayBorrowAndClaim0x37cd3f07': {},
+  'setPendingAdmin0x4dd18bf5': {},
+  'setReserveFactor0x1c446983': {},
+  'setTransferEthGasCost0xc0627004': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+7700914 - 7265498 = 435416 > 333446
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+7027884 - 6915570 = 112314 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6822558 - 6713453 = 109105 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6645859 - 6539515 = 106344 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6469159 - 6365575 = 103584 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6292459 - 6191636 = 100823 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6115760 - 6017698 = 98062 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5939061 - 5843760 = 95301 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5762361 - 5669821 = 92540 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5585663 - 5495884 = 89779 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5408963 - 5321945 = 87018 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5232264 - 5148007 = 84257 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5055564 - 4974068 = 81496 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4878864 - 4800129 = 78735 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4702166 - 4626192 = 75974 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4525466 - 4452253 = 73213 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4348767 - 4278315 = 70452 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4172066 - 4104375 = 67691 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3995369 - 3930438 = 64931 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3818669 - 3756499 = 62170 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3641969 - 3582560 = 59409 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3465269 - 3408621 = 56648 > 6073
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3288570 - 3234683 = 53887 > 6073
+exploitTx:  0x51cbfd46f21afb44da4fa971f220bd28a14530e1d5da5009cfbdfee012e57e35
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+12	9	
+5 sampled FPs for require(gasStart <= constant)
+0xee950ff3082f136371f395e98674968bb1306287b4c644d4992b8ec2c6640190
+0x3cd0483fe9eadf4b3183fecec2429cafa9d7e2ea1424dce3a0e576cd6c459ad5
+0x14d584ea5c0454dd009442d961f6da4927f680af4166850076cbd66429dd5af6
+0x94b88fb785eefe42ec8fc03035c495a1740f5f8fc3cc977300569e105859d4cc
+0xa328a9377157276b7c88281f83970c6f1ff417c77e7e7c7e4d2c9236af1b6935
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xabfcfaf3620bbb2d41a3ffea6e31e93b9b5f61c061b9cfc5a53c74ebe890294d
+0x3cd0483fe9eadf4b3183fecec2429cafa9d7e2ea1424dce3a0e576cd6c459ad5
+0x788159dd98aa21313963641ac8f4e38356631398858080855f783f34a3932f23
+0xee950ff3082f136371f395e98674968bb1306287b4c644d4992b8ec2c6640190
+0x63bad2fb021360a28d2fff604d1388f0bd2fa8fcc740af0dee9824a92f6c42ee
+len(txList3):  342
+====== benchmark Harvest1_fUSDT: 
+==invariant map: 
+{ 'announceStrategyUpdate0x0a6bbeb3': {},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 161187,
+                         'require(gasStart <= constant)': 8846451},
+  'deposit0xb6b55f25': { 'require(gasStart - gasEnd <= constant)': 960071,
+                         'require(gasStart <= constant)': 9665926},
+  'depositFor0x36efd16f': { 'require(gasStart - gasEnd <= constant)': 863699,
+                            'require(gasStart <= constant)': 3522160},
+  'doHardWork0x4fa5d854': { 'require(gasStart - gasEnd <= constant)': 2240876,
+                            'require(gasStart <= constant)': 8889017},
+  'initializeVault0x8fc1708c': {},
+  'setStorage0x9137c1a7': { 'require(gasStart - gasEnd <= constant)': 198484,
+                            'require(gasStart <= constant)': 12077555},
+  'setStrategy0x33a100ca': { 'require(gasStart - gasEnd <= constant)': 1474523,
+                             'require(gasStart <= constant)': 5856840},
+  'setVaultFractionToInvest0xa5b1a24d': { 'require(gasStart - gasEnd <= constant)': 154016,
+                                          'require(gasStart <= constant)': 8906205},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 33240,
+                          'require(gasStart <= constant)': 194190},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 165355,
+                              'require(gasStart <= constant)': 8653442},
+  'withdraw0x2e1a7d4d': { 'require(gasStart - gasEnd <= constant)': 463534,
+                          'require(gasStart <= constant)': 700784}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6967349 - 6419672 = 547677 > 463534
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4169422 - 3665462 = 503960 > 463534
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x0fc6d2ca064fc841bc9b1c1fad1fbb97bcea5c9a1b2b66ef837f1227e06519a6
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  1696
+====== benchmark Harvest2_fUSDC: 
+==invariant map: 
+{ 'announceStrategyUpdate0x0a6bbeb3': {},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 208091,
+                         'require(gasStart <= constant)': 11834676},
+  'deposit0xb6b55f25': { 'require(gasStart - gasEnd <= constant)': 961934,
+                         'require(gasStart <= constant)': 9429093},
+  'depositFor0x36efd16f': { 'require(gasStart - gasEnd <= constant)': 883246,
+                            'require(gasStart <= constant)': 4417010},
+  'doHardWork0x4fa5d854': { 'require(gasStart - gasEnd <= constant)': 2251521,
+                            'require(gasStart <= constant)': 8641598},
+  'initializeVault0x8fc1708c': {},
+  'setStorage0x9137c1a7': { 'require(gasStart - gasEnd <= constant)': 112027,
+                            'require(gasStart <= constant)': 6544272},
+  'setStrategy0x33a100ca': { 'require(gasStart - gasEnd <= constant)': 1483452,
+                             'require(gasStart <= constant)': 5856840},
+  'setVaultFractionToInvest0xa5b1a24d': { 'require(gasStart - gasEnd <= constant)': 150150,
+                                          'require(gasStart <= constant)': 8658786},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 48046,
+                          'require(gasStart <= constant)': 1141772},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 161604,
+                              'require(gasStart <= constant)': 8413399},
+  'withdraw0x2e1a7d4d': { 'require(gasStart - gasEnd <= constant)': 476135,
+                          'require(gasStart <= constant)': 1227735}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+7093876 - 6538773 = 555103 > 476135
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4282494 - 3771318 = 511176 > 476135
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x35f8d2f572fceaac9288e5d462117850ef2694786992a8c3f6d02612277b0877
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  1722
+====== benchmark ValueDeFi: 
+==invariant map: 
+{ 'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 23958,
+                         'require(gasStart <= constant)': 47236},
+  'deposit0x0efe6a8b': {},
+  'depositAllFor0x3b3d1210': { 'require(gasStart - gasEnd <= constant)': 1551586,
+                               'require(gasStart <= constant)': 2354355},
+  'depositFor0x4a042674': { 'require(gasStart - gasEnd <= constant)': 2826236,
+                            'require(gasStart <= constant)': 4222028},
+  'initialize0x485cc955': {},
+  'setCap0x47786d37': {},
+  'setController0x92eefe9b': {},
+  'setConverter0xb23fa562': { 'require(gasStart - gasEnd <= constant)': 48620,
+                              'require(gasStart <= constant)': 83989},
+  'setEarnLowerlimit0x909d3f4c': { 'require(gasStart - gasEnd <= constant)': 22509,
+                                   'require(gasStart <= constant)': 44864},
+  'setInput2Want0x5c0dc697': { 'require(gasStart - gasEnd <= constant)': 23552,
+                               'require(gasStart <= constant)': 46680},
+  'setInputTokens0xa1d79351': {},
+  'setMin0x45dc3dd8': {},
+  'setShareConverter0x9b74c68c': { 'require(gasStart - gasEnd <= constant)': 23460,
+                                   'require(gasStart <= constant)': 46361},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 87600,
+                          'require(gasStart <= constant)': 3665892},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 71819,
+                              'require(gasStart <= constant)': 3628559},
+  'whitelistContract0x3a0e6d43': {},
+  'withdrawFor0x39bb96a8': { 'require(gasStart - gasEnd <= constant)': 2392364,
+                             'require(gasStart <= constant)': 3609706}}
+exploitTx:  0x46a03488247425f845e444b9c10b52ba3c14927c687d38287c0faddc7471150a
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	2	
+5 sampled FPs for require(gasStart <= constant)
+0xc9b95411cee956873f335462d6da0f5f4e15e90319a0c53d412c50ef40e17079
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xa87fff3aeef29cc6d618dfb2354d37b03c6d3f9ddf04588b466a2fd9b8280233
+0xc9b95411cee956873f335462d6da0f5f4e15e90319a0c53d412c50ef40e17079
+len(txList3):  269
+====== benchmark Yearn1: 
+==invariant map: 
+{ 'deposit0xd0e30db0': { 'require(gasStart - gasEnd <= constant)': 3256062,
+                         'require(gasStart <= constant)': 4360560},
+  'setGovernance0xab033ea9': {},
+  'setStrategistReward0x0d596cdf': {},
+  'setTreasuryFee0x77e741c7': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  15
+====== benchmark Yearn1_interface: 
+==invariant map: 
+{ 'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 115925,
+                         'require(gasStart <= constant)': 6348635},
+  'deposit0xb6b55f25': { 'require(gasStart - gasEnd <= constant)': 498512,
+                         'require(gasStart <= constant)': 6349097},
+  'depositAll0xde5f6268': { 'require(gasStart - gasEnd <= constant)': 502272,
+                            'require(gasStart <= constant)': 6349310},
+  'earn0xd389800f': { 'require(gasStart - gasEnd <= constant)': 991891,
+                      'require(gasStart <= constant)': 1544901},
+  'setGovernance0xab033ea9': {},
+  'setMin0x45dc3dd8': {},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 124294,
+                          'require(gasStart <= constant)': 7508544},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 137874,
+                              'require(gasStart <= constant)': 7150715},
+  'withdraw0x2e1a7d4d': { 'require(gasStart - gasEnd <= constant)': 3430230,
+                          'require(gasStart <= constant)': 7213063},
+  'withdrawAll0x853828b6': { 'require(gasStart - gasEnd <= constant)': 3352064,
+                             'require(gasStart <= constant)': 6349308}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+8	8	
+5 sampled FPs for require(gasStart <= constant)
+0xcec5804c0413ab9785552f780eeb75b081d1f1bf7f01b1aaa61cd27f7ec6e467
+0x49d62533adb1131d476ff0a4f67d5a41ba1e65c2ceeb1de54eb8ad9d4f87bf8e
+0xc7433481e21cc58827973122e29b823761cd4c28e1d34b0335448205f0611ffc
+0x6e9df07fb3d355478b90bb47a3f14e08659f4d8d4ade8e549483b60e3ef40ee0
+0x3f64ce7e0e690445d5453b0351be2499a10521560d3b249c404d8a4d6e48a8cb
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x468de3c9fedaa52a0c26f716d8247d5338fa931e54c96f7db9439ccccf5a876b
+0x9fde19f09c05886827b820b212f594d29b21b5c4e5a82a36d351d8ac6c8eb7f0
+0x49d62533adb1131d476ff0a4f67d5a41ba1e65c2ceeb1de54eb8ad9d4f87bf8e
+0xc7433481e21cc58827973122e29b823761cd4c28e1d34b0335448205f0611ffc
+0x7b644251877b91e16b448bbdd0611a991f061503b9632c4b75e22621bd6e3714
+len(txList3):  24979
+====== benchmark VisorFi: 
+==invariant map: 
+{ 'deposit0x2e2d2984': { 'require(gasStart - gasEnd <= constant)': 227827,
+                         'require(gasStart <= constant)': 357209},
+  'snapshot0x9711715a': {},
+  'transferOwnership0xf2fde38b': {},
+  'transferTokenOwnership0x21e6b53d': {},
+  'withdraw0xb460af94': { 'require(gasStart - gasEnd <= constant)': 137703,
+                          'require(gasStart <= constant)': 220085}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9971666 - 9654218 = 317448 > 227827
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9619534 - 9356679 = 262855 > 227827
+exploitTx:  0x69272d8c84d67d1da2f6425b339192fa472898dce936f24818fda415c1c1ff3f
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  1692
+====== benchmark UmbrellaNetwork: 
+==invariant map: 
+{ 'exit0xe9fad8ee': {},
+  'notifyRewardAmount0x3c6b16ab': {},
+  'stake0xa694fc3a': { 'require(gasStart - gasEnd <= constant)': 114178,
+                       'require(gasStart <= constant)': 158516}}
+exploitTx:  0x33479bcfbc792aa0f8103ab0d7a3784788b5b0e1467c81ffbed1b7682660b4fa
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  58
+====== benchmark PickleFi: 
+==invariant map: 
+{ '': { 'require(gasStart - gasEnd <= constant)': 41784,
+        'require(gasStart <= constant)': 2555914},
+  'approveJarConverter0xcb35508a': {},
+  'approveStrategy0xc494448e': { 'require(gasStart - gasEnd <= constant)': 23730,
+                                 'require(gasStart <= constant)': 978058},
+  'earn0xb02bf4b9': { 'require(gasStart - gasEnd <= constant)': 536770,
+                      'require(gasStart <= constant)': 1936270},
+  'setConvenienceFee0x1dfd45af': {},
+  'setDevFund0xae4db919': {},
+  'setGovernance0xab033ea9': { 'require(gasStart - gasEnd <= constant)': 7073,
+                               'require(gasStart <= constant)': 18230},
+  'setJar0x46560bfb': {'require(gasStart <= constant)': 978025},
+  'setStrategy0x72cb5d97': { 'require(gasStart - gasEnd <= constant)': 2976379,
+                             'require(gasStart <= constant)': 4541607},
+  'setTimelock0xbdacb303': {},
+  'swapExactJarForJar0xff3f1869': { 'require(gasStart - gasEnd <= constant)': 4083900,
+                                    'require(gasStart <= constant)': 5573387},
+  'withdraw0xf3fef3a3': { 'require(gasStart - gasEnd <= constant)': 1900172,
+                          'require(gasStart <= constant)': 10784894}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+11264758 - 7020858 = 4243900 > 4083900
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0xe72d4e7ba9b5af0cf2a8cfb1e30fd9f388df0ab3da79790be842bfbed11087b0
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	1	
+5 sampled FPs for require(gasStart <= constant)
+0x7cdf96df591718d53e275053352c9af8b546f6b32866a563b57804c074d22212
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x7cdf96df591718d53e275053352c9af8b546f6b32866a563b57804c074d22212
+len(txList3):  2116
+====== benchmark Eminence: 
+==invariant map: 
+{ 'addGM0x12d8d1a9': {},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 37631,
+                         'require(gasStart <= constant)': 6348669},
+  'award0x5d8a776e': { 'require(gasStart - gasEnd <= constant)': 36722,
+                       'require(gasStart <= constant)': 374585},
+  'buy0xd6febde8': { 'require(gasStart - gasEnd <= constant)': 82788,
+                     'require(gasStart <= constant)': 1978386},
+  'claim0xaad3ec96': { 'require(gasStart - gasEnd <= constant)': 38942,
+                       'require(gasStart <= constant)': 1463226},
+  'increaseAllowance0x39509351': { 'require(gasStart - gasEnd <= constant)': 23474,
+                                   'require(gasStart <= constant)': 6348694},
+  'sell0xd79875eb': { 'require(gasStart - gasEnd <= constant)': 66365,
+                      'require(gasStart <= constant)': 453026},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 67051,
+                          'require(gasStart <= constant)': 3307408},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 53004,
+                              'require(gasStart <= constant)': 969442}}
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1936717 - 1846440 = 90277 > 82788
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1874044 - 1821520 = 52524 > 37631
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1766621 - 1692084 = 74537 > 66365
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1651155 - 1594486 = 56669 > 36722
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1468495 - 1398451 = 70044 > 66365
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1356912 - 1304841 = 52071 > 36722
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1062416 - 1014946 = 47470 > 36722
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x3503253131644dd9f52802d071de74e456570374d586ddd640159cf6fb9b8ad8
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+4	2	
+5 sampled FPs for require(gasStart <= constant)
+0xd4ff5a0a4e149f3aa6d1da26783964150130f10a1a65b090b1c15c0923d82fe9
+0x5d2ea0d50ce677ce7360e9a1a4059657152e347c49ceee4c66632c4d53f7c41b
+0xdad1a22514a519b5cc80addfd4e3e9bd6984f195df828f8f72776561573239b8
+0xd699a5b7f723dd8e77f675587314c620a1680e3f7c96142a9b7fefea34d19fbb
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xf495de5be8b00dbe3630c69a2d042159f3d57e180c877509e830d25664489046
+0x5d2ea0d50ce677ce7360e9a1a4059657152e347c49ceee4c66632c4d53f7c41b
+len(txList3):  19865
+====== benchmark Opyn: 
+no gas
+0x3ab040a20dba4893ff036e6c7becdf6ac29e5186f66618c4d86012192ac46237
+==invariant map: 
+{ '': { 'require(gasStart - gasEnd <= constant)': 15449,
+        'require(gasStart <= constant)': 32894},
+  'addAndSellERC20CollateralOption0x3226052d': {},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 25197,
+                         'require(gasStart <= constant)': 129505},
+  'burnOTokens0xeaa376b5': {},
+  'createAndSellERC20CollateralOption0xc56749ce': {},
+  'createERC20CollateralOption0x52f89fe3': { 'require(gasStart - gasEnd <= constant)': 219847,
+                                             'require(gasStart <= constant)': 340743},
+  'removeCollateral0x3237c158': {},
+  'setDetails0xb7b090ee': {},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 31481,
+                          'require(gasStart <= constant)': 78002},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 41251,
+                              'require(gasStart <= constant)': 172861},
+  'transferOwnership0xf2fde38b': {},
+  'updateParameters0xee1eab4f': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+730881 - 689199 = 41682 > 31481
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0xa858463f30a08c6f3410ed456e59277fbe62ff14225754d2bb0b4f6a75fdc8ad
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  67
+====== benchmark IndexFi: 
+==invariant map: 
+{ 'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 181923,
+                         'require(gasStart <= constant)': 9894439},
+  'exitPool0xb02f0b73': { 'require(gasStart - gasEnd <= constant)': 941269,
+                          'require(gasStart <= constant)': 2544171},
+  'exitswapExternAmountOut0x02c96748': { 'require(gasStart - gasEnd <= constant)': 134417,
+                                         'require(gasStart <= constant)': 136521},
+  'exitswapPoolAmountIn0x46ab38f1': { 'require(gasStart - gasEnd <= constant)': 307432,
+                                      'require(gasStart <= constant)': 897434},
+  'joinPool0x4f69c0d4': { 'require(gasStart - gasEnd <= constant)': 589724,
+                          'require(gasStart <= constant)': 1731963},
+  'joinswapExternAmountIn0x5db34277': { 'require(gasStart - gasEnd <= constant)': 264317,
+                                        'require(gasStart <= constant)': 903851},
+  'joinswapPoolAmountOut0x6d06dfa0': { 'require(gasStart - gasEnd <= constant)': 128903,
+                                       'require(gasStart <= constant)': 334828},
+  'reindexTokens0xc3f46810': { 'require(gasStart - gasEnd <= constant)': 137988,
+                               'require(gasStart <= constant)': 434554},
+  'reweighTokens0x5d5e8ce7': { 'require(gasStart - gasEnd <= constant)': 63393,
+                               'require(gasStart <= constant)': 338786},
+  'setExitFeeRecipient0xf9f97c98': { 'require(gasStart - gasEnd <= constant)': 34341,
+                                     'require(gasStart <= constant)': 534071},
+  'setSwapFee0x34e19907': { 'require(gasStart - gasEnd <= constant)': 13067,
+                            'require(gasStart <= constant)': 408787},
+  'swapExactAmountIn0x8201aa3f': { 'require(gasStart - gasEnd <= constant)': 324939,
+                                   'require(gasStart <= constant)': 9645841},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 213703,
+                          'require(gasStart <= constant)': 11781311},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 169392,
+                              'require(gasStart <= constant)': 9652375}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9214389 - 8931186 = 283203 > 137988
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x44aad3b853866468161735496a5d9cc961ce5aa872924c5d78673076b1cd95aa
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+45	5	
+5 sampled FPs for require(gasStart <= constant)
+0xe90bc17193f2fff73eb64b103700bb6db5364af6cf4f81252420021861101a85
+0x1b95c2de9e08cf776b12c0bae3f540b82460c260c3e66ca40dec2d4d20075dcf
+0xc4a6de5ef374de78343e913a6eba5dcf6caf82b1f7beec9be016ae4657915c7b
+0x5248a1c683c539b55aad1f3cc920cd44f3649c54d534c79f013cae9c707e9f5e
+0x5b0c4daf9549f5030d164600f33223103e0de3ee004f7880e2a794203e07d935
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xf2682b97c022296779b55f78ad44b52ba7a6f6de2dbb86a7dc2a98c21e6b4aad
+0x8f9e1b7f503099e1ce1e0847c176fb8549bd57984342c471c1a36751d6ebf072
+0xcc602b83899b738dcec50133241e6cd7797c48bc1ac56975c0e586fe7ffc5a78
+0xe90bc17193f2fff73eb64b103700bb6db5364af6cf4f81252420021861101a85
+0x51e89702b6b9713b3f2fd12c1d8bc661aa3b05c8312c254040a6b20398b4ead2
+len(txList3):  18422
+====== benchmark RevestFi: 
+==invariant map: 
+{ 'createFNFT0x8717293d': { 'require(gasStart - gasEnd <= constant)': 269286,
+                            'require(gasStart <= constant)': 11611184},
+  'depositToken0xa3606b90': { 'require(gasStart - gasEnd <= constant)': 20447,
+                              'require(gasStart <= constant)': 52991},
+  'handleMultipleDeposits0x375d59ba': { 'require(gasStart - gasEnd <= constant)': 8779,
+                                        'require(gasStart <= constant)': 10965},
+  'transferOwnership0xf2fde38b': {},
+  'withdrawToken0x5d61210d': { 'require(gasStart - gasEnd <= constant)': 250918,
+                               'require(gasStart <= constant)': 496942}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1049748 - 1026416 = 23332 > 20447
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1027702 - 962862 = 64840 > 8779
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	9	
+5 sampled FPs for require(gasStart <= constant)
+0x1ec775935d5abdd2e708cc69b25b8eeeaa76234adda8429a98e586e7436d9898
+0x1c7e86a4fd67191ffdea0a31a0097eee3047b57310209fe0c975f4129100ae13
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x1c7e86a4fd67191ffdea0a31a0097eee3047b57310209fe0c975f4129100ae13
+0x3efc5a817e858df181bbca0e83205eff6432572e0989366b1f2e60ccc14ed7d1
+0xccb3cde9baf90710654fd977e21d2b2be81b137f54e3f7426dc46bf0126f6886
+0x655858bd3c7bfed29962873dd9e772d5663195155f34c4ff56fbb4a11da51166
+0x559d0f499cf172f9de39a572da22c80e5bf0c8e2a62e81ad9f6426d49d4b4cb0
+len(txList3):  1460
+====== benchmark RevestFi_interface: 
+==invariant map: 
+{ 'depositAdditionalToFNFT0x5dcb7ab2': { 'require(gasStart - gasEnd <= constant)': 109044,
+                                         'require(gasStart <= constant)': 109044},
+  'extendFNFTMaturity0x93a9003c': {},
+  'mintAddressLock0x02e236bc': { 'require(gasStart - gasEnd <= constant)': 4025386,
+                                 'require(gasStart <= constant)': 11912942},
+  'mintTimeLock0x5a7c08f0': { 'require(gasStart - gasEnd <= constant)': 3242581,
+                              'require(gasStart <= constant)': 4926295},
+  'mintValueLock0xbdb132d5': { 'require(gasStart - gasEnd <= constant)': 569224,
+                               'require(gasStart <= constant)': 974788},
+  'transferOwnership0xf2fde38b': {},
+  'unlockFNFT0x22caa234': { 'require(gasStart - gasEnd <= constant)': 66340,
+                            'require(gasStart <= constant)': 66340},
+  'withdrawFNFT0xf2465f09': { 'require(gasStart - gasEnd <= constant)': 369141,
+                              'require(gasStart <= constant)': 578539}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1109598 - 976563 = 133035 > 109044
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	9	
+5 sampled FPs for require(gasStart <= constant)
+0x1ec775935d5abdd2e708cc69b25b8eeeaa76234adda8429a98e586e7436d9898
+0x1c7e86a4fd67191ffdea0a31a0097eee3047b57310209fe0c975f4129100ae13
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x0d970581af26e27ef6b09a80fe409f6af2fc9c501d6aaae5004acfe5cd0964ba
+0x655858bd3c7bfed29962873dd9e772d5663195155f34c4ff56fbb4a11da51166
+0x559d0f499cf172f9de39a572da22c80e5bf0c8e2a62e81ad9f6426d49d4b4cb0
+0x1ec775935d5abdd2e708cc69b25b8eeeaa76234adda8429a98e586e7436d9898
+0x1c7e86a4fd67191ffdea0a31a0097eee3047b57310209fe0c975f4129100ae13
+len(txList3):  1463
+====== benchmark DODO: 
+==invariant map: 
+{ 'buyShares0x4c85b425': {},
+  'init0x5039972a': {},
+  'sellBase0xbd6015b4': { 'require(gasStart - gasEnd <= constant)': 102609,
+                          'require(gasStart <= constant)': 486201},
+  'sellQuote0xdd93f59a': { 'require(gasStart - gasEnd <= constant)': 95366,
+                           'require(gasStart <= constant)': 338650}}
+exploitTx:  0x395675b56370a9f5fe8b32badfa80043f5291443bd6c8273900476880fb5221e
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+4	3	
+5 sampled FPs for require(gasStart <= constant)
+0x68541d8cf34015dd31c9f1d379705d145ea35c8526a3c3d1fd14e1a0d3affe08
+0xcf804e15f529673eeff1ace704deac6e2b522ffb25fc150579a2b7d2a8776821
+0x0bb22ab91ee9bdaa91df4347661af78897a00cf450d53141a385c9d1687af65f
+0x9eb53bf2d908f651210e39557a85c8f564cf1a50ec37d3b54b43382e7723f3e9
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xcf804e15f529673eeff1ace704deac6e2b522ffb25fc150579a2b7d2a8776821
+0x0bb22ab91ee9bdaa91df4347661af78897a00cf450d53141a385c9d1687af65f
+0x9eb53bf2d908f651210e39557a85c8f564cf1a50ec37d3b54b43382e7723f3e9
+len(txList3):  41
+====== benchmark Punk_1: 
+==invariant map: 
+{ 'initialize0xcc2a9a5b': {},
+  'invest0xe8b5e51f': { 'require(gasStart - gasEnd <= constant)': 212948,
+                        'require(gasStart <= constant)': 695683},
+  'withdrawTo0xc86283c8': { 'require(gasStart - gasEnd <= constant)': 186329,
+                            'require(gasStart <= constant)': 379406}}
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  28
+====== benchmark Punk_2: 
+==invariant map: 
+{ 'initialize0xcc2a9a5b': {},
+  'invest0xe8b5e51f': { 'require(gasStart - gasEnd <= constant)': 223401,
+                        'require(gasStart <= constant)': 763916},
+  'withdrawTo0xc86283c8': { 'require(gasStart - gasEnd <= constant)': 192429,
+                            'require(gasStart <= constant)': 683058}}
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  42
+====== benchmark Punk_3: 
+==invariant map: 
+{ 'initialize0xcc2a9a5b': {},
+  'invest0xe8b5e51f': { 'require(gasStart - gasEnd <= constant)': 218225,
+                        'require(gasStart <= constant)': 750571},
+  'withdrawTo0xc86283c8': { 'require(gasStart - gasEnd <= constant)': 179231,
+                            'require(gasStart <= constant)': 683038}}
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  37
+====== benchmark BeanstalkFarms: 
+==invariant map: 
+{ 'add_liquidity0x0b4c7e4d': { 'require(gasStart - gasEnd <= constant)': 188775,
+                               'require(gasStart <= constant)': 280745},
+  'add_liquidity0x0c3e4b54': { 'require(gasStart - gasEnd <= constant)': 239297,
+                               'require(gasStart <= constant)': 1111875},
+  'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 28098,
+                         'require(gasStart <= constant)': 52424},
+  'exchange0x3df02124': { 'require(gasStart - gasEnd <= constant)': 175481,
+                          'require(gasStart <= constant)': 712540},
+  'exchange0xddc1f59d': { 'require(gasStart - gasEnd <= constant)': 141027,
+                          'require(gasStart <= constant)': 164605},
+  'exchange_underlying0x44ee1986': { 'require(gasStart - gasEnd <= constant)': 262683,
+                                     'require(gasStart <= constant)': 495193},
+  'exchange_underlying0xa6417ed6': { 'require(gasStart - gasEnd <= constant)': 372425,
+                                     'require(gasStart <= constant)': 1480496},
+  'initialize0xd178231c': {},
+  'remove_liquidity0x5b36389c': { 'require(gasStart - gasEnd <= constant)': 150507,
+                                  'require(gasStart <= constant)': 619823},
+  'remove_liquidity_one_coin0x081579a5': { 'require(gasStart - gasEnd <= constant)': 177527,
+                                           'require(gasStart <= constant)': 486303},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 36258,
+                          'require(gasStart <= constant)': 242062},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 45026,
+                              'require(gasStart <= constant)': 654444},
+  'withdraw_admin_fees0x30c54085': { 'require(gasStart - gasEnd <= constant)': 203661,
+                                     'require(gasStart <= constant)': 229421}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8975366 - 8812408 = 162958 > 28098
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5519494 - 5275898 = 243596 > 188775
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5019569 - 4932411 = 87158 > 45026
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4503477 - 4409896 = 93581 > 36258
+exploitTx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+12	10	
+5 sampled FPs for require(gasStart <= constant)
+0x3505d6d3faabfee4aec35a996b2d945757946e73ba0e0057fe8b69226770532b
+0x5a22e7d5581df1bb33856a8372f3d4900d7953e321110775f6bbb2b01e927fe5
+0xb7130c45ae1f41dbe5e7936f593629c42e98ba98bf1b0ba081c50a979b102d93
+0x8345ef1afafb0bf6312b27d8383220e64781dd0cbae7abaddf9c397454076bfc
+0x188a085fbaafd9a583facf0949e1b972eb409ac47e196d6cf56e280edf6e8b46
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x9e29783f5bf4ada6b520d0950debcc6a505e00d06be2d577bce6bc53503a8df2
+0xc73433b023d8903c98aa61bdd797b73fdf2ef1150e0120d777ca2de1e0e51580
+0x188a085fbaafd9a583facf0949e1b972eb409ac47e196d6cf56e280edf6e8b46
+0xd15a74964c3ab6a0f604cb19235783ddd1386dce2a74555f7e2f4a9517873242
+0x2debc39485952b095126258bd6e257f6b26b74f4e249a602c4422e5d95f287b9
+len(txList3):  5661
+====== benchmark BeanstalkFarms_interface: 
+==invariant map: 
+{ 'emergencyCommit0x73015684': { 'require(gasStart - gasEnd <= constant)': 781285,
+                                 'require(gasStart <= constant)': 781285},
+  'unvoteAll0xa461468c': {},
+  'vote0x9094c763': { 'require(gasStart - gasEnd <= constant)': 48058,
+                      'require(gasStart <= constant)': 90665},
+  'voteAll0x09b12cde': { 'require(gasStart - gasEnd <= constant)': 117040,
+                         'require(gasStart <= constant)': 183351},
+  'voteUnvoteAll0xe349978d': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4888787 - 4774559 = 114228 > 48058
+Successfully stops the exploit using require(gasStart <= constant)
+exploitTx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  299

@@ -1,0 +1,129 @@
+==========================================================================================
+==========================================  RQ1 ==========================================
+==========================================================================================
+
+
+ RQ1 Table
+RoninNetwork,66742,28603,0,\xmark,\xmark,\xmark,\xmark,\xmark,\xmark,\xmark,1*,6,0,-,-,-,-,-,1,2*,0,1,2*,113,33*,
+HarmonyBridge,22505,9644,2,0,\xmark,\xmark,0,0,0,\xmark,271,270,0,-,-,-,-,-,1,1*,0,1,1*,1,3*,
+Nomad,10939,4688,0,\xmark,0,\xmark,\xmark,0,0,\xmark,0,1,0,-,-,-,-,-,-,0,0,0,0,0,0*,
+PolyNetwork,31157,13352,0,0,\xmark,0,\xmark,0,\xmark,2,2,0,0,-,-,-,-,-,0,-,-,0,0,0,0,
+bZx2,498,213,0*,0,5,0,5,0,0,7,3,4,0,$\emptyset$,$\emptyset$,1,0,0,-,0*,1*,0*,0,-,-,
+Warp,104,44,0,0,\xmark,0,1*,0,0,0*,3*,3*,0,-,-,-,41*,-,-,2*,0,0,2*,0,0*,
+Warp_interface,22,9,0*,0,1,0,3,-,-,0,2*,3,-,8*,4*,-,-,-,-,-,-,-,-,-,-,
+CheeseBank_1,431,184,0*,0,\xmark,0,\xmark,0,0,1,1*,8,0,13*,3*,0,61*,-,-,6*,1,4,2*,4,3*,
+CheeseBank_2,416,177,0*,0,\xmark,0,\xmark,0,0,1,2*,2*,0,18*,5*,0,14*,-,-,0*,0,0,0*,0,0*,
+CheeseBank_3,390,167,0*,0,\xmark,0,\xmark,0,0,0,3*,3,0,18*,3*,0,13,-,-,5,6,5,0,5,0*,
+InverseFi,4594,1968,0,0,0,1,1,0,0,5,1,0,0,0,0,38,321*,-,-,40*,4,29,0*,25,2*,
+CreamFi1_1,4,1,0,0,$\emptyset$,0,$\emptyset$,0,0,$\emptyset$,$\emptyset$,$\emptyset$,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+CreamFi1_2,40729,17455,90*,88,11,84,3,\xmark,\xmark,81,9,48,0,-,-,0,0,-,0,0,1,0,0,11,38,
+CreamFi2_1,890,380,0*,1,0,1,1,0,0,3,4*,4*,0,0,0,11,36*,10,-,3*,2,7,0*,0,3*,
+CreamFi2_2,629,269,0*,0,4,0,5,0,0,10,9*,7*,0,0,0,0,0*,7,-,0*,3,0,0*,0,1*,
+CreamFi2_3,183,78,3,0,7,0,10*,0,0,6*,3*,2*,0,-,-,8,0*,0,-,3,1,3,0,3,0,
+CreamFi2_4,69,29,0,0,\xmark,0,\xmark,0,0,0,0*,0*,0,0,0,-,6*,1,-,1*,0,0,1*,0,1*,
+RariCapital1,466,199,0,0,12,0,9,0*,0*,13*,3*,0*,0,-,-,-,-,-,1*,1*,0,1*,0*,-,-,
+RariCapital2_1,430,184,0*,0,0,0,0,0*,0*,2*,2*,1*,0,-,-,20*,11*,-,1*,1*,0,1*,1*,0,0*,
+RariCapital2_2,527,225,4*,0,1*,0,1,0*,0*,4*,1*,1*,0,-,-,15*,5*,3,-,2*,6,2*,0*,2*,1*,
+RariCapital2_3,283,121,0*,0,0,0,0,0,0,0,1*,2*,0,-,-,0,0,2,-,0,0,0,0,1,0*,
+RariCapital2_4,544,232,0*,0,0,0,0,0,0,1,1*,6*,0,-,-,0,0*,2,-,0*,0,0,0*,0,0*,
+XCarnival,240,102,0,7*,\xmark,6,\xmark,0,0,2*,12*,9*,0,-,-,0,5*,4,4,1,1,4,1,5,29*,
+Harvest1_fUSDT,1436,614,0*,3,0*,0,0*,0*,0*,1*,0*,0*,0,180*,0*,7*,-,-,-,16*,1,0,1*,0,1*,
+Harvest2_fUSDC,1513,648,0*,0,0*,0,0*,0*,0*,0*,0*,0*,0,225*,0*,0*,-,-,-,8*,1,0,0*,1,1*,
+ValueDeFi,207,88,0,0*,\xmark,0,\xmark,0,0*,3*,1,2,0,57*,0,65*,-,-,-,7*,1,0*,0*,0,0,
+Yearn1,471,197,0,0,\xmark,0,0*,0*,0*,0*,0*,0,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+Yearn1_interface,18682,8002,1*,0,\xmark,3,\xmark,\xmark,\xmark,0*,8*,8,0,-,-,-,-,3,-,354*,2,3*,5*,6*,147,
+VisorFi,1187,506,0*,0,\xmark,0,\xmark,0,0,0,0*,0*,0*,-,-,-,-,-,-,21,0,0,6*,0,0*,
+UmbrellaNetwork,42,17,0,2,\xmark,2,\xmark,0,0,1,0,0,0,-,-,-,-,-,-,1,3,1,0,1,0,
+PickleFi,3808,1631,0*,0,0,0,0,0,0,0*,1*,1*,0,-,-,-,-,-,-,2*,2,0,2*,-,-,
+Eminence,14413,6176,0,\xmark,\xmark,0,\xmark,0*,0*,0,4*,2*,0,-,-,1263*,-,-,-,27*,0,0*,28*,0*,5*,
+Opyn,47,20,0*,0,0*,0,0*,0*,0*,0,0*,0*,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+IndexFi,14449,6192,0,0,2,0*,1,0*,0*,1,45*,5*,0,-,-,408*,-,25*,-,1*,0,0*,0*,4*,1*,
+RevestFi,1145,490,0,0,\xmark,0,18*,0*,0*,20,2*,9*,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+RevestFi_interface,1025,438,6*,0,0*,0,18*,0*,0*,20,2*,9*,0*,-,-,-,-,-,-,-,-,-,-,-,-,
+DODO,30,12,0,0*,1,0*,\xmark,0,0,0,4,3,0,-,-,0,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+Punk_1,20,8,0*,0*,$\emptyset$,0*,$\emptyset$,-,-,2,0*,0,0,-,-,-,-,-,-,0,0,0,0,-,-,
+Punk_2,30,12,0*,0*,$\emptyset$,0*,0,-,-,\xmark,0,0,0,-,-,-,-,-,-,0,0,0,0,-,-,
+Punk_3,26,11,0*,0*,$\emptyset$,0*,$\emptyset$,-,-,2,0,0,0,-,-,-,-,-,-,0,0,0,0,-,-,
+BeanstalkFarms,4050,1735,0,0,4*,0,7,\xmark,0*,3,12*,10*,0,-,-,551*,-,-,-,14*,6,0*,1*,0*,0*,
+BeanstalkFarms_interface,215,91,0*,2,0*,2,0*,-,-,0,0*,0*,-,-,-,-,-,-,-,-,-,-,-,-,-,
+
+
+ Ratio Table
+RoninNetwork,0,\xmark,\xmark,\xmark,\xmark,\xmark,\xmark,\xmark,0*,0,0,-,-,-,-,-,0,0*,0,0,0*,0.4,0.1*,
+HarmonyBridge,0,0,\xmark,\xmark,0,0,0,\xmark,2.8,2.8,0,-,-,-,-,-,0,0*,0,0,0*,0,0*,
+Nomad,0,\xmark,0,\xmark,\xmark,0,0,\xmark,0,0,0,-,-,-,-,-,-,0,0,0,0,0,0*,
+PolyNetwork,0,0,\xmark,0,\xmark,0,\xmark,0,0,0,0,-,-,-,-,-,0,-,-,0,0,0,0,
+bZx2,0*,0,2.3,0,2.3,0,0,3.3,1.4,1.9,0,$\emptyset$,$\emptyset$,0.5,0,0,-,0*,0.5*,0*,0,-,-,
+Warp,0,0,\xmark,0,2.3*,0,0,0*,6.8*,6.8*,0,-,-,-,93.2*,-,-,4.5*,0,0,4.5*,0,0*,
+Warp_interface,0*,0,11.1,0,33.3,-,-,0,22.2*,33.3,-,88.9*,44.4*,-,-,-,-,-,-,-,-,-,-,
+CheeseBank_1,0*,0,\xmark,0,\xmark,0,0,0.5,0.5*,4.3,0,7.1*,1.6*,0,33.2*,-,-,3.3*,0.5,2.2,1.1*,2.2,1.6*,
+CheeseBank_2,0*,0,\xmark,0,\xmark,0,0,0.6,1.1*,1.1*,0,10.2*,2.8*,0,7.9*,-,-,0*,0,0,0*,0,0*,
+CheeseBank_3,0*,0,\xmark,0,\xmark,0,0,0,1.8*,1.8,0,10.8*,1.8*,0,7.8,-,-,3,3.6,3,0,3,0*,
+InverseFi,0,0,0,0.1,0.1,0,0,0.3,0.1,0,0,0,0,1.9,16.3*,-,-,2*,0.2,1.5,0*,1.3,0.1*,
+CreamFi1_1,0,0,$\emptyset$,0,$\emptyset$,0,0,$\emptyset$,$\emptyset$,$\emptyset$,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+CreamFi1_2,0.5*,0.5,0.1,0.5,0,\xmark,\xmark,0.5,0.1,0.3,0,-,-,0,0,-,0,0,0,0,0,0.1,0.2,
+CreamFi2_1,0*,0.3,0,0.3,0.3,0,0,0.8,1.1*,1.1*,0,0,0,2.9,9.5*,2.6,-,0.8*,0.5,1.8,0*,0,0.8*,
+CreamFi2_2,0*,0,1.5,0,1.9,0,0,3.7,3.3*,2.6*,0,0,0,0,0*,2.6,-,0*,1.1,0,0*,0,0.4*,
+CreamFi2_3,3.8,0,9,0,12.8*,0,0,7.7*,3.8*,2.6*,0,-,-,10.3,0*,0,-,3.8,1.3,3.8,0,3.8,0,
+CreamFi2_4,0,0,\xmark,0,\xmark,0,0,0,0*,0*,0,0,0,-,20.7*,3.4,-,3.4*,0,0,3.4*,0,3.4*,
+RariCapital1,0,0,6,0,4.5,0*,0*,6.5*,1.5*,0*,0,-,-,-,-,-,0.5*,0.5*,0,0.5*,0*,-,-,
+RariCapital2_1,0*,0,0,0,0,0*,0*,1.1*,1.1*,0.5*,0,-,-,10.9*,6*,-,0.5*,0.5*,0,0.5*,0.5*,0,0*,
+RariCapital2_2,1.8*,0,0.4*,0,0.4,0*,0*,1.8*,0.4*,0.4*,0,-,-,6.7*,2.2*,1.3,-,0.9*,2.7,0.9*,0*,0.9*,0.4*,
+RariCapital2_3,0*,0,0,0,0,0,0,0,0.8*,1.7*,0,-,-,0,0,1.7,-,0,0,0,0,0.8,0*,
+RariCapital2_4,0*,0,0,0,0,0,0,0.4,0.4*,2.6*,0,-,-,0,0*,0.9,-,0*,0,0,0*,0,0*,
+XCarnival,0,6.9*,\xmark,5.9,\xmark,0,0,2*,11.8*,8.8*,0,-,-,0,4.9*,3.9,3.9,1,1,3.9,1,4.9,28.4*,
+Harvest1_fUSDT,0*,0.5,0*,0,0*,0*,0*,0.2*,0*,0*,0,29.3*,0*,1.1*,-,-,-,2.6*,0.2,0,0.2*,0,0.2*,
+Harvest2_fUSDC,0*,0,0*,0,0*,0*,0*,0*,0*,0*,0,34.7*,0*,0*,-,-,-,1.2*,0.2,0,0*,0.2,0.2*,
+ValueDeFi,0,0*,\xmark,0,\xmark,0,0*,3.4*,1.1,2.3,0,64.8*,0,73.9*,-,-,-,8*,1.1,0*,0*,0,0,
+Yearn1,0,0,\xmark,0,0*,0*,0*,0*,0*,0,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+Yearn1_interface,0*,0,\xmark,0,\xmark,\xmark,\xmark,0*,0.1*,0.1,0,-,-,-,-,0,-,4.4*,0,0*,0.1*,0.1*,1.8,
+VisorFi,0*,0,\xmark,0,\xmark,0,0,0,0*,0*,0*,-,-,-,-,-,-,4.2,0,0,1.2*,0,0*,
+UmbrellaNetwork,0,11.8,\xmark,11.8,\xmark,0,0,5.9,0,0,0,-,-,-,-,-,-,5.9,17.6,5.9,0,5.9,0,
+PickleFi,0*,0,0,0,0,0,0,0*,0.1*,0.1*,0,-,-,-,-,-,-,0.1*,0.1,0,0.1*,-,-,
+Eminence,0,\xmark,\xmark,0,\xmark,0*,0*,0,0.1*,0*,0,-,-,20.5*,-,-,-,0.4*,0,0*,0.5*,0*,0.1*,
+Opyn,0*,0,0*,0,0*,0*,0*,0,0*,0*,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+IndexFi,0,0,0,0*,0,0*,0*,0,0.7*,0.1*,0,-,-,6.6*,-,0.4*,-,0*,0,0*,0*,0.1*,0*,
+RevestFi,0,0,\xmark,0,3.7*,0*,0*,4.1,0.4*,1.8*,0,-,-,-,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+RevestFi_interface,1.4*,0,0*,0,4.1*,0*,0*,4.6,0.5*,2.1*,0*,-,-,-,-,-,-,-,-,-,-,-,-,
+DODO,0,0*,8.3,0*,\xmark,0,0,0,33.3,25,0,-,-,0,-,-,-,$\emptyset$,$\emptyset$,-,-,-,-,
+Punk_1,0*,0*,$\emptyset$,0*,$\emptyset$,-,-,25,0*,0,0,-,-,-,-,-,-,0,0,0,0,-,-,
+Punk_2,0*,0*,$\emptyset$,0*,0,-,-,\xmark,0,0,0,-,-,-,-,-,-,0,0,0,0,-,-,
+Punk_3,0*,0*,$\emptyset$,0*,$\emptyset$,-,-,18.2,0,0,0,-,-,-,-,-,-,0,0,0,0,-,-,
+BeanstalkFarms,0,0,0.2*,0,0.4,\xmark,0*,0.2,0.7*,0.6*,0,-,-,31.8*,-,-,-,0.8*,0.3,0*,0.1*,0*,0*,
+BeanstalkFarms_interface,0*,2.2,0*,2.2,0*,-,-,0,0*,0*,-,-,-,-,-,-,-,-,-,-,-,-,-,
+
+
+ Summary Table
+require(gasStart-gasEnd<=c)
+onlyEOA isSenderOwner isOriginOwner isSenderManager isOriginManager SHA(sender,block) SHA(origin,block) lastUpdate require(gasStart<=c) require(gasStart-gasEnd<=c) NonReentrantLocks oracle 0.2 oracle deviation totalsupply totalborrow MappingUpperBound callValueUpperBound dataFlowUpperBound dataFlowLowerBound tokenInCap tokenOutCap tokenInRatioCap tokenOutRatioCap 
+42 39 22 39 25 33 33 37 41 41 40 11 11 21 16 11 7 33 33 34 34 28 28 
+23 6 7 5 9 11 13 12 30 23 2 7 6 8 12 1 2 22 1 9 22 5 22 
+15 4 6 3 8 9 11 10 18 15 2 5 4 7 6 1 2 17 1 8 17 5 15 
+0.2 0.6 1.8 0.5 2.6 0.0 0.0 2.4 2.4 2.6 0.0 22.3 4.6 7.9 12.6 1.5 0.7 1.6 0.9 0.7 0.4 0.8 1.4 
+==========================================================================================
+==========================================  RQ3 ==========================================
+==========================================================================================
+========================================
+highestPrevented:  23
+((onlyEOA ∧ (require(gasStart-gasEnd<=c) ∧ dataFlowUpperBound)), 3.992561633243208)
+hacks blocked 
+['RoninNetwork', 'HarmonyBridge', 'bZx2', 'Warp', 'CheeseBank', 'InverseFi', 'CreamFi1', 'CreamFi2', 'RariCapital1', 'RariCapital2', 'XCarnival', 'Harvest1', 'Harvest2', 'ValueDeFi', 'Yearn1', 'VisorFi', 'PickleFi', 'Eminence', 'Opyn', 'IndexFi', 'RevestFi', 'Punk', 'BeanstalkFarms']
+((onlyEOA ∧ (dataFlowUpperBound ∧ require(gasStart-gasEnd<=c))), 3.992561633243208)
+((require(gasStart-gasEnd<=c) ∧ (onlyEOA ∧ dataFlowUpperBound)), 3.992561633243208)
+((require(gasStart-gasEnd<=c) ∧ (dataFlowUpperBound ∧ onlyEOA)), 3.992561633243208)
+((dataFlowUpperBound ∧ (onlyEOA ∧ require(gasStart-gasEnd<=c))), 3.992561633243208)
+((dataFlowUpperBound ∧ (require(gasStart-gasEnd<=c) ∧ onlyEOA)), 3.992561633243208)
+(((onlyEOA ∧ require(gasStart-gasEnd<=c)) ∧ dataFlowUpperBound), 3.992561633243208)
+(((onlyEOA ∧ dataFlowUpperBound) ∧ require(gasStart-gasEnd<=c)), 3.992561633243208)
+(((require(gasStart-gasEnd<=c) ∧ onlyEOA) ∧ dataFlowUpperBound), 3.992561633243208)
+(((require(gasStart-gasEnd<=c) ∧ dataFlowUpperBound) ∧ onlyEOA), 3.992561633243208)
+(((dataFlowUpperBound ∧ onlyEOA) ∧ require(gasStart-gasEnd<=c)), 3.992561633243208)
+(((dataFlowUpperBound ∧ require(gasStart-gasEnd<=c)) ∧ onlyEOA), 3.992561633243208)
+========================================
+highestPreventedUnder100:  20
+((onlyEOA ∧ (SHA(origin,block) v dataFlowUpperBound)), 0.2847864474558773)
+hacks blocked 
+['RoninNetwork', 'bZx2', 'Warp', 'CheeseBank', 'CreamFi1', 'CreamFi2', 'RariCapital1', 'RariCapital2', 'Harvest1', 'Harvest2', 'ValueDeFi', 'Yearn1', 'VisorFi', 'PickleFi', 'Eminence', 'Opyn', 'IndexFi', 'RevestFi', 'Punk', 'BeanstalkFarms']
+((onlyEOA ∧ (dataFlowUpperBound v SHA(origin,block))), 0.2847864474558773)
+(((SHA(origin,block) v dataFlowUpperBound) ∧ onlyEOA), 0.2847864474558773)
+(((dataFlowUpperBound v SHA(origin,block)) ∧ onlyEOA), 0.2847864474558773)

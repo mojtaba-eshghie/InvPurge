@@ -1,0 +1,2349 @@
+RariCapital2_1 has one function call with several transfers
+Yearn1 has one function call with several transfers
+Eminence has one function call with several transfers
+Opyn has one function call with several transfers
+
+
+
+
+
+
+
+
+
+Invariant: access control
+====== benchmark RoninNetwork: 
+len(training set):  66742
+func withdrawERC20For0x993e1c42 has more than 5 senders
+func withdrawERC20For0x993e1c42 has more than 5 origins
+func depositEthFor0xeee3f07a has more than 5 senders
+func depositEthFor0xeee3f07a has more than 5 origins
+func depositERC20For0x85eb3a35 has more than 5 senders
+func depositERC20For0x85eb3a35 has more than 5 origins
+==invariant map: 
+{ 'depositERC20For0x85eb3a35': {'require(origin==sender)': False},
+  'depositEthFor0xeee3f07a': {'require(origin==sender)': False},
+  'withdrawERC20For0x993e1c42': {'require(origin==sender)': True}}
+len(testing set):  28603
+exploitTx:  0xc28fad5e8d5e0ce6a2eaf67b6687be5d58113e16be590824d6cfa1a94467d0b7
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	N/A	N/A	N/A	N/A		66742	28603
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  95345
+====== benchmark HarmonyBridge: 
+len(training set):  22505
+func lockEth0xb6569195 has more than 5 senders
+func lockEth0xb6569195 has more than 5 origins
+func unlockEth0x973ff2e0 has only 1 sender
+==invariant map: 
+{ 'lockEth0xb6569195': {'require(origin==sender)': True},
+  'unlockEth0x973ff2e0': { 'isOriginManager': [ '0x812d8622c6f3c45959439e7ede3c580da06f8f25',
+                                                '0x48bd0666b995353d9451ec9f897e2d03cfaf50ce',
+                                                '0x3b6c5555af7af12f67613abd4e9addc7249c4682',
+                                                '0xc60804f252b3f624257d62b88ae0643818767a9d'],
+                           'isSenderOwner': '0x715cdda5e9ad30a0ced14940f9997ee611496de6',
+                           'require(origin==sender)': False}}
+len(testing set):  9644
+exploitTx:  0x27981c7289c372e601c9475e5b5466310be18ed10b59d1ac840145f6e7804c97
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+2	0	N/A	N/A	0		22505	9644
+5 sampled FPs for require(origin==sender)
+0x5c0197ca34a57be85b6679fde7449e5dc885961356502c7766fbcb3319f790e2
+0xe3bae63d803795209cfccf470ee7c47263e20dd84eedc56c5aed75ce53131dee
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  32149
+====== benchmark Nomad: 
+len(training set):  10939
+func send0xa9bd1226 has more than 5 senders
+func send0xa9bd1226 has more than 5 origins
+func handle0xab2dc3f5 has more than 5 origins
+==invariant map: 
+{ 'handle0xab2dc3f5': { 'isSenderManager': [ '0x5bae47bf29f4e9b1e275c0b427b84c4daa30033a',
+                                             '0x049b51e531fd8f90da6d92ea83dc4125002f20ef',
+                                             '0xef989866b66a491e7b6c7473d73b589450d0f766',
+                                             '0x5d94309e5a0090b165fa4181519701637b6daeba'],
+                        'require(origin==sender)': False},
+  'send0xa9bd1226': {'require(origin==sender)': False}}
+len(testing set):  4688
+exploitTx:  0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	N/A	0	N/A	N/A		10939	4688
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  15627
+====== benchmark PolyNetwork: 
+len(training set):  31157
+func bindProxyHash0x379b98f6 has only 1 sender
+func bindProxyHash0x379b98f6 has only 1 origin
+func bindAssetHash0x3348f63b has only 1 sender
+func bindAssetHash0x3348f63b has only 1 origin
+func setManagerProxy0xaf9980f0 has only 1 sender
+func setManagerProxy0xaf9980f0 has only 1 origin
+func lock0x84a6d055 has more than 5 senders
+func lock0x84a6d055 has more than 5 origins
+func unlock0x06af4b9f has only 1 sender
+func unlock0x06af4b9f has more than 5 origins
+==invariant map: 
+{ 'bindAssetHash0x3348f63b': { 'isOriginOwner': '0x8b35064b158634458fd53a861d68eb84152e4106',
+                               'isSenderOwner': '0x8b35064b158634458fd53a861d68eb84152e4106',
+                               'require(origin==sender)': True},
+  'bindProxyHash0x379b98f6': { 'isOriginOwner': '0x8b35064b158634458fd53a861d68eb84152e4106',
+                               'isSenderOwner': '0x8b35064b158634458fd53a861d68eb84152e4106',
+                               'require(origin==sender)': True},
+  'lock0x84a6d055': {'require(origin==sender)': False},
+  'setManagerProxy0xaf9980f0': { 'isOriginOwner': '0x8b35064b158634458fd53a861d68eb84152e4106',
+                                 'isSenderOwner': '0x8b35064b158634458fd53a861d68eb84152e4106',
+                                 'require(origin==sender)': True},
+  'unlock0x06af4b9f': { 'isSenderOwner': '0x838bf9e95cb12dd76a54c9f9d2e3082eaf928270',
+                        'require(origin==sender)': False}}
+len(testing set):  13352
+exploitTx:  0xad7a2c70c958fcd3effbf374d0acf3774a9257577625ae4c838e24b0de17602a
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		31157	13352
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  44509
+====== benchmark bZx2: 
+len(training set):  498
+func mint0x40c10f19 has more than 5 senders
+func mint0x40c10f19 has more than 5 origins
+func mintWithEther0x8f6ede1f has more than 5 senders
+func mintWithEther0x8f6ede1f has more than 5 origins
+func burn0x9dc29fac has more than 5 senders
+func burn0x9dc29fac has more than 5 origins
+func burnToEther0x81a6b250 has more than 5 senders
+func burnToEther0x81a6b250 has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+func marginTradeFromDeposit0x1c5d1da5 has more than 5 senders
+func marginTradeFromDeposit0x1c5d1da5 has more than 5 origins
+func updateSettings0x284e2f56 has only 1 sender
+func updateSettings0x284e2f56 has only 1 origin
+func borrowTokenFromDeposit0xcfb65bb9 has more than 5 senders
+func borrowTokenFromDeposit0xcfb65bb9 has more than 5 origins
+==invariant map: 
+{ 'approve0x095ea7b3': { 'isOriginManager': [ '0xef764bac8a438e7e498c2e5fccf0f174c3e3f8db',
+                                              '0xfdcbced5d0cceb70bd63163206486ca79c89647a',
+                                              '0xa93a7294c9807f0d32a9b674781662d75d6326ec'],
+                         'isSenderManager': [ '0xef764bac8a438e7e498c2e5fccf0f174c3e3f8db',
+                                              '0xfdcbced5d0cceb70bd63163206486ca79c89647a',
+                                              '0xa93a7294c9807f0d32a9b674781662d75d6326ec'],
+                         'require(origin==sender)': True},
+  'borrowTokenFromDeposit0xcfb65bb9': {'require(origin==sender)': True},
+  'burn0x9dc29fac': {'require(origin==sender)': False},
+  'burnToEther0x81a6b250': {'require(origin==sender)': False},
+  'marginTradeFromDeposit0x1c5d1da5': {'require(origin==sender)': False},
+  'mint0x40c10f19': {'require(origin==sender)': False},
+  'mintWithEther0x8f6ede1f': {'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isOriginManager': [ '0xef764bac8a438e7e498c2e5fccf0f174c3e3f8db',
+                                                   '0xfdcbced5d0cceb70bd63163206486ca79c89647a',
+                                                   '0xe5e1e9c58db4ecab40fd46d7ac3578b74c1d0921',
+                                                   '0xa93a7294c9807f0d32a9b674781662d75d6326ec'],
+                              'isSenderManager': [ '0xf8423ebfd98e3de892a87eee646802a6a2571a49',
+                                                   '0x95fc322fb39bf9b1ce9597a85f558e31f8a7f7da',
+                                                   '0x81eed7f1ecbd7fa9978fcc7584296fb0c215dc5c'],
+                              'require(origin==sender)': False},
+  'updateSettings0x284e2f56': { 'isOriginOwner': '0xadff3ada12ed0f8a87e31e5a04dfd2ee054e1118',
+                                'isSenderOwner': '0xbb536eb24fb89b544d4bd9e9f1f34d9fd902bb96',
+                                'require(origin==sender)': False}}
+len(testing set):  213
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x762881b07feb63c436dee38edd4ff1f7a74c33091e534af56c9f7d49b5ecac15
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	5	0	5		498	213
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0x0c5d54dd2c57ce69222c6d278332f6d515d6515110d424cc797cd57d71e50d58
+0xfcf77d2cffe570f127335a8f1ccb2f5795cc5121309fd626fcbc548f3f250da5
+0xe9f5d5433ea3e1885a999369a61cc1ab52b5d1ddc84f95d61bf88818c64de21e
+0x136c890e4d7e464be8a0875e5007101b1a0b8c74a0e662e70d8bf8be436725a7
+0x4348f97208df695803c6bb9a106aba0c7d017a716b9d75577e26478701bfa72d
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0x0c5d54dd2c57ce69222c6d278332f6d515d6515110d424cc797cd57d71e50d58
+0xe9f5d5433ea3e1885a999369a61cc1ab52b5d1ddc84f95d61bf88818c64de21e
+0x136c890e4d7e464be8a0875e5007101b1a0b8c74a0e662e70d8bf8be436725a7
+0xfcf77d2cffe570f127335a8f1ccb2f5795cc5121309fd626fcbc548f3f250da5
+0x4348f97208df695803c6bb9a106aba0c7d017a716b9d75577e26478701bfa72d
+len(txList3):  711
+====== benchmark Warp: 
+len(training set):  104
+func  has only 1 sender
+func  has only 1 origin
+func borrowBalanceCurrent0x17bfdfbc has only 1 sender
+func borrowBalanceCurrent0x17bfdfbc has more than 5 origins
+func lendToWarpVault0x57d32b7a has more than 5 senders
+func lendToWarpVault0x57d32b7a has more than 5 origins
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+func _borrow0x232d46d2 has only 1 sender
+==invariant map: 
+{ '': { 'isOriginOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+        'isSenderOwner': '0x5cb611a4f27b4ba8ab8115375b8fb5d79e8afdce',
+        'require(origin==sender)': False},
+  '_borrow0x232d46d2': { 'isOriginManager': [ '0x7f3a152f09324f2aee916ce069d3908603449173',
+                                              '0x07d0f772165daed08732cc67de81e0c184baa185'],
+                         'isSenderOwner': '0xba539b9a5c2d412cb10e5770435f362094f9541c',
+                         'require(origin==sender)': False},
+  'borrowBalanceCurrent0x17bfdfbc': { 'isSenderOwner': '0xba539b9a5c2d412cb10e5770435f362094f9541c',
+                                      'require(origin==sender)': False},
+  'lendToWarpVault0x57d32b7a': {'require(origin==sender)': True},
+  'redeem0xdb006a75': {'require(origin==sender)': True}}
+len(testing set):  44
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	1		104	44
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0xc869de9b05b82e370071b4203ef3366dc8a7cdbcb699795af622d5c9d6089072
+len(txList3):  148
+====== benchmark Warp_interface: 
+len(training set):  22
+func createNewSCVault0x2792bdd0 has only 1 sender
+func createNewSCVault0x2792bdd0 has only 1 origin
+func createNewLPVault0xe50f4a30 has only 1 sender
+func createNewLPVault0xe50f4a30 has only 1 origin
+func transferOwnership0xf2fde38b has only 1 sender
+func transferOwnership0xf2fde38b has only 1 origin
+func borrowSC0x0a555989 has more than 5 senders
+func borrowSC0x0a555989 has more than 5 origins
+==invariant map: 
+{ 'borrowSC0x0a555989': {'require(origin==sender)': True},
+  'createNewLPVault0xe50f4a30': { 'isOriginOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+                                  'isSenderOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+                                  'require(origin==sender)': True},
+  'createNewSCVault0x2792bdd0': { 'isOriginOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+                                  'isSenderOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+                                  'require(origin==sender)': True},
+  'getMaxWithdrawAllowed0xab5e2c99': { 'isOriginManager': [ '0x7f3a152f09324f2aee916ce069d3908603449173',
+                                                            '0xd836da33a6629548271eb9ef4f62d083376eb4a6',
+                                                            '0x6f0b7771af5ac512af422a25f05f14b1cc2d8858'],
+                                       'isSenderManager': [ '0x3c37f97f7d8f705cc230f97a0668f77a0e05d0aa',
+                                                            '0xb64dfae5122d70fa932f563c53921fe33967b3e0'],
+                                       'require(origin==sender)': False},
+  'transferOwnership0xf2fde38b': { 'isOriginOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+                                   'isSenderOwner': '0x8f3e8a974d6eb27316054147fdf0e960dab2e1b3',
+                                   'require(origin==sender)': True}}
+len(testing set):  9
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	1	0	3		22	9
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0x0c1f191589f4bfdb765fd93e90f79a8f27ce7f02c1f4f800432e9ac161614f6a
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0x6e736e4fdc06fa35889b2892a246c0a9d3e95953df6d6058054f4c881406102f
+0x0c1f191589f4bfdb765fd93e90f79a8f27ce7f02c1f4f800432e9ac161614f6a
+0x13784adfa9136146fe1e267e2ab1e63ae8ce71e56417224cafbe7e2d436cd3be
+len(txList3):  31
+====== benchmark CheeseBank_1: 
+len(training set):  431
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func _setComptroller0x4576b5db has only 1 sender
+func _setComptroller0x4576b5db has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                              'isSenderOwner': '0xc7eec2c723b6fad28290e0755ca4e3d75c0d6958',
+                              'require(origin==sender)': False},
+  '_setComptroller0x4576b5db': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                 'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                 'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                  'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                   'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                            'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': {'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': True},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True}}
+len(testing set):  184
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		431	184
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  615
+====== benchmark CheeseBank_2: 
+len(training set):  416
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func _setComptroller0x4576b5db has only 1 sender
+func _setComptroller0x4576b5db has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                              'isSenderOwner': '0xc7eec2c723b6fad28290e0755ca4e3d75c0d6958',
+                              'require(origin==sender)': False},
+  '_setComptroller0x4576b5db': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                 'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                 'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                  'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                   'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                            'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': {'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': True},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True}}
+len(testing set):  177
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		416	177
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  593
+====== benchmark CheeseBank_3: 
+len(training set):  390
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func _setComptroller0x4576b5db has only 1 sender
+func _setComptroller0x4576b5db has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                              'isSenderOwner': '0xc7eec2c723b6fad28290e0755ca4e3d75c0d6958',
+                              'require(origin==sender)': False},
+  '_setComptroller0x4576b5db': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                 'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                 'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                  'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                   'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                            'isSenderOwner': '0xf3a40b251d5b0b0eb2908b10bbf5dd7e717f897e',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': {'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': True},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True}}
+len(testing set):  167
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		390	167
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  557
+====== benchmark InverseFi: 
+len(training set):  4594
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func balanceOfUnderlying0x3af9e669 has only 1 sender
+func balanceOfUnderlying0x3af9e669 has only 1 origin
+func liquidateBorrow0xf5e3c462 has more than 5 senders
+func liquidateBorrow0xf5e3c462 has more than 5 origins
+func _setInterestRateModel0xf2b3abbd has only 1 sender
+func _setInterestRateModel0xf2b3abbd has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+func borrowBalanceCurrent0x17bfdfbc has only 1 sender
+func borrowBalanceCurrent0x17bfdfbc has only 1 origin
+func repayBorrowBehalf0x2608f818 has only 1 sender
+func repayBorrowBehalf0x2608f818 has only 1 origin
+func seize0xb2a02ff1 has only 1 sender
+func seize0xb2a02ff1 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                              'isSenderOwner': '0x926df14a23be491164dcf93f4c468a50ef659d5b',
+                              'require(origin==sender)': False},
+  '_setInterestRateModel0xf2b3abbd': { 'isOriginOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                       'isSenderOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                  'isSenderOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                   'isSenderOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                   'require(origin==sender)': True},
+  'accrueInterest0xa6afed95': { 'isOriginManager': [ '0x00000639caea2f4991b946c1f68686e4df700000',
+                                                     '0x2000043a2d343a172bd34929bc308a89ab000002'],
+                                'isSenderManager': [ '0xdc4e2ad3c9d25caa5a6b60af9f304658c9815c10',
+                                                     '0xe17721de7ee9510067a097199a7b848aa70d27da',
+                                                     '0x83884ec924d43b6c6d1c52d7b6a57ce4121a4a53',
+                                                     '0x697b4acaa24430f254224eb794d2a85ba1fa1fb8'],
+                                'require(origin==sender)': False},
+  'balanceOfUnderlying0x3af9e669': { 'isOriginOwner': '0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28',
+                                     'isSenderOwner': '0x5e075e40d01c82b6bf0b0ecdb4eb1d6984357ef7',
+                                     'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': False},
+  'borrowBalanceCurrent0x17bfdfbc': { 'isOriginOwner': '0x116f6ad0b0c76337d604661e497df3d31d3e8e69',
+                                      'isSenderOwner': '0x16089279efbac25b174686e60f89a5f8fd5fb8a6',
+                                      'require(origin==sender)': False},
+  'liquidateBorrow0xf5e3c462': {'require(origin==sender)': False},
+  'mint0xa0712d68': {'require(origin==sender)': False},
+  'redeem0xdb006a75': {'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': False},
+  'repayBorrow0x0e752702': {'require(origin==sender)': False},
+  'repayBorrowBehalf0x2608f818': { 'isOriginOwner': '0xaa9e20bab58d013220d632874e9fe44f8f971e4d',
+                                   'isSenderOwner': '0xaa9e20bab58d013220d632874e9fe44f8f971e4d',
+                                   'require(origin==sender)': True},
+  'seize0xb2a02ff1': { 'isOriginOwner': '0x00000639caea2f4991b946c1f68686e4df700000',
+                       'isSenderOwner': '0x697b4acaa24430f254224eb794d2a85ba1fa1fb8',
+                       'require(origin==sender)': False}}
+len(testing set):  1968
+exploitTx:  0x600373f67521324c8068cfd025f121a0843d57ec813411661b07edc5ff781842
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	1	1		4594	1968
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+0xc27139d94ab89216822cd74831d5bb16cb98dea7731aa7c6001b5fdac17f8ef2
+5 sampled FPs for isOriginManager
+0xc27139d94ab89216822cd74831d5bb16cb98dea7731aa7c6001b5fdac17f8ef2
+len(txList3):  6562
+====== benchmark CreamFi1_1: 
+len(training set):  4
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                       'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                       'require(origin==sender)': False}}
+len(testing set):  1
+exploitTx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		4	1
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  5
+====== benchmark CreamFi1_2: 
+len(training set):  40729
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func mint0x1249c58b has more than 5 senders
+func mint0x1249c58b has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x4e4d9fea has more than 5 senders
+func repayBorrow0x4e4d9fea has more than 5 origins
+func accrueInterest0xa6afed95 has more than 5 senders
+func accrueInterest0xa6afed95 has more than 5 origins
+func seize0xb2a02ff1 has more than 5 senders
+func seize0xb2a02ff1 has more than 5 origins
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func liquidateBorrow0xaae40a2a has more than 5 senders
+func liquidateBorrow0xaae40a2a has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+func _setInterestRateModel0xf2b3abbd has only 1 sender
+func _setInterestRateModel0xf2b3abbd has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 origins
+func balanceOfUnderlying0x3af9e669 has more than 5 senders
+func balanceOfUnderlying0x3af9e669 has more than 5 origins
+func borrowBalanceCurrent0x17bfdfbc has only 1 sender
+func borrowBalanceCurrent0x17bfdfbc has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginManager': [ '0xd466c878a504cdc2c711016ebb847ba10260ef54',
+                                                   '0xfd8f30441c0344b305bc6355537d93ec184c42ca'],
+                              'isSenderManager': [ '0x6d5a7597896a703fe8c85775b23395a48f971305',
+                                                   '0xfd8f30441c0344b305bc6355537d93ec184c42ca'],
+                              'require(origin==sender)': False},
+  '_setInterestRateModel0xf2b3abbd': { 'isOriginOwner': '0xd466c878a504cdc2c711016ebb847ba10260ef54',
+                                       'isSenderOwner': '0x6d5a7597896a703fe8c85775b23395a48f971305',
+                                       'require(origin==sender)': False},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                  'isSenderOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                   'isSenderOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                   'require(origin==sender)': True},
+  'accrueInterest0xa6afed95': {'require(origin==sender)': False},
+  'approve0x095ea7b3': {'require(origin==sender)': False},
+  'balanceOfUnderlying0x3af9e669': {'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'borrowBalanceCurrent0x17bfdfbc': { 'isOriginOwner': '0x0a7b571f9c36509dd4a4861af6691b1843fbdf09',
+                                      'isSenderOwner': '0x0a7b571f9c36509dd4a4861af6691b1843fbdf09',
+                                      'require(origin==sender)': True},
+  'liquidateBorrow0xaae40a2a': {'require(origin==sender)': False},
+  'mint0x1249c58b': {'require(origin==sender)': False},
+  'redeem0xdb006a75': {'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': False},
+  'repayBorrow0x4e4d9fea': {'require(origin==sender)': True},
+  'seize0xb2a02ff1': {'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderManager': [ '0x74ddd392bff72add5ca534aa6d6bf53bceea59cf',
+                                                   '0x4e0dede6cafe84d8ba2a1036b7bbaef3be8876fa',
+                                                   '0x24f4ac0fe758c45cf8425d8fbdd608cca9a7dbf8',
+                                                   '0x0a7b571f9c36509dd4a4861af6691b1843fbdf09'],
+                              'require(origin==sender)': False}}
+len(testing set):  17455
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+90	88	11	84	3		40729	17455
+5 sampled FPs for require(origin==sender)
+0x3038c8b5fbe375d9cdb048ab324a26e4edc11da2e200a508fc0bc980c4f90188
+0x3155530cb8e3e1f8f6bf4d6455c9d1850f086ad4f1631c69644b49900c592b0c
+0x4b112f875227d9c972d0e1b14f89f6244644d611e5f3a920e6cbabce7ce262e4
+0x41434edd225f0ff53e4e3dc4e01d552858f3fe6464be54249b2008be60c1e333
+0x522ef669a70633285a8e66dd69f82f93e9d3e3a13db16a3ad6626165ffa8f767
+5 sampled FPs for isSenderOwner
+0x664df4dc2017bdc19ed79451075fded1e00cabbc7f29cf4730ecb712c7240404
+0x522ef669a70633285a8e66dd69f82f93e9d3e3a13db16a3ad6626165ffa8f767
+0x72920279fa7ade87570d37d6a03f0c830736ecb3f7c44420745dc4139169809e
+0x015a2c4a6394f630c4c9b7ccbdac7dced7dfdb030cae3d82f1d289be68d5c5c5
+0xa97df81ee9b743aca72fea9a0087eed17cd273b8d610500096e0c164387cfb54
+5 sampled FPs for isSenderManager
+0xbf48ea9106f15b36f02e405c8ab70d8bff36370066ca99d812727b68937ed835
+0x48fcf40f6cfb49a14deb510d6c23cca929c9c96bbfa675d16fca82481874686f
+0x27933ac35a7fe980585de6c747c726196b783586dcdd97acd2b15bcbde2daed2
+0x17cee717b6e2aa6c0844a7261deeb8676e81150ae6c75bfd67e8482499fe2f76
+0x36b3b1d5c6d1f0227b5aa5d869156c297e2f77908d28b022100188a35493b7f9
+5 sampled FPs for isOriginOwner
+0x69cc989cbb9336ba9081fdcec88f18c4a3c2b55e135ee3adf1ea771c4d7eef85
+0x11d0bb12ef4fb711f96547056f9eaae9fd39422185b1adb9a8a9f0fa38601844
+0x494640c8287462ff006185e0ae08fe28ece1d411ccc02a53426dfe68eea93ac7
+0xcb736fb41cd562d2f417dd31de24cffd9f13c24ecba58f229719af35ff433bc3
+0xa97df81ee9b743aca72fea9a0087eed17cd273b8d610500096e0c164387cfb54
+5 sampled FPs for isOriginManager
+0x48fcf40f6cfb49a14deb510d6c23cca929c9c96bbfa675d16fca82481874686f
+0xd0d4308260e6895967cc697a87d9b1b95969c4c606a516d574e39046926d00ca
+0xcaf6d5002732233a1b09d6f1ad00193f2d1ba62fe201273e3bb9bcab04002dc3
+len(txList3):  58184
+====== benchmark CreamFi2_1: 
+len(training set):  890
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func registerCollateral0x8897bd85 has only 1 sender
+func registerCollateral0x8897bd85 has more than 5 origins
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func exchangeRateCurrent0xbd6d894d has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+func balanceOfUnderlying0x3af9e669 has only 1 sender
+func accrueInterest0xa6afed95 has more than 5 origins
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has only 1 sender
+func transferFrom0x23b872dd has more than 5 origins
+func liquidateBorrow0xf5e3c462 has more than 5 senders
+func liquidateBorrow0xf5e3c462 has more than 5 origins
+func _reduceReserves0x601a0bf1 has only 1 sender
+func seize0xb2a02ff1 has more than 5 origins
+func transfer0xa9059cbb has more than 5 origins
+func unregisterCollateral0x8b35776b has only 1 sender
+func unregisterCollateral0x8b35776b has only 1 origin
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                       'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                       'require(origin==sender)': False},
+  '_reduceReserves0x601a0bf1': { 'isOriginManager': [ '0x5052b44fa20fd39783b11eab41070060255dfc6d',
+                                                      '0x197939c1ca20c2b506d6811d8b6cdb3394471074'],
+                                 'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                 'require(origin==sender)': False},
+  'accrueInterest0xa6afed95': { 'isSenderManager': [ '0x4594bab27825d662064d20eb8eb75195c5d98c8b',
+                                                     '0x1d0986fb43985c88ffa9ad959cc24e6a087c7e35',
+                                                     '0x21011bc93d9e515b9511a817a1ed1d6d468f49fc',
+                                                     '0xb092b4601850e23903a42eacbc9d8a0eec26a4d5'],
+                                'require(origin==sender)': False},
+  'approve0x095ea7b3': {'require(origin==sender)': True},
+  'balanceOfUnderlying0x3af9e669': { 'isOriginManager': [ '0xc0ffee4a95f15ff9973a17e563a8a8701d719890',
+                                                          '0x9b7a6e6b894e243e994cfaa32ea07d8a60740981',
+                                                          '0x3c7d43de93eb6598172f20feb8ecfe8dec70fe41',
+                                                          '0xf27696c8bca7d54d696189085ae1283f59342fa6'],
+                                     'isSenderOwner': '0x9645cee8d720a70e2d79b7d7c7070dc7a580bb0f',
+                                     'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'exchangeRateCurrent0xbd6d894d': { 'isSenderManager': [ '0xa4f8310cd972b1fc3ca9f130b235a91bc882badb',
+                                                          '0x89481da769de069d7dd6a54f1ac642e1f921c7ec'],
+                                     'require(origin==sender)': False},
+  'liquidateBorrow0xf5e3c462': {'require(origin==sender)': False},
+  'mint0xa0712d68': {'require(origin==sender)': False},
+  'redeem0xdb006a75': {'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': False},
+  'registerCollateral0x8897bd85': { 'isSenderOwner': '0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258',
+                                    'require(origin==sender)': False},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True},
+  'seize0xb2a02ff1': { 'isSenderManager': [ '0x1d0986fb43985c88ffa9ad959cc24e6a087c7e35',
+                                            '0x21011bc93d9e515b9511a817a1ed1d6d468f49fc',
+                                            '0xb092b4601850e23903a42eacbc9d8a0eec26a4d5'],
+                       'require(origin==sender)': False},
+  'transfer0xa9059cbb': { 'isSenderManager': [ '0x897e5bb1b7074cf6177d64d87f0bfb5e032b00b7',
+                                               '0xdaacf6da410268c97acea23b20b52837fc55d136'],
+                          'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderOwner': '0x897e5bb1b7074cf6177d64d87f0bfb5e032b00b7',
+                              'require(origin==sender)': False},
+  'unregisterCollateral0x8b35776b': { 'isOriginOwner': '0xd5dad5db8c8839b15db820c870222e698b91dab5',
+                                      'isSenderOwner': '0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258',
+                                      'require(origin==sender)': False}}
+len(testing set):  380
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	1	0	1	1		890	380
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+0xf1570adb8ae4d4b680a81df6a5a8df4d3330b4aa9014f641204cd102cc0ad255
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+0xd21ca9211ba20cd58a922db06f4a0441fd377889528ffff6f5fbe83bc0840d34
+5 sampled FPs for isOriginManager
+0xc53408f89876ae6430cd1105aa264a09cde2ff08183ae6cf6f52ae23b49f516d
+len(txList3):  1270
+====== benchmark CreamFi2_2: 
+len(training set):  629
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+func balanceOfUnderlying0x3af9e669 has only 1 sender
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func registerCollateral0x8897bd85 has only 1 sender
+func registerCollateral0x8897bd85 has more than 5 origins
+func liquidateBorrow0xf5e3c462 has more than 5 senders
+func liquidateBorrow0xf5e3c462 has more than 5 origins
+func unregisterCollateral0x8b35776b has only 1 sender
+func unregisterCollateral0x8b35776b has only 1 origin
+func seize0xb2a02ff1 has only 1 sender
+func seize0xb2a02ff1 has only 1 origin
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+func _reduceReserves0x601a0bf1 has only 1 sender
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                       'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                       'require(origin==sender)': False},
+  '_reduceReserves0x601a0bf1': { 'isOriginManager': [ '0x5052b44fa20fd39783b11eab41070060255dfc6d',
+                                                      '0x197939c1ca20c2b506d6811d8b6cdb3394471074'],
+                                 'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                 'require(origin==sender)': False},
+  'accrueInterest0xa6afed95': { 'isOriginManager': [ '0x378a9c9c44b41c0e8970c358470e4e72eb782302',
+                                                     '0x76d266dfd3754f090488ae12f6bd115cd7e77ebd',
+                                                     '0xeb5b69c5f93ace94ec36352c1467a540ff167f02',
+                                                     '0xb5abdabe50b5193d4db92a16011792b22ba3ef51'],
+                                'isSenderManager': [ '0xcee88909be73d07d557ef2648ab60f7c8c90ac9f',
+                                                     '0x8eacba80bee37ed291b084752375c49cd489590b',
+                                                     '0x299e254a8a165bbeb76d9d69305013329eea3a3b'],
+                                'require(origin==sender)': False},
+  'approve0x095ea7b3': { 'isOriginManager': [ '0x7149976d0cf5b71ec11ebc37b9e24854c705402e',
+                                              '0xa2683ebd17c4ee3dab08939b91d381d128a0a18e'],
+                         'isSenderManager': [ '0x7149976d0cf5b71ec11ebc37b9e24854c705402e',
+                                              '0xa2683ebd17c4ee3dab08939b91d381d128a0a18e'],
+                         'require(origin==sender)': True},
+  'balanceOfUnderlying0x3af9e669': { 'isOriginManager': [ '0xf1e26c020a084e77a4931fee4c997a2b064566fc',
+                                                          '0xc0ffee4a95f15ff9973a17e563a8a8701d719890',
+                                                          '0x9b7a6e6b894e243e994cfaa32ea07d8a60740981',
+                                                          '0x0d5c07293a860247bd610f7c6c1ae548076d62ef'],
+                                     'isSenderOwner': '0xb74baccdf70f6b8d009fd7a7fb4cc3755ad00921',
+                                     'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'exchangeRateCurrent0xbd6d894d': { 'isOriginManager': [ '0xd79e338667aeb42fb8f71c03b815d06bb8da968d',
+                                                          '0xc0fcf8403e10b65f1d18f1b81b093004b1127275',
+                                                          '0x2bdaadfbc352dc693479aedf4d0aa9760fe59f44'],
+                                     'isSenderManager': [ '0x7b1e1a841afe589f1b5337a2eec41a18a58475be',
+                                                          '0x2a928a3c54622f56e5147f0c9bf5133e04503c4f'],
+                                     'require(origin==sender)': False},
+  'liquidateBorrow0xf5e3c462': {'require(origin==sender)': False},
+  'mint0xa0712d68': {'require(origin==sender)': False},
+  'redeem0xdb006a75': {'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': False},
+  'registerCollateral0x8897bd85': { 'isSenderOwner': '0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258',
+                                    'require(origin==sender)': False},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True},
+  'seize0xb2a02ff1': { 'isOriginOwner': '0xeb5b69c5f93ace94ec36352c1467a540ff167f02',
+                       'isSenderOwner': '0x299e254a8a165bbeb76d9d69305013329eea3a3b',
+                       'require(origin==sender)': False},
+  'transfer0xa9059cbb': { 'isOriginManager': [ '0xa2683ebd17c4ee3dab08939b91d381d128a0a18e',
+                                               '0x453721d8f20513944a0edc7230ec2709552f7e17',
+                                               '0x7e2dceebdff9c029857ae81eedfe26a0925c71b5'],
+                          'isSenderManager': [ '0x897e5bb1b7074cf6177d64d87f0bfb5e032b00b7',
+                                               '0x7e2dceebdff9c029857ae81eedfe26a0925c71b5'],
+                          'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isOriginManager': [ '0x000000000057e8abd581828a2b40076852c0ba6e',
+                                                   '0x7149976d0cf5b71ec11ebc37b9e24854c705402e'],
+                              'isSenderManager': [ '0x9cf5c26b293407444f3a68c62cc587ef033e0ec3',
+                                                   '0x897e5bb1b7074cf6177d64d87f0bfb5e032b00b7'],
+                              'require(origin==sender)': False},
+  'unregisterCollateral0x8b35776b': { 'isOriginOwner': '0x315426ccf0510037b8248629bbe7569dc057bc99',
+                                      'isSenderOwner': '0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258',
+                                      'require(origin==sender)': False}}
+len(testing set):  269
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	4	0	5		629	269
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0xa0ca9f4d03abf07bff2a563e46f164835e04aa0bb839d159467d13e9e3adde68
+0x9e704ea1dbbc99c1cb6f5f5d39b0d52ea611a4db4b0b16ad5900c54b8a46e4e6
+0xf40a2c39755bd255c97129f3bb05d2db828ca3b3f97c932b93e8ff346229b91d
+0xcd3aba60c03c5864367c7e027f3bb46b4b165cbf0481b55378d920b9c78f64ff
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0x9e704ea1dbbc99c1cb6f5f5d39b0d52ea611a4db4b0b16ad5900c54b8a46e4e6
+0xa0ca9f4d03abf07bff2a563e46f164835e04aa0bb839d159467d13e9e3adde68
+0xcd3aba60c03c5864367c7e027f3bb46b4b165cbf0481b55378d920b9c78f64ff
+0xf40a2c39755bd255c97129f3bb05d2db828ca3b3f97c932b93e8ff346229b91d
+0xc53408f89876ae6430cd1105aa264a09cde2ff08183ae6cf6f52ae23b49f516d
+len(txList3):  898
+====== benchmark CreamFi2_3: 
+len(training set):  183
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func registerCollateral0x8897bd85 has only 1 sender
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                       'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                       'require(origin==sender)': False},
+  'mint0xa0712d68': { 'isOriginManager': [ '0x5bf6681a73a33a076c5569a4e729f41ae20bd901',
+                                           '0x14200888c9b85b4f1e589de4be12e46916b7af31'],
+                      'isSenderManager': [ '0x5bf6681a73a33a076c5569a4e729f41ae20bd901',
+                                           '0x14200888c9b85b4f1e589de4be12e46916b7af31'],
+                      'require(origin==sender)': True},
+  'redeem0xdb006a75': {'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': { 'isOriginManager': [ '0xbb00900b914c71d7cc0d6c8865359499b9d0b3b6',
+                                                       '0x2fa57186d6e07e2f4c83e03808fd48833c2e5850',
+                                                       '0xd9c47c0113abf140e72a947f5a7fa3921837cb68'],
+                                  'isSenderManager': [ '0xbb00900b914c71d7cc0d6c8865359499b9d0b3b6',
+                                                       '0x2fa57186d6e07e2f4c83e03808fd48833c2e5850',
+                                                       '0xd9c47c0113abf140e72a947f5a7fa3921837cb68'],
+                                  'require(origin==sender)': True},
+  'registerCollateral0x8897bd85': { 'isOriginManager': [ '0x5bf6681a73a33a076c5569a4e729f41ae20bd901',
+                                                         '0x14200888c9b85b4f1e589de4be12e46916b7af31'],
+                                    'isSenderOwner': '0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258',
+                                    'require(origin==sender)': False},
+  'repayBorrow0x0e752702': { 'isOriginManager': [ '0x4ab2c3092dfee2e10c1676e51c9c889cd8126579',
+                                                  '0x823c9dfee98f247cbc041dca4db9cabb2d42a404',
+                                                  '0x46020205abd2cd506e135d8f36db5c48d1c0183e',
+                                                  '0xf523efbb1150a9140f3aa964055517040881f949'],
+                             'isSenderManager': [ '0x4ab2c3092dfee2e10c1676e51c9c889cd8126579',
+                                                  '0x823c9dfee98f247cbc041dca4db9cabb2d42a404',
+                                                  '0x46020205abd2cd506e135d8f36db5c48d1c0183e',
+                                                  '0xf523efbb1150a9140f3aa964055517040881f949'],
+                             'require(origin==sender)': True}}
+len(testing set):  78
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+3	0	7	0	10		183	78
+5 sampled FPs for require(origin==sender)
+0xdad15b885b44000360eeace73aa9573b94a5173311198778b1c9d43bce38ab1d
+0x5dce27889e1359a3b84ba57c7b436cc976cf9449330dddc2f70db096df7d7fc9
+0x55e2461c253f98c85d9d3b7d54001afaa491469cb89e673349bd502e6c9d1715
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0xbf6deab08e4bc86e5a25746e0a3ec5abcf0846794df145ecc55477e320edf5b5
+0xdad15b885b44000360eeace73aa9573b94a5173311198778b1c9d43bce38ab1d
+0xed4e15f1384f9bb988b659b709c5d65d5acf6c5bd140c99da8795739038d6b01
+0xb3a566c6d749efa30137b43166da6c7fae05830e01ba71bd57ea731b3650fa41
+0x417bc968ccfafbcdedf63598d5dd2500de39507f50e175cff8b8f437510c7981
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0xed4e15f1384f9bb988b659b709c5d65d5acf6c5bd140c99da8795739038d6b01
+0x84a3b466bbdaf7db2007fcf9cd7fcd98b4bda87ce23742858da67c3613fe16a7
+0xdd944a682f9185e2f76b17ab44dce1ce13f511ad8c710cbbdaee9eeba307a248
+0x78e79a4af7183af7d5d5ad4320c38b6d71e8d7241cc3844062133ac45ed32632
+0x417bc968ccfafbcdedf63598d5dd2500de39507f50e175cff8b8f437510c7981
+len(txList3):  261
+====== benchmark CreamFi2_4: 
+len(training set):  69
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func registerCollateral0x8897bd85 has only 1 sender
+func registerCollateral0x8897bd85 has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x197939c1ca20c2b506d6811d8b6cdb3394471074',
+                                       'isSenderOwner': '0x3fae5e5722c51cdb5b0afd8c7082e8a6af336ee8',
+                                       'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': False},
+  'registerCollateral0x8897bd85': { 'isSenderOwner': '0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258',
+                                    'require(origin==sender)': False},
+  'repayBorrow0x0e752702': {'require(origin==sender)': False}}
+len(testing set):  29
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		69	29
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  98
+====== benchmark RariCapital1: 
+len(training set):  466
+func addMissingPools0xcab6ca80 has only 1 sender
+func addMissingPools0xcab6ca80 has only 1 origin
+func deposit0xd0e30db0 has more than 5 senders
+func deposit0xd0e30db0 has more than 5 origins
+func withdraw0x2e1a7d4d has more than 5 senders
+func withdraw0x2e1a7d4d has more than 5 origins
+func  has only 1 sender
+func  has more than 5 origins
+func withdrawFees0x476343ee has only 1 sender
+func withdrawFees0x476343ee has only 1 origin
+func transferOwnership0xf2fde38b has only 1 sender
+func transferOwnership0xf2fde38b has only 1 origin
+func disableFund0xf3b43386 has only 1 sender
+func disableFund0xf3b43386 has only 1 origin
+func enableFund0x65df2918 has only 1 sender
+func enableFund0x65df2918 has only 1 origin
+==invariant map: 
+{ '': { 'isSenderOwner': '0xa422890cbbe5eaa8f1c88590fbab7f319d7e24b6',
+        'require(origin==sender)': False},
+  'addMissingPools0xcab6ca80': { 'isOriginOwner': '0x10db6bce3f2ae1589ec91a872213dae59697967a',
+                                 'isSenderOwner': '0x10db6bce3f2ae1589ec91a872213dae59697967a',
+                                 'require(origin==sender)': True},
+  'deposit0xd0e30db0': {'require(origin==sender)': False},
+  'disableFund0xf3b43386': { 'isOriginOwner': '0x03fbf4a999249256a32df071230573f153ae60fe',
+                             'isSenderOwner': '0x5ea4a9a7592683bf0bc187d6da706c6c4770976f',
+                             'require(origin==sender)': False},
+  'enableFund0x65df2918': { 'isOriginOwner': '0x1774b6106d7e969d467396a5e90089fead6e55eb',
+                            'isSenderOwner': '0x5ea4a9a7592683bf0bc187d6da706c6c4770976f',
+                            'require(origin==sender)': False},
+  'getFundBalance0xdae9e379': { 'isOriginManager': [ '0x0a09cd09b0107bb98a83f211704f036eca94b92e',
+                                                     '0xef9be1ace449eb63622b5c2bd4ee7af3b09dcc60'],
+                                'isSenderManager': [ '0x829df2cb6748b9fd619efcd23cc5c351957ecac9',
+                                                     '0xaafa0cc84c02f26008fa496d4e83ab444e08f6dd'],
+                                'require(origin==sender)': False},
+  'transferOwnership0xf2fde38b': { 'isOriginOwner': '0x10db6bce3f2ae1589ec91a872213dae59697967a',
+                                   'isSenderOwner': '0x10db6bce3f2ae1589ec91a872213dae59697967a',
+                                   'require(origin==sender)': True},
+  'withdraw0x2e1a7d4d': {'require(origin==sender)': False},
+  'withdrawFees0x476343ee': { 'isOriginOwner': '0x1e87ebbe2e02037dd4697d443c5507ff97959c99',
+                              'isSenderOwner': '0x1e87ebbe2e02037dd4697d443c5507ff97959c99',
+                              'require(origin==sender)': True}}
+len(testing set):  199
+exploitTx:  0x4764dc6ff19a64fc1b0e57e735661f64d97bc1c44e026317be8765358d0a7392
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	12	0	9		466	199
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0x9232337c5a995e1c34b846ef0f11979216b0061c3db398e95fba5202e663b099
+0xe6ee51c0a671d40ec973de28fc21be7f868a11d9ead4ffecb39fad3b511149c5
+0x0cb4f5c7c6d0cfee1f3183c591dc96202ddcde4da6bcc317ada24b15e8699b6d
+0xd502264ba1b7fd50d91dc7ba1b446253a4a5a7b1583f98a6fc6f238db8ff6b8b
+0x695e5bed8824fa1b6d2448bbfc983c91edc6ba2ff18806527cd32c8630ff3805
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0x0cb4f5c7c6d0cfee1f3183c591dc96202ddcde4da6bcc317ada24b15e8699b6d
+0x0c715568b2218a233467df07d5171f7a26245e50f9b4f010c5bfaa4165ff5277
+0xb109d2ca8b6215b40050f81af3777f5d0805ebe85ba72269807206bd638ba8ae
+0xe6ee51c0a671d40ec973de28fc21be7f868a11d9ead4ffecb39fad3b511149c5
+0x11f28cdd470f61c334a5bfed2b9f20d41e44065c4f73b507798cf5da2d29c3e4
+len(txList3):  665
+====== benchmark RariCapital2_1: 
+len(training set):  430
+func initialize0x79c2c954 has only 1 sender
+func initialize0x79c2c954 has only 1 origin
+func _setImplementationSafe0x50d85b73 has only 1 sender
+func _setImplementationSafe0x50d85b73 has only 1 origin
+func _prepare0x1db78944 has more than 5 senders
+func _prepare0x1db78944 has more than 5 origins
+func mint0x1249c58b has more than 5 senders
+func mint0x1249c58b has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x4e4d9fea has more than 5 senders
+func repayBorrow0x4e4d9fea has more than 5 origins
+func accrueInterest0xa6afed95 has only 1 sender
+func accrueInterest0xa6afed95 has only 1 origin
+func seize0xb2a02ff1 has only 1 sender
+func seize0xb2a02ff1 has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+func redeem0xdb006a75 has only 1 origin
+func _setInterestRateModel0xf2b3abbd has only 1 sender
+func _setInterestRateModel0xf2b3abbd has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+==invariant map: 
+{ '_prepare0x1db78944': {'require(origin==sender)': False},
+  '_setImplementationSafe0x50d85b73': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                        'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                                        'require(origin==sender)': False},
+  '_setInterestRateModel0xf2b3abbd': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'require(origin==sender)': True},
+  'accrueInterest0xa6afed95': { 'isOriginOwner': '0x813d8e93dbbf493c26d470c6e0c9a2cdf97f6335',
+                                'isSenderOwner': '0xebe0d1cb6a0b8569929e062d67bfbc07608f0a47',
+                                'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0x79c2c954': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                            'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                            'require(origin==sender)': False},
+  'liquidateBorrow0xaae40a2a': { 'isOriginManager': [ '0x7f8825739572c3825ea061491443167aed4d6fb8',
+                                                      '0x00000639caea2f4991b946c1f68686e4df700000'],
+                                 'isSenderManager': [ '0x811213d2d0e26ecf65714074cef59119dd7f36d9',
+                                                      '0x6ee33c4a192118ea664612aec6f7b6e4aef78b87'],
+                                 'require(origin==sender)': False},
+  'mint0x1249c58b': {'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginOwner': '0x813d8e93dbbf493c26d470c6e0c9a2cdf97f6335',
+                        'isSenderOwner': '0x44ccdcd59984848a749e9f999b08f2b68153e123',
+                        'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': True},
+  'repayBorrow0x4e4d9fea': {'require(origin==sender)': True},
+  'seize0xb2a02ff1': { 'isOriginOwner': '0x813d8e93dbbf493c26d470c6e0c9a2cdf97f6335',
+                       'isSenderOwner': '0xebe0d1cb6a0b8569929e062d67bfbc07608f0a47',
+                       'require(origin==sender)': False}}
+len(testing set):  184
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	0	0		430	184
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  614
+====== benchmark RariCapital2_2: 
+len(training set):  527
+func initialize0xa0b0d289 has only 1 sender
+func initialize0xa0b0d289 has only 1 origin
+func _setImplementationSafe0x50d85b73 has only 1 sender
+func _setImplementationSafe0x50d85b73 has only 1 origin
+func _prepare0x1db78944 has more than 5 senders
+func _prepare0x1db78944 has more than 5 origins
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+func _setInterestRateModel0xf2b3abbd has only 1 sender
+func _setInterestRateModel0xf2b3abbd has only 1 origin
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func accrueInterest0xa6afed95 has more than 5 origins
+func seize0xb2a02ff1 has more than 5 origins
+func transfer0xa9059cbb has only 1 sender
+func transfer0xa9059cbb has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+==invariant map: 
+{ '_prepare0x1db78944': {'require(origin==sender)': False},
+  '_setImplementationSafe0x50d85b73': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                        'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                                        'require(origin==sender)': False},
+  '_setInterestRateModel0xf2b3abbd': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'require(origin==sender)': True},
+  'accrueInterest0xa6afed95': { 'isSenderManager': [ '0x8d68d8301fe02654791e6ef5e9ec240865bb79cd',
+                                                     '0xf0a6b4f7f26f6188d821cfbc69a31fb0bbb9702f',
+                                                     '0x3a0135418db6f9428fe669ee1162a1450612c33c'],
+                                'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0xa0b0d289': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                            'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                            'require(origin==sender)': False},
+  'liquidateBorrow0xf5e3c462': { 'isOriginManager': [ '0x813d8e93dbbf493c26d470c6e0c9a2cdf97f6335',
+                                                      '0x00000639caea2f4991b946c1f68686e4df700000'],
+                                 'isSenderManager': [ '0x44ccdcd59984848a749e9f999b08f2b68153e123',
+                                                      '0x83884ec924d43b6c6d1c52d7b6a57ce4121a4a53'],
+                                 'require(origin==sender)': False},
+  'mint0xa0712d68': {'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginManager': [ '0x7f8825739572c3825ea061491443167aed4d6fb8',
+                                             '0x9ac5b848c732590b303b4516bb8af77c7707e793',
+                                             '0x50000058358691325338eb7b787d4c3f39e60005',
+                                             '0x00000639caea2f4991b946c1f68686e4df700000'],
+                        'isSenderManager': [ '0x811213d2d0e26ecf65714074cef59119dd7f36d9',
+                                             '0x6ee33c4a192118ea664612aec6f7b6e4aef78b87'],
+                        'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': True},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True},
+  'seize0xb2a02ff1': { 'isSenderManager': [ '0x8d68d8301fe02654791e6ef5e9ec240865bb79cd',
+                                            '0xf0a6b4f7f26f6188d821cfbc69a31fb0bbb9702f',
+                                            '0x3a0135418db6f9428fe669ee1162a1450612c33c'],
+                       'require(origin==sender)': False},
+  'transfer0xa9059cbb': { 'isOriginOwner': '0x5cb656d7605d9924c085fc859585f3ff2f7ad08f',
+                          'isSenderOwner': '0x5cb656d7605d9924c085fc859585f3ff2f7ad08f',
+                          'require(origin==sender)': True}}
+len(testing set):  225
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+4	0	1	0	1		527	225
+5 sampled FPs for require(origin==sender)
+0xa2a1d32f5278eeea0376edd397d675c36e00ff0c27bf6195bbb62392d6d21efd
+0x95d7aefb988f3eea3ea9aeb50ed0cbb1a1f031fdff85b43139c48db115ba94ba
+0x436f8e55b94239ba4984671e4d08db8a9bcf2c7ffa9f69db075e165fba4f2b12
+0x5af0f208193e9f101f2a0bcfd760477a5a7ec6e488f75622c386589f736bb7e3
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0xd4477db3007cccd667a2a074161d3871caa3a2223deeffc9f85b297483372cef
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0xd4477db3007cccd667a2a074161d3871caa3a2223deeffc9f85b297483372cef
+len(txList3):  752
+====== benchmark RariCapital2_3: 
+len(training set):  283
+func initialize0xa0b0d289 has only 1 sender
+func initialize0xa0b0d289 has only 1 origin
+func _setImplementationSafe0x50d85b73 has only 1 sender
+func _setImplementationSafe0x50d85b73 has only 1 origin
+func _prepare0x1db78944 has more than 5 senders
+func _prepare0x1db78944 has more than 5 origins
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func redeemUnderlying0x852a12e3 has more than 5 senders
+func redeemUnderlying0x852a12e3 has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+func _setInterestRateModel0xf2b3abbd has only 1 sender
+func _setInterestRateModel0xf2b3abbd has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func accrueInterest0xa6afed95 has only 1 sender
+func seize0xb2a02ff1 has only 1 sender
+==invariant map: 
+{ '_prepare0x1db78944': {'require(origin==sender)': False},
+  '_setImplementationSafe0x50d85b73': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                        'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                                        'require(origin==sender)': False},
+  '_setInterestRateModel0xf2b3abbd': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'require(origin==sender)': True},
+  'accrueInterest0xa6afed95': { 'isOriginManager': [ '0xd222a1e298bfad02765a210c0e4452209457d2b5',
+                                                     '0x06ac16ff8caa7c7a4d66f506a4c74d4da9e8569e',
+                                                     '0x7f8825739572c3825ea061491443167aed4d6fb8'],
+                                'isSenderOwner': '0x3a0135418db6f9428fe669ee1162a1450612c33c',
+                                'require(origin==sender)': False},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0xa0b0d289': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                            'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                            'require(origin==sender)': False},
+  'mint0xa0712d68': {'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginManager': [ '0x06ac16ff8caa7c7a4d66f506a4c74d4da9e8569e',
+                                             '0x7f8825739572c3825ea061491443167aed4d6fb8'],
+                        'isSenderManager': [ '0x07197a25bf7297c2c41dd09a79160d05b6232bcf',
+                                             '0x8ceb117f98cebf18b3fb97181a8a2067fad700d7'],
+                        'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': {'require(origin==sender)': True},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True},
+  'seize0xb2a02ff1': { 'isOriginManager': [ '0xd222a1e298bfad02765a210c0e4452209457d2b5',
+                                            '0x06ac16ff8caa7c7a4d66f506a4c74d4da9e8569e',
+                                            '0x7f8825739572c3825ea061491443167aed4d6fb8'],
+                       'isSenderOwner': '0x3a0135418db6f9428fe669ee1162a1450612c33c',
+                       'require(origin==sender)': False}}
+len(testing set):  121
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	0	0		283	121
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  404
+====== benchmark RariCapital2_4: 
+len(training set):  544
+func initialize0xa0b0d289 has only 1 sender
+func initialize0xa0b0d289 has only 1 origin
+func _setImplementationSafe0x50d85b73 has only 1 sender
+func _setImplementationSafe0x50d85b73 has only 1 origin
+func _prepare0x1db78944 has more than 5 senders
+func _prepare0x1db78944 has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func repayBorrow0x0e752702 has more than 5 senders
+func repayBorrow0x0e752702 has more than 5 origins
+func liquidateBorrow0xf5e3c462 has only 1 sender
+func liquidateBorrow0xf5e3c462 has more than 5 origins
+func redeemUnderlying0x852a12e3 has only 1 sender
+func redeemUnderlying0x852a12e3 has only 1 origin
+func _setInterestRateModel0xf2b3abbd has only 1 sender
+func _setInterestRateModel0xf2b3abbd has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+==invariant map: 
+{ '_prepare0x1db78944': {'require(origin==sender)': False},
+  '_setImplementationSafe0x50d85b73': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                        'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                                        'require(origin==sender)': False},
+  '_setInterestRateModel0xf2b3abbd': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                       'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'isSenderOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'initialize0xa0b0d289': { 'isOriginOwner': '0xe150fef6cdc4db5168ae3c85b74e442542d51de5',
+                            'isSenderOwner': '0xa731585ab05fc9f83555cf9bff8f58ee94e18f85',
+                            'require(origin==sender)': False},
+  'liquidateBorrow0xf5e3c462': { 'isSenderOwner': '0x83884ec924d43b6c6d1c52d7b6a57ce4121a4a53',
+                                 'require(origin==sender)': False},
+  'mint0xa0712d68': { 'isOriginManager': [ '0x36a87d1e3200225f881488e4aeedf25303febcae',
+                                           '0x17e06ce6914e3969f7bd37d8b2a563890ca1c96e',
+                                           '0x3d57b83154423edb0ba0e747b03858e69075fca1',
+                                           '0x69863cdd8a25bae9a57271f7a29a76764da87f1a'],
+                      'isSenderManager': [ '0x36a87d1e3200225f881488e4aeedf25303febcae',
+                                           '0x96665d63c1b53f8335e3c9287ee255f306c93c45',
+                                           '0x3d57b83154423edb0ba0e747b03858e69075fca1',
+                                           '0x69863cdd8a25bae9a57271f7a29a76764da87f1a'],
+                      'require(origin==sender)': False},
+  'redeemUnderlying0x852a12e3': { 'isOriginOwner': '0x3d57b83154423edb0ba0e747b03858e69075fca1',
+                                  'isSenderOwner': '0x3d57b83154423edb0ba0e747b03858e69075fca1',
+                                  'require(origin==sender)': True},
+  'repayBorrow0x0e752702': {'require(origin==sender)': True}}
+len(testing set):  232
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	0	0		544	232
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  776
+====== benchmark XCarnival: 
+len(training set):  240
+func initialize0x7715632e has only 1 sender
+func initialize0x7715632e has only 1 origin
+func setReserveFactor0x1c446983 has only 1 sender
+func setReserveFactor0x1c446983 has only 1 origin
+func setTransferEthGasCost0xc0627004 has only 1 sender
+func setTransferEthGasCost0xc0627004 has only 1 origin
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+func setPendingAdmin0x4dd18bf5 has only 1 sender
+func setPendingAdmin0x4dd18bf5 has only 1 origin
+func acceptAdmin0x0e18b681 has only 1 sender
+func acceptAdmin0x0e18b681 has only 1 origin
+func borrow0x0c28d13e has only 1 sender
+func borrow0x0c28d13e has more than 5 origins
+func borrowBalanceCurrent0xd9af3db8 has only 1 sender
+func borrowBalanceCurrent0xd9af3db8 has more than 5 origins
+func redeemUnderlying0x852a12e3 has only 1 sender
+func redeemUnderlying0x852a12e3 has only 1 origin
+func redeem0xdb006a75 has more than 5 senders
+func redeem0xdb006a75 has more than 5 origins
+func repayBorrowAndClaim0x37cd3f07 has only 1 sender
+func repayBorrowAndClaim0x37cd3f07 has only 1 origin
+==invariant map: 
+{ 'acceptAdmin0x0e18b681': { 'isOriginOwner': '0x249af8e014cb80a82e9e7787e809d0eba10c37df',
+                             'isSenderOwner': '0x6d7bc3d418e8c482c49f6c1ebad901606d9c10a4',
+                             'require(origin==sender)': False},
+  'borrow0x0c28d13e': { 'isSenderOwner': '0xb14b3b9682990ccc16f52eb04146c3ceab01169a',
+                        'require(origin==sender)': False},
+  'borrowBalanceCurrent0xd9af3db8': { 'isSenderOwner': '0xb7e2300e77d81336307e36ce68d6909e43f4d38a',
+                                      'require(origin==sender)': False},
+  'initialize0x7715632e': { 'isOriginOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                            'isSenderOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': {'require(origin==sender)': True},
+  'redeem0xdb006a75': {'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': { 'isOriginOwner': '0x27fae987f304afa9f2ff10f48e9d8e90eb05a7df',
+                                  'isSenderOwner': '0x27fae987f304afa9f2ff10f48e9d8e90eb05a7df',
+                                  'require(origin==sender)': True},
+  'repayBorrowAndClaim0x37cd3f07': { 'isOriginOwner': '0xaf7a1caa97ed983e73f14e0bfd12fb5edf63e39d',
+                                     'isSenderOwner': '0xaf7a1caa97ed983e73f14e0bfd12fb5edf63e39d',
+                                     'require(origin==sender)': True},
+  'setPendingAdmin0x4dd18bf5': { 'isOriginOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                                 'isSenderOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                                 'require(origin==sender)': True},
+  'setReserveFactor0x1c446983': { 'isOriginOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                                  'isSenderOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                                  'require(origin==sender)': True},
+  'setTransferEthGasCost0xc0627004': { 'isOriginOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                                       'isSenderOwner': '0xc087629431256745e6e3d87b3ec14e8b42d47e48',
+                                       'require(origin==sender)': True}}
+len(testing set):  102
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isSenderOwner
+exploitTx:  0x51cbfd46f21afb44da4fa971f220bd28a14530e1d5da5009cfbdfee012e57e35
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	7	N/A	6	N/A		240	102
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+0x2e4d7f9940f2940be1f8bb61d35d8ca0225c73ef97332a6db5fcf5ddff156f18
+0xc0fc333b042eea9e14cb7e9e796c0f575a75c36885b2ec0aa29c63644eebfd2f
+0xa328a9377157276b7c88281f83970c6f1ff417c77e7e7c7e4d2c9236af1b6935
+0x25c96d5ddcd0b2d56364480227744cddc8613ed221b72c2074dfeff2f015b922
+0x48085239ff06c312b894e3ffff4abc2b10426d010f84ad8f2627ab019cc8cb6a
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+0x48085239ff06c312b894e3ffff4abc2b10426d010f84ad8f2627ab019cc8cb6a
+0x25c96d5ddcd0b2d56364480227744cddc8613ed221b72c2074dfeff2f015b922
+0xa328a9377157276b7c88281f83970c6f1ff417c77e7e7c7e4d2c9236af1b6935
+0x94b88fb785eefe42ec8fc03035c495a1740f5f8fc3cc977300569e105859d4cc
+0xc0fc333b042eea9e14cb7e9e796c0f575a75c36885b2ec0aa29c63644eebfd2f
+5 sampled FPs for isOriginManager
+len(txList3):  342
+====== benchmark Harvest1_fUSDT: 
+len(training set):  1436
+func initializeVault0x8fc1708c has only 1 sender
+func initializeVault0x8fc1708c has only 1 origin
+func setStrategy0x33a100ca has only 1 origin
+func announceStrategyUpdate0x0a6bbeb3 has only 1 sender
+func announceStrategyUpdate0x0a6bbeb3 has only 1 origin
+func doHardWork0x4fa5d854 has only 1 origin
+func setStorage0x9137c1a7 has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has only 1 sender
+func transferFrom0x23b872dd has more than 5 origins
+func setVaultFractionToInvest0xa5b1a24d has only 1 origin
+func transfer0xa9059cbb has only 1 sender
+func transfer0xa9059cbb has more than 5 origins
+func withdraw0x2e1a7d4d has more than 5 senders
+func withdraw0x2e1a7d4d has more than 5 origins
+func depositFor0x36efd16f has only 1 sender
+func depositFor0x36efd16f has more than 5 origins
+==invariant map: 
+{ 'announceStrategyUpdate0x0a6bbeb3': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                        'isSenderOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                        'require(origin==sender)': True},
+  'approve0x095ea7b3': {'require(origin==sender)': False},
+  'deposit0xb6b55f25': { 'isOriginManager': [ '0x7ba605bc00ea26512a639d5e0335eaeb3e81ad94',
+                                              '0xf00dd244228f51547f0563e60bca65a30fbf5f7f'],
+                         'isSenderManager': [ '0x7ba605bc00ea26512a639d5e0335eaeb3e81ad94',
+                                              '0xe0dbb056f31d554e6928d2c97442111958a0e62e'],
+                         'require(origin==sender)': False},
+  'depositFor0x36efd16f': { 'isSenderOwner': '0xf8ce90c2710713552fb564869694b2505bfc0846',
+                            'require(origin==sender)': False},
+  'doHardWork0x4fa5d854': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                            'isSenderManager': [ '0x222412af183bceadefd72e4cb1b71f1889953b1c',
+                                                 '0xb95a02e38ce0830aabffebee17d1c5925cf3ebf9'],
+                            'require(origin==sender)': False},
+  'initializeVault0x8fc1708c': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                 'isSenderOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                 'require(origin==sender)': True},
+  'setStorage0x9137c1a7': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                            'isSenderManager': [ '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                                 '0xb95a02e38ce0830aabffebee17d1c5925cf3ebf9'],
+                            'require(origin==sender)': False},
+  'setStrategy0x33a100ca': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                             'isSenderManager': [ '0x222412af183bceadefd72e4cb1b71f1889953b1c',
+                                                  '0xf00dd244228f51547f0563e60bca65a30fbf5f7f'],
+                             'require(origin==sender)': False},
+  'setVaultFractionToInvest0xa5b1a24d': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                          'isSenderManager': [ '0xb95a02e38ce0830aabffebee17d1c5925cf3ebf9',
+                                                               '0xf00dd244228f51547f0563e60bca65a30fbf5f7f'],
+                                          'require(origin==sender)': False},
+  'transfer0xa9059cbb': { 'isSenderOwner': '0x6ac4a7ab91e6fd098e13b7d347c6d4d1494994a2',
+                          'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderOwner': '0x6ac4a7ab91e6fd098e13b7d347c6d4d1494994a2',
+                              'require(origin==sender)': False},
+  'withdraw0x2e1a7d4d': {'require(origin==sender)': True}}
+len(testing set):  614
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x0fc6d2ca064fc841bc9b1c1fad1fbb97bcea5c9a1b2b66ef837f1227e06519a6
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	3	0	0	0		1436	614
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+0x787cde87822d46eb346fa9f8bc71c0ccf78ecf68550ab5ea3cde7bc3a6e1a48a
+0x97623f360c352604ce7158950ae3a4df2275f0caec25d62e0d3019f856a8dc1d
+0xc5c4c38c34a23405eafe82c81dcf6c44116e80f3f1aaaed2fd95f8d3f8a2d556
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  2050
+====== benchmark Harvest2_fUSDC: 
+len(training set):  1513
+func initializeVault0x8fc1708c has only 1 sender
+func initializeVault0x8fc1708c has only 1 origin
+func setStrategy0x33a100ca has only 1 origin
+func announceStrategyUpdate0x0a6bbeb3 has only 1 sender
+func announceStrategyUpdate0x0a6bbeb3 has only 1 origin
+func doHardWork0x4fa5d854 has only 1 origin
+func setStorage0x9137c1a7 has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has only 1 sender
+func transferFrom0x23b872dd has more than 5 origins
+func setVaultFractionToInvest0xa5b1a24d has only 1 origin
+func depositFor0x36efd16f has only 1 sender
+func depositFor0x36efd16f has more than 5 origins
+func transfer0xa9059cbb has only 1 sender
+func transfer0xa9059cbb has more than 5 origins
+func withdraw0x2e1a7d4d has more than 5 senders
+func withdraw0x2e1a7d4d has more than 5 origins
+==invariant map: 
+{ 'announceStrategyUpdate0x0a6bbeb3': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                        'isSenderOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                        'require(origin==sender)': True},
+  'approve0x095ea7b3': {'require(origin==sender)': False},
+  'deposit0xb6b55f25': { 'isOriginManager': [ '0x7ba605bc00ea26512a639d5e0335eaeb3e81ad94',
+                                              '0xf00dd244228f51547f0563e60bca65a30fbf5f7f'],
+                         'isSenderManager': [ '0x7ba605bc00ea26512a639d5e0335eaeb3e81ad94',
+                                              '0xd5df7e9f74b31ec8d5011600093156c9f904671d'],
+                         'require(origin==sender)': False},
+  'depositFor0x36efd16f': { 'isSenderOwner': '0xf8ce90c2710713552fb564869694b2505bfc0846',
+                            'require(origin==sender)': False},
+  'doHardWork0x4fa5d854': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                            'isSenderManager': [ '0x222412af183bceadefd72e4cb1b71f1889953b1c',
+                                                 '0xb95a02e38ce0830aabffebee17d1c5925cf3ebf9'],
+                            'require(origin==sender)': False},
+  'initializeVault0x8fc1708c': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                 'isSenderOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                 'require(origin==sender)': True},
+  'setStorage0x9137c1a7': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                            'isSenderManager': [ '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                                 '0xb95a02e38ce0830aabffebee17d1c5925cf3ebf9'],
+                            'require(origin==sender)': False},
+  'setStrategy0x33a100ca': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                             'isSenderManager': [ '0x222412af183bceadefd72e4cb1b71f1889953b1c',
+                                                  '0xf00dd244228f51547f0563e60bca65a30fbf5f7f'],
+                             'require(origin==sender)': False},
+  'setVaultFractionToInvest0xa5b1a24d': { 'isOriginOwner': '0xf00dd244228f51547f0563e60bca65a30fbf5f7f',
+                                          'isSenderManager': [ '0xb95a02e38ce0830aabffebee17d1c5925cf3ebf9',
+                                                               '0xf00dd244228f51547f0563e60bca65a30fbf5f7f'],
+                                          'require(origin==sender)': False},
+  'transfer0xa9059cbb': { 'isSenderOwner': '0x4f7c28ccb0f1dbd1388209c67eec234273c878bd',
+                          'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderOwner': '0x4f7c28ccb0f1dbd1388209c67eec234273c878bd',
+                              'require(origin==sender)': False},
+  'withdraw0x2e1a7d4d': {'require(origin==sender)': True}}
+len(testing set):  648
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x35f8d2f572fceaac9288e5d462117850ef2694786992a8c3f6d02612277b0877
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	0	0		1513	648
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  2161
+====== benchmark ValueDeFi: 
+len(training set):  207
+func initialize0x485cc955 has only 1 sender
+func initialize0x485cc955 has only 1 origin
+func whitelistContract0x3a0e6d43 has only 1 sender
+func whitelistContract0x3a0e6d43 has only 1 origin
+func setInputTokens0xa1d79351 has only 1 sender
+func setInputTokens0xa1d79351 has only 1 origin
+func setController0x92eefe9b has only 1 sender
+func setController0x92eefe9b has only 1 origin
+func setMin0x45dc3dd8 has only 1 sender
+func setMin0x45dc3dd8 has only 1 origin
+func setEarnLowerlimit0x909d3f4c has only 1 sender
+func setEarnLowerlimit0x909d3f4c has only 1 origin
+func setCap0x47786d37 has only 1 sender
+func setCap0x47786d37 has only 1 origin
+func setConverter0xb23fa562 has only 1 sender
+func setConverter0xb23fa562 has only 1 origin
+func setShareConverter0x9b74c68c has only 1 sender
+func setShareConverter0x9b74c68c has only 1 origin
+func depositFor0x4a042674 has only 1 sender
+func depositFor0x4a042674 has more than 5 origins
+func depositAllFor0x3b3d1210 has only 1 sender
+func depositAllFor0x3b3d1210 has more than 5 origins
+func setInput2Want0x5c0dc697 has only 1 sender
+func setInput2Want0x5c0dc697 has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transfer0xa9059cbb has only 1 sender
+func transfer0xa9059cbb has more than 5 origins
+func transferFrom0x23b872dd has only 1 sender
+func transferFrom0x23b872dd has more than 5 origins
+func withdrawFor0x39bb96a8 has only 1 sender
+func withdrawFor0x39bb96a8 has more than 5 origins
+func deposit0x0efe6a8b has only 1 sender
+func deposit0x0efe6a8b has only 1 origin
+==invariant map: 
+{ 'approve0x095ea7b3': {'require(origin==sender)': True},
+  'deposit0x0efe6a8b': { 'isOriginOwner': '0x77777a55576e4b03844ac5133b8e9a99057492d6',
+                         'isSenderOwner': '0x77777a55576e4b03844ac5133b8e9a99057492d6',
+                         'require(origin==sender)': True},
+  'depositAllFor0x3b3d1210': { 'isSenderOwner': '0x8764f2c305b79680cfcc3398a96aedea9260f7ff',
+                               'require(origin==sender)': False},
+  'depositFor0x4a042674': { 'isSenderOwner': '0x8764f2c305b79680cfcc3398a96aedea9260f7ff',
+                            'require(origin==sender)': False},
+  'initialize0x485cc955': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                            'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                            'require(origin==sender)': True},
+  'setCap0x47786d37': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                        'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                        'require(origin==sender)': True},
+  'setController0x92eefe9b': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                               'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                               'require(origin==sender)': True},
+  'setConverter0xb23fa562': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                              'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                              'require(origin==sender)': True},
+  'setEarnLowerlimit0x909d3f4c': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                   'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                   'require(origin==sender)': True},
+  'setInput2Want0x5c0dc697': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                               'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                               'require(origin==sender)': True},
+  'setInputTokens0xa1d79351': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                'require(origin==sender)': True},
+  'setMin0x45dc3dd8': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                        'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                        'require(origin==sender)': True},
+  'setShareConverter0x9b74c68c': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                   'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                   'require(origin==sender)': True},
+  'transfer0xa9059cbb': { 'isSenderOwner': '0x8764f2c305b79680cfcc3398a96aedea9260f7ff',
+                          'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderOwner': '0x8764f2c305b79680cfcc3398a96aedea9260f7ff',
+                              'require(origin==sender)': False},
+  'whitelistContract0x3a0e6d43': { 'isOriginOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                   'isSenderOwner': '0x7be4d5a99c903c437ec77a20cb6d0688cbb73c7f',
+                                   'require(origin==sender)': True},
+  'withdrawFor0x39bb96a8': { 'isSenderOwner': '0x8764f2c305b79680cfcc3398a96aedea9260f7ff',
+                             'require(origin==sender)': False}}
+len(testing set):  88
+Successfully stops the exploit using isSenderOwner
+exploitTx:  0x46a03488247425f845e444b9c10b52ba3c14927c687d38287c0faddc7471150a
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		207	88
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  295
+====== benchmark Yearn1: 
+len(training set):  468
+func deposit0xd0e30db0 has only 1 sender
+func setStrategistReward0x0d596cdf has only 1 sender
+func setStrategistReward0x0d596cdf has only 1 origin
+func setTreasuryFee0x77e741c7 has only 1 sender
+func setTreasuryFee0x77e741c7 has only 1 origin
+func setGovernance0xab033ea9 has only 1 sender
+func setGovernance0xab033ea9 has only 1 origin
+==invariant map: 
+{ 'deposit0xd0e30db0': { 'isOriginManager': [ '0x0cec743b8ce4ef8802cac0e5df18a180ed8402a7',
+                                              '0x1ea056c13f8ccc981e51c5f1cdf87476666d0a74'],
+                         'isSenderOwner': '0x9e65ad11b299ca0abefc2799ddb6314ef2d91080',
+                         'require(origin==sender)': False},
+  'setGovernance0xab033ea9': { 'isOriginOwner': '0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24',
+                               'isSenderOwner': '0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24',
+                               'require(origin==sender)': True},
+  'setStrategistReward0x0d596cdf': { 'isOriginOwner': '0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24',
+                                     'isSenderOwner': '0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24',
+                                     'require(origin==sender)': True},
+  'setTreasuryFee0x77e741c7': { 'isOriginOwner': '0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24',
+                                'isSenderOwner': '0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24',
+                                'require(origin==sender)': True}}
+len(testing set):  197
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	0		471	197
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  665
+====== benchmark Yearn1_interface: 
+len(training set):  18679
+func deposit0xb6b55f25 has more than 5 senders
+func deposit0xb6b55f25 has more than 5 origins
+func earn0xd389800f has more than 5 senders
+func earn0xd389800f has more than 5 origins
+func withdraw0x2e1a7d4d has more than 5 senders
+func withdraw0x2e1a7d4d has more than 5 origins
+func depositAll0xde5f6268 has more than 5 senders
+func depositAll0xde5f6268 has more than 5 origins
+func withdrawAll0x853828b6 has more than 5 senders
+func withdrawAll0x853828b6 has more than 5 origins
+func setGovernance0xab033ea9 has only 1 sender
+func setGovernance0xab033ea9 has only 1 origin
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 senders
+func transferFrom0x23b872dd has more than 5 origins
+func setMin0x45dc3dd8 has only 1 sender
+func setMin0x45dc3dd8 has only 1 origin
+==invariant map: 
+{ 'approve0x095ea7b3': {'require(origin==sender)': False},
+  'deposit0xb6b55f25': {'require(origin==sender)': False},
+  'depositAll0xde5f6268': {'require(origin==sender)': False},
+  'earn0xd389800f': {'require(origin==sender)': True},
+  'setGovernance0xab033ea9': { 'isOriginOwner': '0x2d407ddb06311396fe14d4b49da5f0471447d45c',
+                               'isSenderOwner': '0x2d407ddb06311396fe14d4b49da5f0471447d45c',
+                               'require(origin==sender)': True},
+  'setMin0x45dc3dd8': { 'isOriginOwner': '0x6626593c237f530d15ae9980a95ef938ac15c35c',
+                        'isSenderOwner': '0xfeb4acf3df3cdea7399794d0869ef76a6efaff52',
+                        'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': {'require(origin==sender)': False},
+  'withdraw0x2e1a7d4d': {'require(origin==sender)': False},
+  'withdrawAll0x853828b6': {'require(origin==sender)': False}}
+len(testing set):  8002
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+1	0	N/A	3	N/A		18682	8002
+5 sampled FPs for require(origin==sender)
+0x49d62533adb1131d476ff0a4f67d5a41ba1e65c2ceeb1de54eb8ad9d4f87bf8e
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+0x49d62533adb1131d476ff0a4f67d5a41ba1e65c2ceeb1de54eb8ad9d4f87bf8e
+0x0b6cb1534af3254ac69db83794609c8c6debbc3471a5dcde6b7d6df7ad84eb44
+0x4d30d5fde395fda81c54ca9454ccecff576875b66555489ea0225efd70c02000
+5 sampled FPs for isOriginManager
+len(txList3):  26681
+====== benchmark VisorFi: 
+len(training set):  1186
+func deposit0x2e2d2984 has more than 5 senders
+func deposit0x2e2d2984 has more than 5 origins
+func withdraw0xb460af94 has more than 5 senders
+func withdraw0xb460af94 has more than 5 origins
+func transferTokenOwnership0x21e6b53d has only 1 sender
+func transferTokenOwnership0x21e6b53d has only 1 origin
+func snapshot0x9711715a has only 1 sender
+func snapshot0x9711715a has only 1 origin
+func transferOwnership0xf2fde38b has only 1 sender
+func transferOwnership0xf2fde38b has only 1 origin
+==invariant map: 
+{ 'deposit0x2e2d2984': {'require(origin==sender)': True},
+  'snapshot0x9711715a': { 'isOriginOwner': '0x79a5e766e84076d00af6d05ebfcca9a274e47815',
+                          'isSenderOwner': '0x79a5e766e84076d00af6d05ebfcca9a274e47815',
+                          'require(origin==sender)': True},
+  'transferOwnership0xf2fde38b': { 'isOriginOwner': '0x79a5e766e84076d00af6d05ebfcca9a274e47815',
+                                   'isSenderOwner': '0x79a5e766e84076d00af6d05ebfcca9a274e47815',
+                                   'require(origin==sender)': True},
+  'transferTokenOwnership0x21e6b53d': { 'isOriginOwner': '0x79a5e766e84076d00af6d05ebfcca9a274e47815',
+                                        'isSenderOwner': '0x79a5e766e84076d00af6d05ebfcca9a274e47815',
+                                        'require(origin==sender)': True},
+  'withdraw0xb460af94': {'require(origin==sender)': True}}
+len(testing set):  506
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x69272d8c84d67d1da2f6425b339192fa472898dce936f24818fda415c1c1ff3f
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		1187	506
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  1692
+====== benchmark UmbrellaNetwork: 
+len(training set):  42
+func notifyRewardAmount0x3c6b16ab has only 1 sender
+func notifyRewardAmount0x3c6b16ab has only 1 origin
+func stake0xa694fc3a has more than 5 senders
+func stake0xa694fc3a has more than 5 origins
+func exit0xe9fad8ee has only 1 sender
+func exit0xe9fad8ee has only 1 origin
+==invariant map: 
+{ 'exit0xe9fad8ee': { 'isOriginOwner': '0xbbd98aa93942ea47f99e071346f7c17f287ae441',
+                      'isSenderOwner': '0xbbd98aa93942ea47f99e071346f7c17f287ae441',
+                      'require(origin==sender)': True},
+  'notifyRewardAmount0x3c6b16ab': { 'isOriginOwner': '0xa6e4ffa19b213abea258ae72e8e1a209b9e543e7',
+                                    'isSenderOwner': '0xa6e4ffa19b213abea258ae72e8e1a209b9e543e7',
+                                    'require(origin==sender)': True},
+  'stake0xa694fc3a': {'require(origin==sender)': True}}
+len(testing set):  17
+exploitTx:  0x33479bcfbc792aa0f8103ab0d7a3784788b5b0e1467c81ffbed1b7682660b4fa
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	2	N/A	2	N/A		42	17
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+0x2fcf3fda994b0836c3624c45acd33cfd1426b8e32ecaf2fc0a7b95a3d3bac630
+0x935ca4702e375fb713a67cf55a68600a6a094c3ed17953d7a267490d3bd99f90
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+0x2fcf3fda994b0836c3624c45acd33cfd1426b8e32ecaf2fc0a7b95a3d3bac630
+0x935ca4702e375fb713a67cf55a68600a6a094c3ed17953d7a267490d3bd99f90
+5 sampled FPs for isOriginManager
+len(txList3):  59
+====== benchmark PickleFi: 
+len(training set):  3808
+func approveJarConverter0xcb35508a has only 1 sender
+func approveJarConverter0xcb35508a has only 1 origin
+func setJar0x46560bfb has only 1 sender
+func setJar0x46560bfb has only 1 origin
+func setTimelock0xbdacb303 has only 1 sender
+func setTimelock0xbdacb303 has only 1 origin
+func earn0xb02bf4b9 has more than 5 senders
+func earn0xb02bf4b9 has more than 5 origins
+func withdraw0xf3fef3a3 has more than 5 senders
+func withdraw0xf3fef3a3 has more than 5 origins
+func swapExactJarForJar0xff3f1869 has more than 5 senders
+func swapExactJarForJar0xff3f1869 has more than 5 origins
+func setDevFund0xae4db919 has only 1 sender
+func setDevFund0xae4db919 has only 1 origin
+func setConvenienceFee0x1dfd45af has only 1 sender
+func setConvenienceFee0x1dfd45af has only 1 origin
+==invariant map: 
+{ 'approveJarConverter0xcb35508a': { 'isOriginOwner': '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                     'isSenderOwner': '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                     'require(origin==sender)': True},
+  'approveStrategy0xc494448e': { 'isOriginManager': [ '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                                      '0xeb8efa8cad41e89986aef7e896a06fb2f1f7e932'],
+                                 'isSenderManager': [ '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                                      '0xd92c7faa0ca0e6ae4918f3a83d9832d9caeaa0d3'],
+                                 'require(origin==sender)': False},
+  'earn0xb02bf4b9': {'require(origin==sender)': False},
+  'setConvenienceFee0x1dfd45af': { 'isOriginOwner': '0x821880a3e2bac432d67e5155e72bb655ef65fa5e',
+                                   'isSenderOwner': '0xd92c7faa0ca0e6ae4918f3a83d9832d9caeaa0d3',
+                                   'require(origin==sender)': False},
+  'setDevFund0xae4db919': { 'isOriginOwner': '0x5898dc88e6f1bd8247f5e1e0e3eff7231c143d10',
+                            'isSenderOwner': '0x9d074e37d408542fd38be78848e8814afb38db17',
+                            'require(origin==sender)': False},
+  'setGovernance0xab033ea9': { 'isOriginManager': [ '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                                    '0x821880a3e2bac432d67e5155e72bb655ef65fa5e'],
+                               'isSenderManager': [ '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                                    '0x9d074e37d408542fd38be78848e8814afb38db17'],
+                               'require(origin==sender)': False},
+  'setJar0x46560bfb': { 'isOriginOwner': '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                        'isSenderOwner': '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                        'require(origin==sender)': True},
+  'setStrategy0x72cb5d97': { 'isOriginManager': [ '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                                  '0x907d9b32654b8d43e8737e0291ad9bfcce01dad6'],
+                             'isSenderManager': [ '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                                                  '0x907d9b32654b8d43e8737e0291ad9bfcce01dad6'],
+                             'require(origin==sender)': True},
+  'setTimelock0xbdacb303': { 'isOriginOwner': '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                             'isSenderOwner': '0xf00d98806a785bb0e1854a0ccc8a39c9c4f4316a',
+                             'require(origin==sender)': True},
+  'swapExactJarForJar0xff3f1869': {'require(origin==sender)': True},
+  'withdraw0xf3fef3a3': {'require(origin==sender)': False}}
+len(testing set):  1631
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0xe72d4e7ba9b5af0cf2a8cfb1e30fd9f388df0ab3da79790be842bfbed11087b0
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	0	0		3808	1631
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  5439
+====== benchmark Eminence: 
+len(training set):  14413
+func addGM0x12d8d1a9 has more than 5 senders
+func addGM0x12d8d1a9 has only 1 origin
+func buy0xd6febde8 has more than 5 senders
+func buy0xd6febde8 has more than 5 origins
+func claim0xaad3ec96 has more than 5 senders
+func claim0xaad3ec96 has more than 5 origins
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func sell0xd79875eb has more than 5 senders
+func sell0xd79875eb has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+func transferFrom0x23b872dd has more than 5 senders
+func transferFrom0x23b872dd has more than 5 origins
+func increaseAllowance0x39509351 has more than 5 senders
+func increaseAllowance0x39509351 has more than 5 origins
+func award0x5d8a776e has more than 5 senders
+func award0x5d8a776e has more than 5 origins
+==invariant map: 
+{ 'addGM0x12d8d1a9': { 'isOriginOwner': '0x2d407ddb06311396fe14d4b49da5f0471447d45c',
+                       'require(origin==sender)': False},
+  'approve0x095ea7b3': {'require(origin==sender)': False},
+  'award0x5d8a776e': {'require(origin==sender)': False},
+  'buy0xd6febde8': {'require(origin==sender)': False},
+  'claim0xaad3ec96': {'require(origin==sender)': False},
+  'increaseAllowance0x39509351': {'require(origin==sender)': True},
+  'sell0xd79875eb': {'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': {'require(origin==sender)': False}}
+len(testing set):  6176
+exploitTx:  0x3503253131644dd9f52802d071de74e456570374d586ddd640159cf6fb9b8ad8
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	N/A	N/A	0	N/A		14413	6176
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  20589
+====== benchmark Opyn: 
+len(training set):  47
+func  has more than 5 origins
+func transferOwnership0xf2fde38b has only 1 sender
+func transferOwnership0xf2fde38b has only 1 origin
+func setDetails0xb7b090ee has only 1 sender
+func setDetails0xb7b090ee has only 1 origin
+func updateParameters0xee1eab4f has only 1 sender
+func updateParameters0xee1eab4f has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 origins
+func transfer0xa9059cbb has only 1 sender
+func transfer0xa9059cbb has more than 5 origins
+func createAndSellERC20CollateralOption0xc56749ce has more than 5 senders
+func createAndSellERC20CollateralOption0xc56749ce has more than 5 origins
+func burnOTokens0xeaa376b5 has only 1 sender
+func burnOTokens0xeaa376b5 has only 1 origin
+func removeCollateral0x3237c158 has only 1 sender
+func removeCollateral0x3237c158 has only 1 origin
+==invariant map: 
+{ '': { 'isSenderManager': [ '0xcc5d905b9c2c8c9329eb4e25dc086369d6c7777c',
+                             '0x7623a53cbc779dbf44b706a00d4adf1be7e358ec'],
+        'require(origin==sender)': False},
+  'addAndSellERC20CollateralOption0x3226052d': { 'isOriginManager': [ '0x4b5160ab8efec1742f20a74428e08790cbc90a48',
+                                                                      '0x01bdb7ada61c82e951b9ed9f0d312dc9af0ba0f2',
+                                                                      '0x6cfac3cf77a359d7ce28c14f2d53de48981e0f04'],
+                                                 'isSenderManager': [ '0x4b5160ab8efec1742f20a74428e08790cbc90a48',
+                                                                      '0x01bdb7ada61c82e951b9ed9f0d312dc9af0ba0f2',
+                                                                      '0x6cfac3cf77a359d7ce28c14f2d53de48981e0f04'],
+                                                 'require(origin==sender)': True},
+  'approve0x095ea7b3': {'require(origin==sender)': False},
+  'burnOTokens0xeaa376b5': { 'isOriginOwner': '0x280bf69d522bbcfb3aeb138c59d85a16e449057c',
+                             'isSenderOwner': '0x280bf69d522bbcfb3aeb138c59d85a16e449057c',
+                             'require(origin==sender)': True},
+  'createAndSellERC20CollateralOption0xc56749ce': { 'require(origin==sender)': True},
+  'createERC20CollateralOption0x52f89fe3': { 'isOriginManager': [ '0xde99ea535749f02da84d13e6f8253291e32d3a7f',
+                                                                  '0x076c95c6cd2eb823acc6347fdf5b3dd9b83511e4'],
+                                             'isSenderManager': [ '0xde99ea535749f02da84d13e6f8253291e32d3a7f',
+                                                                  '0x076c95c6cd2eb823acc6347fdf5b3dd9b83511e4'],
+                                             'require(origin==sender)': True},
+  'removeCollateral0x3237c158': { 'isOriginOwner': '0x280bf69d522bbcfb3aeb138c59d85a16e449057c',
+                                  'isSenderOwner': '0x280bf69d522bbcfb3aeb138c59d85a16e449057c',
+                                  'require(origin==sender)': True},
+  'setDetails0xb7b090ee': { 'isOriginOwner': '0x9e68b67660c223b3e0634d851f5df821e0e17d84',
+                            'isSenderOwner': '0x87887cf0e37d937f989ab76b99e4f4682da044c4',
+                            'require(origin==sender)': False},
+  'transfer0xa9059cbb': { 'isSenderOwner': '0x7623a53cbc779dbf44b706a00d4adf1be7e358ec',
+                          'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderManager': [ '0x7623a53cbc779dbf44b706a00d4adf1be7e358ec',
+                                                   '0x39246c4f3f6592c974ebc44f80ba6dc69b817c71'],
+                              'require(origin==sender)': False},
+  'transferOwnership0xf2fde38b': { 'isOriginOwner': '0xde99ea535749f02da84d13e6f8253291e32d3a7f',
+                                   'isSenderOwner': '0xcc5d905b9c2c8c9329eb4e25dc086369d6c7777c',
+                                   'require(origin==sender)': False},
+  'updateParameters0xee1eab4f': { 'isOriginOwner': '0x9e68b67660c223b3e0634d851f5df821e0e17d84',
+                                  'isSenderOwner': '0x87887cf0e37d937f989ab76b99e4f4682da044c4',
+                                  'require(origin==sender)': False}}
+len(testing set):  20
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0xa858463f30a08c6f3410ed456e59277fbe62ff14225754d2bb0b4f6a75fdc8ad
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	0	0	0		47	20
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  67
+====== benchmark IndexFi: 
+len(training set):  14449
+func setExitFeeRecipient0xf9f97c98 has only 1 sender
+func setExitFeeRecipient0xf9f97c98 has only 1 origin
+func setSwapFee0x34e19907 has only 1 sender
+func setSwapFee0x34e19907 has only 1 origin
+func swapExactAmountIn0x8201aa3f has more than 5 senders
+func swapExactAmountIn0x8201aa3f has more than 5 origins
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 senders
+func transferFrom0x23b872dd has more than 5 origins
+func joinPool0x4f69c0d4 has more than 5 senders
+func joinPool0x4f69c0d4 has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+func exitswapPoolAmountIn0x46ab38f1 has more than 5 senders
+func exitswapPoolAmountIn0x46ab38f1 has more than 5 origins
+func joinswapExternAmountIn0x5db34277 has more than 5 senders
+func joinswapExternAmountIn0x5db34277 has more than 5 origins
+func reweighTokens0x5d5e8ce7 has only 1 sender
+func reweighTokens0x5d5e8ce7 has only 1 origin
+func reindexTokens0xc3f46810 has only 1 sender
+func reindexTokens0xc3f46810 has only 1 origin
+func exitPool0xb02f0b73 has more than 5 senders
+func exitPool0xb02f0b73 has more than 5 origins
+func joinswapPoolAmountOut0x6d06dfa0 has more than 5 origins
+==invariant map: 
+{ 'approve0x095ea7b3': {'require(origin==sender)': False},
+  'exitPool0xb02f0b73': {'require(origin==sender)': False},
+  'exitswapExternAmountOut0x02c96748': { 'isOriginManager': [ '0x022ce09cf5aeb75ba41177a0cea36fc41680d751',
+                                                              '0x99905f8152e86a6f3f7f3a816da6329a27d57851'],
+                                         'isSenderManager': [ '0x022ce09cf5aeb75ba41177a0cea36fc41680d751',
+                                                              '0x99905f8152e86a6f3f7f3a816da6329a27d57851'],
+                                         'require(origin==sender)': True},
+  'exitswapPoolAmountIn0x46ab38f1': {'require(origin==sender)': False},
+  'joinPool0x4f69c0d4': {'require(origin==sender)': False},
+  'joinswapExternAmountIn0x5db34277': {'require(origin==sender)': False},
+  'joinswapPoolAmountOut0x6d06dfa0': { 'isSenderManager': [ '0xfb6ac20d38a1f0c4f90747ca0745e140bc17e4c3',
+                                                            '0x429302c74a0350410fc8b43e4839d459dec4d050'],
+                                       'require(origin==sender)': False},
+  'reindexTokens0xc3f46810': { 'isOriginOwner': '0x000000000057e8abd581828a2b40076852c0ba6e',
+                               'isSenderOwner': '0xf00a38376c8668fc1f3cd3daeef42e0e44a7fcdb',
+                               'require(origin==sender)': False},
+  'reweighTokens0x5d5e8ce7': { 'isOriginOwner': '0x000000000057e8abd581828a2b40076852c0ba6e',
+                               'isSenderOwner': '0xf00a38376c8668fc1f3cd3daeef42e0e44a7fcdb',
+                               'require(origin==sender)': False},
+  'setExitFeeRecipient0xf9f97c98': { 'isOriginOwner': '0x000000000057e8abd581828a2b40076852c0ba6e',
+                                     'isSenderOwner': '0xf00a38376c8668fc1f3cd3daeef42e0e44a7fcdb',
+                                     'require(origin==sender)': False},
+  'setSwapFee0x34e19907': { 'isOriginOwner': '0x000000000057e8abd581828a2b40076852c0ba6e',
+                            'isSenderOwner': '0xf00a38376c8668fc1f3cd3daeef42e0e44a7fcdb',
+                            'require(origin==sender)': False},
+  'swapExactAmountIn0x8201aa3f': {'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': {'require(origin==sender)': False}}
+len(testing set):  6192
+Successfully stops the exploit using isOriginOwner
+exploitTx:  0x44aad3b853866468161735496a5d9cc961ce5aa872924c5d78673076b1cd95aa
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	2	0	1		14449	6192
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0xf14b0d7c49ccb9b14b199acddda624b34bc1b4bd839bfe321b06c8a6521f67c9
+0x166c7da04f323618ae36e564dc768872902e9df621a722138c41d2d2861bd5bd
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0x166c7da04f323618ae36e564dc768872902e9df621a722138c41d2d2861bd5bd
+len(txList3):  20641
+====== benchmark RevestFi: 
+len(training set):  1145
+func createFNFT0x8717293d has only 1 sender
+func createFNFT0x8717293d has more than 5 origins
+func transferOwnership0xf2fde38b has only 1 sender
+func transferOwnership0xf2fde38b has only 1 origin
+func withdrawToken0x5d61210d has only 1 sender
+func withdrawToken0x5d61210d has more than 5 origins
+func depositToken0xa3606b90 has only 1 sender
+func handleMultipleDeposits0x375d59ba has only 1 sender
+==invariant map: 
+{ 'createFNFT0x8717293d': { 'isSenderOwner': '0x2320a28f52334d62622cc2eafa15de55f9987ed9',
+                            'require(origin==sender)': False},
+  'depositToken0xa3606b90': { 'isOriginManager': [ '0x74c8c6ce9766c5f77e3e1ad5c75fe7da07199fc8',
+                                                   '0x2d925d3cf3651c2a08fa1bd534d397dca2af588f',
+                                                   '0xa012adb952b6f821291592bad77bd7541f122b08'],
+                              'isSenderOwner': '0x2320a28f52334d62622cc2eafa15de55f9987ed9',
+                              'require(origin==sender)': False},
+  'handleMultipleDeposits0x375d59ba': { 'isOriginManager': [ '0x74c8c6ce9766c5f77e3e1ad5c75fe7da07199fc8',
+                                                             '0x2d925d3cf3651c2a08fa1bd534d397dca2af588f',
+                                                             '0xa012adb952b6f821291592bad77bd7541f122b08'],
+                                        'isSenderOwner': '0x2320a28f52334d62622cc2eafa15de55f9987ed9',
+                                        'require(origin==sender)': False},
+  'transferOwnership0xf2fde38b': { 'isOriginOwner': '0x81245e489cf1e02e38a83c2b9618826747410c50',
+                                   'isSenderOwner': '0x81245e489cf1e02e38a83c2b9618826747410c50',
+                                   'require(origin==sender)': True},
+  'withdrawToken0x5d61210d': { 'isSenderOwner': '0x2320a28f52334d62622cc2eafa15de55f9987ed9',
+                               'require(origin==sender)': False}}
+len(testing set):  490
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	18		1145	490
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0x40d4d309a72e54622036c8dee8e0d8daf511976a927cd0f7374b7802f0b3d6be
+0xe334b092dbf4b9b0f501adec3af405e1a14699060c3fd744b73956983fe366e7
+0x2ff5cf69f77abf79145700d3be818959ddcaeaddc29c256821b0cde69b080aed
+0xc58d8a6b976160ec5e1166d1d3ffc182c9494a0a6b2435b1501c90cafec5c4d7
+0x7b1f814ccd1f6c2797db8d4764ba7d4e137b7f6aa4f22be35b4573a43cdabe28
+len(txList3):  1635
+====== benchmark RevestFi_interface: 
+len(training set):  1025
+func mintTimeLock0x5a7c08f0 has more than 5 senders
+func mintTimeLock0x5a7c08f0 has more than 5 origins
+func transferOwnership0xf2fde38b has only 1 sender
+func transferOwnership0xf2fde38b has only 1 origin
+func mintAddressLock0x02e236bc has more than 5 senders
+func mintAddressLock0x02e236bc has more than 5 origins
+func withdrawFNFT0xf2465f09 has more than 5 senders
+func withdrawFNFT0xf2465f09 has more than 5 origins
+func extendFNFTMaturity0x93a9003c has only 1 sender
+func extendFNFTMaturity0x93a9003c has only 1 origin
+==invariant map: 
+{ 'depositAdditionalToFNFT0x5dcb7ab2': { 'isOriginManager': [ '0x74c8c6ce9766c5f77e3e1ad5c75fe7da07199fc8',
+                                                              '0x2d925d3cf3651c2a08fa1bd534d397dca2af588f',
+                                                              '0xa012adb952b6f821291592bad77bd7541f122b08'],
+                                         'isSenderManager': [ '0x74c8c6ce9766c5f77e3e1ad5c75fe7da07199fc8',
+                                                              '0xbcbb435cf6f664caa5222c3ee01d1a377f12c428'],
+                                         'require(origin==sender)': False},
+  'extendFNFTMaturity0x93a9003c': { 'isOriginOwner': '0x74c8c6ce9766c5f77e3e1ad5c75fe7da07199fc8',
+                                    'isSenderOwner': '0x74c8c6ce9766c5f77e3e1ad5c75fe7da07199fc8',
+                                    'require(origin==sender)': True},
+  'mintAddressLock0x02e236bc': {'require(origin==sender)': False},
+  'mintTimeLock0x5a7c08f0': {'require(origin==sender)': True},
+  'mintValueLock0xbdb132d5': { 'isOriginManager': [ '0xb14484956fcebb5357f23994f7bcbcc027615704',
+                                                    '0x996e90d4d81a8677cf95cb987a5eb0d2ade3aca5'],
+                               'isSenderManager': [ '0xb14484956fcebb5357f23994f7bcbcc027615704',
+                                                    '0x996e90d4d81a8677cf95cb987a5eb0d2ade3aca5'],
+                               'require(origin==sender)': True},
+  'transferOwnership0xf2fde38b': { 'isOriginOwner': '0x81245e489cf1e02e38a83c2b9618826747410c50',
+                                   'isSenderOwner': '0x81245e489cf1e02e38a83c2b9618826747410c50',
+                                   'require(origin==sender)': True},
+  'unlockFNFT0x22caa234': { 'isOriginManager': [ '0xb1612b88b9dd199e55ac92fdedba7538df9bef88',
+                                                 '0xf0e3ea754d038b979cd0124e2f1a4bf44f32746a'],
+                            'isSenderManager': [ '0xb1612b88b9dd199e55ac92fdedba7538df9bef88',
+                                                 '0x8dd5c40e6c024afcfcec592b6b96471b46a35815'],
+                            'require(origin==sender)': False},
+  'withdrawFNFT0xf2465f09': {'require(origin==sender)': True}}
+len(testing set):  438
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+6	0	0	0	18		1025	438
+5 sampled FPs for require(origin==sender)
+0xa85e1a5d93a65e4df65a59b4281101125a518171c7ef8bb3dbf39b092f54c051
+0xe03b12b2383ef785445436331d957c361c526ee6a626bf92975aa2b625c2c391
+0xe4e261d4ea37e4319104b3815da6e9eec8d97643ab9a44f571d43f417e163d95
+0xf7903bf60e9cb1310fc2a67890f96f9b411d627f5327a277357b517f746a5fa9
+0x01a4ee0f9408e4b56a9e5d8aef93f73a04544623be034bba1f1b62ff03797f06
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0xab44a6b0a882b1a0ecb04734ceefce5f9f662ce138ba4cd3a073d650f198a08e
+0x6529ea5df404b24a722136ff2cf52294c4040036795d7d0133da76e1f6daf9e6
+0x40d4d309a72e54622036c8dee8e0d8daf511976a927cd0f7374b7802f0b3d6be
+0x0e54ecbd065b3eb679764c92166e2b01ba2b006079d911100528792450bbf0b2
+0xe8d110b146c3c2003393150b315ab703bcdc3fbbddcaa52a239be9fb4831fad3
+len(txList3):  1463
+====== benchmark DODO: 
+len(training set):  30
+func init0x5039972a has only 1 sender
+func init0x5039972a has only 1 origin
+func buyShares0x4c85b425 has only 1 sender
+func buyShares0x4c85b425 has only 1 origin
+func sellQuote0xdd93f59a has more than 5 origins
+func sellBase0xbd6015b4 has more than 5 origins
+==invariant map: 
+{ 'buyShares0x4c85b425': { 'isOriginOwner': '0x96627558c67e7cf488d8fa9f359daefb43c7e834',
+                           'isSenderOwner': '0xa356867fdcea8e71aeaf87805808803806231fdc',
+                           'require(origin==sender)': False},
+  'init0x5039972a': { 'isOriginOwner': '0x96627558c67e7cf488d8fa9f359daefb43c7e834',
+                      'isSenderOwner': '0x72d220ce168c4f361dd4dee5d826a01ad8598f6c',
+                      'require(origin==sender)': False},
+  'sellBase0xbd6015b4': { 'isSenderManager': [ '0xe069cb01d06ba617bcdf789bf2ff0d5e5ca20c71',
+                                               '0xa356867fdcea8e71aeaf87805808803806231fdc',
+                                               '0xe55154d09265b18ac7cdac6e646672a5460389a1',
+                                               '0x22f9dcf4647084d6c31b2765f6910cd85c178c18'],
+                          'require(origin==sender)': False},
+  'sellQuote0xdd93f59a': { 'isSenderManager': [ '0xa356867fdcea8e71aeaf87805808803806231fdc',
+                                                '0x22f9dcf4647084d6c31b2765f6910cd85c178c18',
+                                                '0xe069cb01d06ba617bcdf789bf2ff0d5e5ca20c71',
+                                                '0xe55154d09265b18ac7cdac6e646672a5460389a1'],
+                           'require(origin==sender)': False}}
+len(testing set):  12
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+exploitTx:  0x395675b56370a9f5fe8b32badfa80043f5291443bd6c8273900476880fb5221e
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	1	0	N/A		30	12
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0x68541d8cf34015dd31c9f1d379705d145ea35c8526a3c3d1fd14e1a0d3affe08
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  42
+====== benchmark Punk_1: 
+len(training set):  20
+func initialize0xcc2a9a5b has only 1 sender
+func initialize0xcc2a9a5b has only 1 origin
+func invest0xe8b5e51f has only 1 sender
+func invest0xe8b5e51f has more than 5 origins
+func withdrawTo0xc86283c8 has only 1 sender
+func withdrawTo0xc86283c8 has only 1 origin
+==invariant map: 
+{ 'initialize0xcc2a9a5b': { 'isOriginOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'isSenderOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'require(origin==sender)': True},
+  'invest0xe8b5e51f': { 'isSenderOwner': '0x0a548513693a09135604e78b8a8fe3bb801586e6',
+                        'require(origin==sender)': False},
+  'withdrawTo0xc86283c8': { 'isOriginOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'isSenderOwner': '0x0a548513693a09135604e78b8a8fe3bb801586e6',
+                            'require(origin==sender)': False}}
+len(testing set):  8
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+Successfully stops the exploit using isSenderOwner
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		20	8
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  28
+====== benchmark Punk_2: 
+len(training set):  30
+func initialize0xcc2a9a5b has only 1 sender
+func initialize0xcc2a9a5b has only 1 origin
+func invest0xe8b5e51f has only 1 sender
+func invest0xe8b5e51f has more than 5 origins
+func withdrawTo0xc86283c8 has only 1 sender
+==invariant map: 
+{ 'initialize0xcc2a9a5b': { 'isOriginOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'isSenderOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'require(origin==sender)': True},
+  'invest0xe8b5e51f': { 'isSenderOwner': '0x0d73ad702ac09eddacc10ceb137cbf84e6b3b9e0',
+                        'require(origin==sender)': False},
+  'withdrawTo0xc86283c8': { 'isOriginManager': [ '0x28c01b64f2492d82fd58feecf8c71603c769bb4a',
+                                                 '0x1bc3fdf1c126827dc59ad76697131d5d47836778'],
+                            'isSenderOwner': '0x0d73ad702ac09eddacc10ceb137cbf84e6b3b9e0',
+                            'require(origin==sender)': False}}
+len(testing set):  12
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+Successfully stops the exploit using isSenderOwner
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	0		30	12
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  42
+====== benchmark Punk_3: 
+len(training set):  26
+func initialize0xcc2a9a5b has only 1 sender
+func initialize0xcc2a9a5b has only 1 origin
+func invest0xe8b5e51f has only 1 sender
+func invest0xe8b5e51f has more than 5 origins
+func withdrawTo0xc86283c8 has only 1 sender
+func withdrawTo0xc86283c8 has only 1 origin
+==invariant map: 
+{ 'initialize0xcc2a9a5b': { 'isOriginOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'isSenderOwner': '0xe36cc0432619247ab12f1cdd19bb3e7a24a7f47c',
+                            'require(origin==sender)': True},
+  'invest0xe8b5e51f': { 'isSenderOwner': '0xc9309a6121ce122c3fb3f7aa8920fb4cbd5fbeec',
+                        'require(origin==sender)': False},
+  'withdrawTo0xc86283c8': { 'isOriginOwner': '0x3cdef21a1ff02b0c61e61e5092de9d17012f4e89',
+                            'isSenderOwner': '0xc9309a6121ce122c3fb3f7aa8920fb4cbd5fbeec',
+                            'require(origin==sender)': False}}
+len(testing set):  11
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+Successfully stops the exploit using isSenderOwner
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	N/A	0	N/A		26	11
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+len(txList3):  37
+====== benchmark BeanstalkFarms: 
+len(training set):  4050
+func initialize0xd178231c has only 1 sender
+func initialize0xd178231c has only 1 origin
+func add_liquidity0x0c3e4b54 has only 1 sender
+func add_liquidity0x0c3e4b54 has more than 5 origins
+func exchange_underlying0xa6417ed6 has more than 5 senders
+func exchange_underlying0xa6417ed6 has more than 5 origins
+func withdraw_admin_fees0x30c54085 has only 1 sender
+func withdraw_admin_fees0x30c54085 has only 1 origin
+func exchange0xddc1f59d has only 1 sender
+func exchange0xddc1f59d has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+func remove_liquidity_one_coin0x081579a5 has only 1 sender
+func remove_liquidity_one_coin0x081579a5 has more than 5 origins
+func add_liquidity0x0b4c7e4d has more than 5 origins
+func exchange_underlying0x44ee1986 has only 1 sender
+func exchange_underlying0x44ee1986 has only 1 origin
+func remove_liquidity0x5b36389c has only 1 sender
+==invariant map: 
+{ 'add_liquidity0x0b4c7e4d': { 'isSenderManager': [ '0x5ce9b49b7a1be9f2c3dc2b2a5bacea56fa21fbee',
+                                                    '0xb02f6c30bcf0d42e64712c28b007b85c199db43f'],
+                               'require(origin==sender)': False},
+  'add_liquidity0x0c3e4b54': { 'isSenderOwner': '0xa79828df1850e8a3a3064576f380d90aecdd3359',
+                               'require(origin==sender)': False},
+  'approve0x095ea7b3': {'require(origin==sender)': False},
+  'exchange0x3df02124': { 'isOriginManager': [ '0x31a7ca77c0bc7a26a5ee69ea3e65363ead6aa322',
+                                               '0x1fd34033240c95aabf73e186a94b9576c6dab81b',
+                                               '0x524cfae2daab901234c842f3a17235902b0f01f9',
+                                               '0xfd459e98faccb98838440db466f01690322a721c'],
+                          'isSenderManager': [ '0x00000000c2cf7648c169b25ef1c217864bfa38cc',
+                                               '0xa1006d0051a35b0000f961a8000000009ea8d2db',
+                                               '0xec001d0000004536cad29291f4000000d029abb2',
+                                               '0xf8b8db73db0c3f4ff0d633836e939db23847ca1e'],
+                          'require(origin==sender)': False},
+  'exchange0xddc1f59d': { 'isOriginOwner': '0x8c73d39b2da2dd1a10cc16502bc7c8d768ec74c9',
+                          'isSenderOwner': '0x0959158b6040d32d04c301a72cbfd6b39e21c9ae',
+                          'require(origin==sender)': False},
+  'exchange_underlying0x44ee1986': { 'isOriginOwner': '0x2ee36e41387f87b7e6f678a86d1e575b23b996f5',
+                                     'isSenderOwner': '0x45716d9eddbc332df1d42b9f540fbebed671b20f',
+                                     'require(origin==sender)': False},
+  'exchange_underlying0xa6417ed6': {'require(origin==sender)': False},
+  'initialize0xd178231c': { 'isOriginOwner': '0x925753106fcdb6d2f30c3db295328a0a1c5fd1d1',
+                            'isSenderOwner': '0x0959158b6040d32d04c301a72cbfd6b39e21c9ae',
+                            'require(origin==sender)': False},
+  'remove_liquidity0x5b36389c': { 'isOriginManager': [ '0x6c3e007377effd74afe237ce3b0aeef969b63c91',
+                                                       '0xd047b65f54f4aa8eae6bb9f3d9d5d126fe722b9f',
+                                                       '0xd8711e8bdece3e95baadbdbf7a21a73ba3471b7f',
+                                                       '0x912f852eb064c6cd74037b76987a8d4a8877f428'],
+                                  'isSenderOwner': '0xa79828df1850e8a3a3064576f380d90aecdd3359',
+                                  'require(origin==sender)': False},
+  'remove_liquidity_one_coin0x081579a5': { 'isSenderOwner': '0xa79828df1850e8a3a3064576f380d90aecdd3359',
+                                           'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': { 'isSenderManager': [ '0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5',
+                                                   '0xa79828df1850e8a3a3064576f380d90aecdd3359',
+                                                   '0x6f98da2d5098604239c07875c6b7fd583bc520b9'],
+                              'require(origin==sender)': False},
+  'withdraw_admin_fees0x30c54085': { 'isOriginOwner': '0x8c73d39b2da2dd1a10cc16502bc7c8d768ec74c9',
+                                     'isSenderOwner': '0x8c73d39b2da2dd1a10cc16502bc7c8d768ec74c9',
+                                     'require(origin==sender)': True}}
+len(testing set):  1735
+Successfully stops the exploit using isSenderManager
+exploitTx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	0	4	0	7		4050	1735
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+5 sampled FPs for isSenderManager
+0x3505d6d3faabfee4aec35a996b2d945757946e73ba0e0057fe8b69226770532b
+0xf30deb0c7f65c5cf8f5fa02079c63c95df342d98c0dd808d4b2af7abdd2b3d27
+0x022c34d44184ffe145b6b802b43552bd240c6a6952a86fa1032592e32285a3a8
+0x188a085fbaafd9a583facf0949e1b972eb409ac47e196d6cf56e280edf6e8b46
+5 sampled FPs for isOriginOwner
+5 sampled FPs for isOriginManager
+0xc7ef1a26aa54e9ea098853440b41a54c96fd3893e08d283034a203cdc6b49da5
+0xb3b8b8ec0e87528b81348aa1b5554edcb55002a042cee019f8bbcba1cf8267cf
+0xe28a50f4aa6325322b907f87d23592dc9554fdbb5398d3411d1142327c154cb0
+0xad2aa0932c3692c65d53f57ff828ae1c244074442a8906c8c35304e76c4cb873
+0x898e091854f8e709be07c23f6fcd1266d9cc52cfef3856c5406106af08402cb8
+len(txList3):  5785
+====== benchmark BeanstalkFarms_interface: 
+len(training set):  215
+func vote0x9094c763 has more than 5 senders
+func vote0x9094c763 has more than 5 origins
+func voteAll0x09b12cde has more than 5 senders
+func voteAll0x09b12cde has more than 5 origins
+func voteUnvoteAll0xe349978d has only 1 sender
+func voteUnvoteAll0xe349978d has only 1 origin
+func unvoteAll0xa461468c has only 1 sender
+func unvoteAll0xa461468c has only 1 origin
+==invariant map: 
+{ 'emergencyCommit0x73015684': { 'isOriginManager': [ '0x925753106fcdb6d2f30c3db295328a0a1c5fd1d1',
+                                                      '0xc95186f04b68cfec0d9f585d08c3b5697c858fe0'],
+                                 'isSenderManager': [ '0x925753106fcdb6d2f30c3db295328a0a1c5fd1d1',
+                                                      '0xc95186f04b68cfec0d9f585d08c3b5697c858fe0'],
+                                 'require(origin==sender)': True},
+  'unvoteAll0xa461468c': { 'isOriginOwner': '0x36998db3f9d958f0ebaef7b0b6bf11f3441b216f',
+                           'isSenderOwner': '0x36998db3f9d958f0ebaef7b0b6bf11f3441b216f',
+                           'require(origin==sender)': True},
+  'vote0x9094c763': {'require(origin==sender)': False},
+  'voteAll0x09b12cde': {'require(origin==sender)': True},
+  'voteUnvoteAll0xe349978d': { 'isOriginOwner': '0x483cdc51a29df38adec82e1bb3f0ae197142a351',
+                               'isSenderOwner': '0x483cdc51a29df38adec82e1bb3f0ae197142a351',
+                               'require(origin==sender)': True}}
+len(testing set):  91
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+FPMap: ['require(origin==sender)', 'isSenderOwner', 'isSenderManager', 'isOriginOwner', 'isOriginManager']
+0	2	0	2	0		215	91
+5 sampled FPs for require(origin==sender)
+5 sampled FPs for isSenderOwner
+0xe0f4706480993c80ebbb05cb8bc58c33d60dbc1aac65f41b9e4fbf8f83d919b5
+0x33c49da5a396fadd70536c5389afe01d0d6354e3be01478e0c426f08a81ea804
+5 sampled FPs for isSenderManager
+5 sampled FPs for isOriginOwner
+0xe0f4706480993c80ebbb05cb8bc58c33d60dbc1aac65f41b9e4fbf8f83d919b5
+0x33c49da5a396fadd70536c5389afe01d0d6354e3be01478e0c426f08a81ea804
+5 sampled FPs for isOriginManager
+len(txList3):  306
