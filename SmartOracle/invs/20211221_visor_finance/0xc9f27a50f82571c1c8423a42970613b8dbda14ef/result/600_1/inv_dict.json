@@ -1,0 +1,552 @@
+{
+    "contract": {
+        "count": 600,
+        "invs": {
+            "post(variable.vvisr) == pre(variable.vvisr)": {
+                "num": 600,
+                "type": "normal"
+            },
+            "post(variable.visr) == pre(variable.visr)": {
+                "num": 600,
+                "type": "normal"
+            },
+            "post(tokenBalance.[pre(variable.visr)][all]) == pre(tokenBalance.[pre(variable.visr)][all])": {
+                "num": 600,
+                "type": "inference"
+            },
+            "post(tokenBalance.[post(variable.visr)][all]) == pre(tokenBalance.[post(variable.visr)][all])": {
+                "num": 600,
+                "type": "inference"
+            },
+            "post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all]) == pre(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all])": {
+                "num": 600,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender])": {
+                "num": 600,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][all]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][all])": {
+                "num": 600,
+                "type": "normal"
+            }
+        }
+    },
+    "deposit(uint256,address,address)": {
+        "count": 269,
+        "invs": {
+            "post(variable.vvisr) == pre(variable.vvisr)": {
+                "num": 269,
+                "type": "normal"
+            },
+            "post(variable.visr) == pre(variable.visr)": {
+                "num": 269,
+                "type": "normal"
+            },
+            "post(tokenBalance.[pre(variable.visr)][all]) == pre(tokenBalance.[pre(variable.visr)][all])": {
+                "num": 269,
+                "type": "inference"
+            },
+            "post(tokenBalance.[post(variable.visr)][all]) == pre(tokenBalance.[post(variable.visr)][all])": {
+                "num": 269,
+                "type": "inference"
+            },
+            "post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all]) == pre(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all])": {
+                "num": 269,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender])": {
+                "num": 269,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][method.from]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][method.from])": {
+                "num": 269,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][all]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][all])": {
+                "num": 269,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == change.post(tokenBalance.[pre(variable.vvisr)][method.to])": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][method.from]) == - (method.visrDeposit)": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == method.visrDeposit": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][method.from]))": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == change.post(tokenBalance.[post(variable.vvisr)][method.to])": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][method.from]) == - (method.visrDeposit)": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == method.visrDeposit": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][method.from]))": {
+                "num": 269,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]) == - (method.visrDeposit)": {
+                "num": 269,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == method.visrDeposit": {
+                "num": 269,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]))": {
+                "num": 269,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.to])": {
+                "num": 269,
+                "type": "normal"
+            }
+        }
+    },
+    "deposit(uint256,address,address):11-16-25-26-42-91-102-103-113-114-124-217-234-239-606-683-701-702-720-770-788-789-807-861-925-930-940-950-967-972-979-980-1049-1054-1064-1074-1091-1096-1175-1180-1190-1200-1217-1222-2797-2805-2816-2818-2824-2879-2897-2974-2981-2983-1255-1507-3434-3489-3502-3579-3618-3619-3618-3619-3618-3619-3618-3641-3705-3706-3785-3786-3317-3318-3333-3338-3344-3217-1611-1616-1626-1636": {
+        "count": 164,
+        "invs": {
+            "post(variable.vvisr) == pre(variable.vvisr)": {
+                "num": 164,
+                "type": "normal"
+            },
+            "post(variable.visr) == pre(variable.visr)": {
+                "num": 164,
+                "type": "normal"
+            },
+            "post(tokenBalance.[pre(variable.visr)][all]) == pre(tokenBalance.[pre(variable.visr)][all])": {
+                "num": 164,
+                "type": "inference"
+            },
+            "post(tokenBalance.[post(variable.visr)][all]) == pre(tokenBalance.[post(variable.visr)][all])": {
+                "num": 164,
+                "type": "inference"
+            },
+            "post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all]) == pre(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all])": {
+                "num": 164,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender])": {
+                "num": 164,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][method.from]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][method.from])": {
+                "num": 164,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][all]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][all])": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == change.post(tokenBalance.[pre(variable.vvisr)][method.to])": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][msg.sender]) == - (method.visrDeposit)": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][method.from]) == change.post(tokenBalance.[pre(variable.visr)][msg.sender])": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][method.from]) == - (method.visrDeposit)": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == method.visrDeposit": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][msg.sender]))": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][method.from]))": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == change.post(tokenBalance.[post(variable.vvisr)][method.to])": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][msg.sender]) == - (method.visrDeposit)": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][method.from]) == change.post(tokenBalance.[post(variable.visr)][msg.sender])": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][method.from]) == - (method.visrDeposit)": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == method.visrDeposit": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][msg.sender]))": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][method.from]))": {
+                "num": 164,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][msg.sender]) == - (method.visrDeposit)": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]) == change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][msg.sender])": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]) == - (method.visrDeposit)": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == method.visrDeposit": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][msg.sender]))": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]))": {
+                "num": 164,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.to])": {
+                "num": 164,
+                "type": "normal"
+            }
+        }
+    },
+    "withdraw(uint256,address,address)": {
+        "count": 331,
+        "invs": {
+            "post(variable.vvisr) == pre(variable.vvisr)": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(variable.visr) == pre(variable.visr)": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[pre(variable.visr)][all]) == pre(tokenBalance.[pre(variable.visr)][all])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "post(tokenBalance.[post(variable.visr)][all]) == pre(tokenBalance.[post(variable.visr)][all])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all]) == pre(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][method.to]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][method.to])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][all]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][all])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][method.from]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == change.post(tokenBalance.[pre(variable.vvisr)][method.from])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][method.to]))": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][method.from]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == change.post(tokenBalance.[post(variable.vvisr)][method.from])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][method.to]))": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.to]))": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.from]) == - (method.shares)": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.from])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == - (method.shares)": {
+                "num": 331,
+                "type": "normal"
+            }
+        }
+    },
+    "withdraw(uint256,address,address):11-16-25-26-42-43-53-54-64-65-75-311-328-333-1868-1945-1959-2009-2023-2077-2142-2147-2157-2167-2184-2189-2267-2272-2282-2292-2309-2314-2797-2805-2816-2818-2824-2879-2897-2974-2981-2983-3434-3489-3502-3579-3618-3619-3618-3619-3618-3641-3705-3706-3785-3786-3317-3318-3333-3338-3344-3217-2365-2366-2430-2435-2445-2455-2472-2477-2494-2571-2651-1616-1626-1636": {
+        "count": 331,
+        "invs": {
+            "post(variable.vvisr) == pre(variable.vvisr)": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(variable.visr) == pre(variable.visr)": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[pre(variable.visr)][all]) == pre(tokenBalance.[pre(variable.visr)][all])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "post(tokenBalance.[post(variable.visr)][all]) == pre(tokenBalance.[post(variable.visr)][all])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all]) == pre(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][method.to]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][method.to])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][all]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][all])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][method.from]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == change.post(tokenBalance.[pre(variable.vvisr)][method.from])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][method.to]))": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][method.from]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == change.post(tokenBalance.[post(variable.vvisr)][method.from])": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == - (method.shares)": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][method.to]))": {
+                "num": 331,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.to]))": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.from]) == - (method.shares)": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.from])": {
+                "num": 331,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == - (method.shares)": {
+                "num": 331,
+                "type": "normal"
+            }
+        }
+    },
+    "deposit(uint256,address,address):11-16-25-26-42-91-102-103-113-114-124-217-234-239-606-683-701-702-720-770-788-789-807-861-925-930-940-950-967-972-979-980-1049-1054-1064-1074-1091-1096-1175-1180-1190-1200-1217-1222-2797-2805-2816-2818-2824-2879-2897-2974-2981-2983-1255-1256-1319-1324-1334-1344-1361-1366-1382-1387-1473-1478-1488-1498-1611-1616-1626-1636": {
+        "count": 105,
+        "invs": {
+            "post(variable.vvisr) == pre(variable.vvisr)": {
+                "num": 105,
+                "type": "normal"
+            },
+            "post(variable.visr) == pre(variable.visr)": {
+                "num": 105,
+                "type": "normal"
+            },
+            "post(tokenBalance.[pre(variable.visr)][all]) == pre(tokenBalance.[pre(variable.visr)][all])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "post(tokenBalance.[post(variable.visr)][all]) == pre(tokenBalance.[post(variable.visr)][all])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all]) == pre(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][all])": {
+                "num": 105,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][msg.sender])": {
+                "num": 105,
+                "type": "normal"
+            },
+            "post(tokenBalance.[0x0000000000000000000000000000000000000000][all]) == pre(tokenBalance.[0x0000000000000000000000000000000000000000][all])": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][method.from]) == change.post(tokenBalance.[pre(variable.vvisr)][method.to])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == change.post(tokenBalance.[pre(variable.vvisr)][method.to])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.vvisr)][all]) == change.post(tokenBalance.[pre(variable.vvisr)][method.from])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][method.to]) == - (method.visrDeposit)": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][method.from]) == change.post(tokenBalance.[pre(variable.visr)][method.to])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][method.from]) == - (method.visrDeposit)": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == method.visrDeposit": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][method.to]))": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[pre(variable.visr)][callee]) == - (change.post(tokenBalance.[pre(variable.visr)][method.from]))": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][method.from]) == change.post(tokenBalance.[post(variable.vvisr)][method.to])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == change.post(tokenBalance.[post(variable.vvisr)][method.to])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.vvisr)][all]) == change.post(tokenBalance.[post(variable.vvisr)][method.from])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][method.to]) == - (method.visrDeposit)": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][method.from]) == change.post(tokenBalance.[post(variable.visr)][method.to])": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][method.from]) == - (method.visrDeposit)": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == method.visrDeposit": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][method.to]))": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[post(variable.visr)][callee]) == - (change.post(tokenBalance.[post(variable.visr)][method.from]))": {
+                "num": 105,
+                "type": "inference"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.to]) == - (method.visrDeposit)": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]) == change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.to])": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]) == - (method.visrDeposit)": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == method.visrDeposit": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.to]))": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][callee]) == - (change.post(tokenBalance.[0xf938424f7210f31df2aee3011291b658f872e91e][method.from]))": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.from]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.to])": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.to])": {
+                "num": 105,
+                "type": "normal"
+            },
+            "change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][all]) == change.post(tokenBalance.[0x3a84ad5d16adbe566baa6b3dafe39db3d5e261e5][method.from])": {
+                "num": 105,
+                "type": "normal"
+            }
+        }
+    }
+}
