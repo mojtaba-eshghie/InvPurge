@@ -1,0 +1,49 @@
+{
+    "variables": [
+        {
+            "contractName": "SushiMaker",
+            "varName": "owner",
+            "varType": "address",
+            "varBytes": 20,
+            "varValue": "0x19b3eb3af5d93b77a5619b047de0eed7115a19e7",
+            "varSlot": 0,
+            "varOffset": 0
+        },
+        {
+            "contractName": "SushiMaker",
+            "varName": "pendingOwner",
+            "varType": "address",
+            "varBytes": 20,
+            "varValue": null,
+            "varSlot": 1,
+            "varOffset": 0
+        },
+        {
+            "contractName": "SushiMaker",
+            "varName": "_bridges",
+            "varType": "mapping(address => address)",
+            "varBytes": 32,
+            "varValue": {},
+            "varSlot": 2,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            }
+        }
+    ]
+}
