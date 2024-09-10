@@ -8,15 +8,6 @@ import re
 
 comparator = Comparator()
 
-def read_json(path: str):
-    """Reads json and returns a dict """
-    try:
-        with open(path, "r") as file:
-            data = json.load(file)
-            return data
-    except Exception as e:
-        print(f"Error reading JSON file: {e}")
-        return None
 
 
 def parse_daikon_list(predicates: list):
