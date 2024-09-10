@@ -1,0 +1,306 @@
+RariCapital2_1 has one function call with several transfers
+Yearn1 has one function call with several transfers
+Eminence has one function call with several transfers
+Opyn has one function call with several transfers
+Invariant: reentrancy
+====== benchmark RoninNetwork: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xc28fad5e8d5e0ce6a2eaf67b6687be5d58113e16be590824d6cfa1a94467d0b7
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark HarmonyBridge: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x27981c7289c372e601c9475e5b5466310be18ed10b59d1ac840145f6e7804c97
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Nomad: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+{'NonReentrantLocks': []}
+====== benchmark PolyNetwork: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xad7a2c70c958fcd3effbf374d0acf3774a9257577625ae4c838e24b0de17602a
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark bZx2: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x762881b07feb63c436dee38edd4ff1f7a74c33091e534af56c9f7d49b5ecac15
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Warp: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Warp_interface: 
+==invariant list: 
+{'NonReentrantLocks': False}
+exploitTx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+FPMap: ['NonReentrantLocks']
+N/A	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CheeseBank_1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CheeseBank_2: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CheeseBank_3: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark InverseFi: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x600373f67521324c8068cfd025f121a0843d57ec813411661b07edc5ff781842
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CreamFi1_1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CreamFi1_2: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CreamFi2_1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CreamFi2_2: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CreamFi2_3: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark CreamFi2_4: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RariCapital1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x4764dc6ff19a64fc1b0e57e735661f64d97bc1c44e026317be8765358d0a7392
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RariCapital2_1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RariCapital2_2: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RariCapital2_3: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RariCapital2_4: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark XCarnival: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x51cbfd46f21afb44da4fa971f220bd28a14530e1d5da5009cfbdfee012e57e35
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Harvest1_fUSDT: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x0fc6d2ca064fc841bc9b1c1fad1fbb97bcea5c9a1b2b66ef837f1227e06519a6
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Harvest2_fUSDC: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x35f8d2f572fceaac9288e5d462117850ef2694786992a8c3f6d02612277b0877
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark ValueDeFi: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x46a03488247425f845e444b9c10b52ba3c14927c687d38287c0faddc7471150a
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Yearn1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Yearn1_interface: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark VisorFi: 
+==invariant list: 
+{'NonReentrantLocks': True}
+old name: deposit, old structLogsStart: 132, old structLogsEnd: 3542
+new name: deposit, new structLogsStart: 1254, new structLogsEnd: 2903
+Successfully stops the exploit using MoveNonReentrantLocks
+exploitTx:  0x69272d8c84d67d1da2f6425b339192fa472898dce936f24818fda415c1c1ff3f
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark UmbrellaNetwork: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x33479bcfbc792aa0f8103ab0d7a3784788b5b0e1467c81ffbed1b7682660b4fa
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark PickleFi: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xe72d4e7ba9b5af0cf2a8cfb1e30fd9f388df0ab3da79790be842bfbed11087b0
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Eminence: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x3503253131644dd9f52802d071de74e456570374d586ddd640159cf6fb9b8ad8
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Opyn: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xa858463f30a08c6f3410ed456e59277fbe62ff14225754d2bb0b4f6a75fdc8ad
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark IndexFi: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x44aad3b853866468161735496a5d9cc961ce5aa872924c5d78673076b1cd95aa
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RevestFi: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark RevestFi_interface: 
+==invariant list: 
+{'NonReentrantLocks': True}
+old name: mintAddressLock, old structLogsStart: 14363, old structLogsEnd: 34479
+new name: depositAdditionalToFNFT, new structLogsStart: 23323, new structLogsEnd: 33878
+Successfully stops the exploit using MoveNonReentrantLocks
+exploitTx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark DODO: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x395675b56370a9f5fe8b32badfa80043f5291443bd6c8273900476880fb5221e
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Punk_1: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Punk_2: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark Punk_3: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark BeanstalkFarms: 
+==invariant list: 
+{'NonReentrantLocks': True}
+exploitTx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+FPMap: ['NonReentrantLocks']
+0	
+5 sampled FPs for NonReentrantLocks
+====== benchmark BeanstalkFarms_interface: 
+==invariant list: 
+{'NonReentrantLocks': False}
+exploitTx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+FPMap: ['NonReentrantLocks']
+N/A	
+5 sampled FPs for NonReentrantLocks
