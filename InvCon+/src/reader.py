@@ -2,6 +2,7 @@ import json
 import sys
 from predi.comparator  import Comparator
 import re
+import hashlib
 
 
 
@@ -71,7 +72,7 @@ def reduce_json(path: str):
         entry["postconditions"] = reduced_postconditions
         entry["preconditions"] =reduced_preconditions
 
-    f = open("./output.json", "w")
+    f = open("./output2.json", "w")
     json.dump(data, f)
 
 
@@ -96,7 +97,7 @@ def find_strongest_predicate(preds: list):
       
 
 
-def regex_parse(a: str):
+def regex_parse(a: str,):
     """Uses regex to clean daikon expression from [...], Sum(), ori() """
     a = re.sub(r'\[\.\.\.\]', 'arrayPlaceHolder', a)
     result = re.search(r'ori\(([\w\[\]\(\)\.]+)\)', a)
@@ -108,6 +109,56 @@ def regex_parse(a: str):
         a = result.group(1)
 
     return a
+
+
+def recursive_parse(a: str ,b="" ):
+   """Uses regex to clean daikon expression from [...], Sum(), ori() """
+
+
+   if(a.startswith("ori")):
+      a = a[4:]
+      a = a[0:-1]
+      b += "ori_"
+      a = recursive_parse(a)
+
+   if(a.startswith("Sum")):
+      a = a[4:]
+      a = a[0:-1]
+      b += "sum_"
+      a = recursive_parse(a)
+
+   if(a.endswith("[...]")):
+      a = a[0:-5]
+      b += "_spo_"
+      a = recursive_parse(a)
+   
+
+   return a + b
+
+
+def split_expression(a:str):
+   """Takes a predicates and splits into the a tuple of 
+   (lefthandside of expression, relation, righthandside of expression)"""
+   if ">=" in a:
+      a =  re.split("(\>=)",a)
+   if "<=" in a:
+      a =  re.split("(\<=)",a)   
+   elif "==" in a:
+      a = re.split("(\==)",a)
+   elif "!=" in a:
+      a = re.split("(\!=)",a)   
+   elif ">" in a:
+      a = re.split("(\>)",a)   
+   elif "<" in a:
+      a = re.split("(\<)",a)
+
+   left = a[0]
+   right = a[-1]
+   relation = a[1]
+   return left, relation, right
+
+
+
 
 
 def split_expression(a:str):
@@ -138,14 +189,43 @@ def parse_daikon(a:str):
       """
    original = a
    left, delimeter, right = split_expression(a)
-   left = regex_parse(left)
-   right = regex_parse(right)
-   return (left + " "+  right, original,  f"{left} {delimeter} {right}")
+   left = recursive_parse( left.strip())
+   right = recursive_parse( right.strip())
+   if(right.isnumeric()):
+      parsed_right = "Literal"
+   else:
+      parsed_right = right
+
+   return (left+ " " + parsed_right, original,  f"{left} {delimeter} {right}")
 
 
 if __name__ == "__main__":
+   # list = ["x == 0", "x > 0" ,"x >= 0",
+   #    ]
+   # parsed_list =  parse_daikon_list(list
+         
+   #    )
 
-   # list =  parse_daikon_list(["ori(Sum(stakingTokenBalances[...])) >= Sum(stakingTokenBalances[...])",
+   print(recursive_parse("Sum(stakingTokenBalances[...])"))
+   print(recursive_parse("ori(stakingTokenSupply)"))
+
+   
+   # list = ["ori(Sum(stakingTokenBalances[...])) >= Sum(stakingTokenBalances[...])",
+   #       "ori(Sum(stakingTokenBalances[...])) > Sum(stakingTokenBalances[...])",
+   #       "ori(Sum(stakingTokenBalances[...])) != Sum(stakingTokenBalances[...])",
+   #       "ori(Sum(stakingTokenBalances[...])) >= stakingTokenBalances[msg.sender]",
+   #       "ori(Sum(stakingTokenBalances[...])) > stakingTokenBalances[msg.sender]",
+   #       "ori(Sum(stakingTokenBalances[...])) != stakingTokenBalances[msg.sender]",
+   #       "ori(Sum(stakingTokenBalances[...])) >= stakingTokenSupply",
+   #       "ori(Sum(stakingTokenBalances[...])) > stakingTokenSupply",
+   #       "ori(Sum(stakingTokenBalances[...])) != stakingTokenSupply",
+   #       "Sum(stakingTokenBalances[...]) >= ori(stakingTokenBalances[msg.sender])",
+   #       "Sum(stakingTokenBalances[...]) > ori(stakingTokenBalances[msg.sender])",
+   #       "Sum(stakingTokenBalances[...]) != ori(stakingTokenBalances[msg.sender])",
+   #       "Sum(stakingTokenBalances[...]) >= stakingTokenBalances[msg.sender]",
+   #       "Sum(stakingTokenBalances[...]) > stakingTokenBalances[msg.sender]",
+   #       "Sum(stakingTokenBalances[...]) != stakingTokenBalances[msg.sender]"]
+   # parsed_list =  parse_daikon_list(["ori(Sum(stakingTokenBalances[...])) >= Sum(stakingTokenBalances[...])",
    #       "ori(Sum(stakingTokenBalances[...])) > Sum(stakingTokenBalances[...])",
    #       "ori(Sum(stakingTokenBalances[...])) != Sum(stakingTokenBalances[...])",
    #       "ori(Sum(stakingTokenBalances[...])) >= stakingTokenBalances[msg.sender]",
@@ -161,17 +241,17 @@ if __name__ == "__main__":
    #       "Sum(stakingTokenBalances[...]) > stakingTokenBalances[msg.sender]",
    #       "Sum(stakingTokenBalances[...]) != stakingTokenBalances[msg.sender]"])
 
-   # cat, pred = parsed_to_dict(list)
+   # cat, pred = parsed_to_dict(parsed_list)
    # red = find_strongest_in_dict(cat)
-   # for x in red:
+   # for x in list:
    #    print(x)
    # red = parse_original(pred, red)
    # print("_________________________________________________")
    # for x in red:
    #    print(x)
 
-   path = sys.argv[1]
-   reduce_json(path)
+   # path = sys.argv[1]
+   # reduce_json(path)
 
    #  print(comparator.compare("stakingTokenBalances > stakingTokenBalances", "stakingTokenBalances != stakingTokenBalances"))
    #  print(comparator.compare("x > y" ,"x != y"))
